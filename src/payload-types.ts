@@ -69,6 +69,8 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    pages: Page;
+    resources: Resource;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -78,6 +80,8 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    pages: PagesSelect<false> | PagesSelect<true>;
+    resources: ResourcesSelect<false> | ResourcesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -87,8 +91,14 @@ export interface Config {
     defaultIDType: number;
   };
   fallbackLocale: null;
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    navigation: Navigation;
+    footer: Footer;
+  };
+  globalsSelect: {
+    navigation: NavigationSelect<false> | NavigationSelect<true>;
+    footer: FooterSelect<false> | FooterSelect<true>;
+  };
   locale: null;
   user: User;
   jobs: {
@@ -140,12 +150,18 @@ export interface User {
   collection: 'users';
 }
 /**
+ * Images and files — uploaded to Cloudflare R2
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media".
  */
 export interface Media {
   id: number;
+  /**
+   * Describe the image for accessibility and SEO
+   */
   alt: string;
+  prefix?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -157,6 +173,151 @@ export interface Media {
   height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
+  sizes?: {
+    thumbnail?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    card?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    hero?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+  };
+}
+/**
+ * Marketing pages built from reusable content blocks
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: number;
+  /**
+   * The page title — appears in the browser tab and as the main heading
+   */
+  title: string;
+  /**
+   * URL path for this page (e.g. "features" becomes /features)
+   */
+  slug: string;
+  /**
+   * Add and arrange content blocks to build the page
+   */
+  layout?: unknown[] | null;
+  meta?: {
+    /**
+     * SEO title — appears in search results (50-60 characters ideal)
+     */
+    meta_title?: string | null;
+    /**
+     * SEO description — appears below the title in search results (150-160 characters ideal)
+     */
+    meta_description?: string | null;
+    /**
+     * Social sharing image — shown when the page is shared on Twitter/LinkedIn (1200x630px)
+     */
+    og_image?: (number | null) | Media;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * Articles, guides, and other resources
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "resources".
+ */
+export interface Resource {
+  id: number;
+  /**
+   * Article title — appears as the main heading and in search results
+   */
+  title: string;
+  /**
+   * URL path for this article (e.g. "getting-started" becomes /resources/getting-started)
+   */
+  slug: string;
+  /**
+   * Short summary shown on the resources index page (max 250 characters)
+   */
+  excerpt?: string | null;
+  /**
+   * The full article body — use headings, lists, code blocks, and images
+   */
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
+   * Hero image shown at the top of the article and on resource cards
+   */
+  feature_image?: (number | null) | Media;
+  /**
+   * Author name displayed on the article
+   */
+  author?: string | null;
+  /**
+   * Publication date — articles are sorted by this date (newest first)
+   */
+  publish_date?: string | null;
+  /**
+   * Estimated reading time in minutes
+   */
+  reading_time?: number | null;
+  /**
+   * Tags for categorising this article — used for filtering on the resources page
+   */
+  tags?:
+    | {
+        tag: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Related articles shown at the bottom of this article (select up to 3)
+   */
+  related_posts?: (number | Resource)[] | null;
+  meta?: {
+    /**
+     * SEO title (50-60 characters ideal)
+     */
+    meta_title?: string | null;
+    /**
+     * SEO description (150-160 characters ideal)
+     */
+    meta_description?: string | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -189,6 +350,14 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'media';
         value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'pages';
+        value: number | Page;
+      } | null)
+    | ({
+        relationTo: 'resources';
+        value: number | Resource;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -260,6 +429,7 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  prefix?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -271,6 +441,89 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+  sizes?:
+    | T
+    | {
+        thumbnail?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        card?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        hero?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+      };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages_select".
+ */
+export interface PagesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  layout?: T | {};
+  meta?:
+    | T
+    | {
+        meta_title?: T;
+        meta_description?: T;
+        og_image?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "resources_select".
+ */
+export interface ResourcesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  excerpt?: T;
+  content?: T;
+  feature_image?: T;
+  author?: T;
+  publish_date?: T;
+  reading_time?: T;
+  tags?:
+    | T
+    | {
+        tag?: T;
+        id?: T;
+      };
+  related_posts?: T;
+  meta?:
+    | T
+    | {
+        meta_title?: T;
+        meta_description?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -311,6 +564,126 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * Site-wide navigation bar — links and CTA button
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "navigation".
+ */
+export interface Navigation {
+  id: number;
+  /**
+   * Navigation links shown in the header
+   */
+  nav_items?:
+    | {
+        /**
+         * Link text shown in the nav bar
+         */
+        label: string;
+        /**
+         * URL path (e.g. "/features" or "https://external.com")
+         */
+        href: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * CTA button text (e.g. "Get Started")
+   */
+  cta_label?: string | null;
+  /**
+   * CTA button link (e.g. "/test-drive")
+   */
+  cta_href?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Site-wide footer — link groups and social media URLs
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer".
+ */
+export interface Footer {
+  id: number;
+  /**
+   * Footer columns with grouped links
+   */
+  link_groups?:
+    | {
+        /**
+         * Column heading (e.g. "Product", "Company")
+         */
+        group_label: string;
+        links?:
+          | {
+              label: string;
+              href: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * GitHub profile URL
+   */
+  social_github?: string | null;
+  /**
+   * LinkedIn page URL
+   */
+  social_linkedin?: string | null;
+  /**
+   * X/Twitter profile URL
+   */
+  social_twitter?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "navigation_select".
+ */
+export interface NavigationSelect<T extends boolean = true> {
+  nav_items?:
+    | T
+    | {
+        label?: T;
+        href?: T;
+        id?: T;
+      };
+  cta_label?: T;
+  cta_href?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer_select".
+ */
+export interface FooterSelect<T extends boolean = true> {
+  link_groups?:
+    | T
+    | {
+        group_label?: T;
+        links?:
+          | T
+          | {
+              label?: T;
+              href?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  social_github?: T;
+  social_linkedin?: T;
+  social_twitter?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

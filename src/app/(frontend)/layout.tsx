@@ -1,18 +1,23 @@
 import React from 'react'
-import './styles.css'
+import { Inter } from 'next/font/google'
+import { Nav } from '@/components/layout/Nav'
+import { Footer } from '@/components/layout/Footer'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata = {
-  description: 'A blank template using Payload in a Next.js app.',
-  title: 'Payload Blank Template',
+  title: 'CAEPE — Deploy Anywhere, Manage Everything',
+  description: 'CAEPE simplifies multi-cluster Kubernetes management with deployment, smoke testing, and edge support.',
 }
 
-export default async function RootLayout(props: { children: React.ReactNode }) {
-  const { children } = props
-
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <main>{children}</main>
+    <html lang="en" className={inter.variable}>
+      <body className="flex min-h-screen flex-col bg-white font-sans text-navy antialiased">
+        <Nav />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   )

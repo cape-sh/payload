@@ -250,9 +250,9 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 - Create `docs/adr/ADR-001-stack.md` — document why Payload v3 + Neon + Vercel + R2 was chosen
 
 **Success criteria:**
-- [ ] `npm run dev` runs with no TypeScript errors — Payload admin at `http://localhost:3000/admin`
-- [ ] Vercel preview URL accessible in browser
-- [ ] Neon dashboard shows Payload-created tables
+- [x] `npm run dev` runs with no TypeScript errors — Payload admin at `http://localhost:3000/admin`
+- [x] Vercel preview URL accessible in browser
+- [x] Neon dashboard shows Payload-created tables
 
 ### Day 2 — Payload Schema + Design System
 
@@ -279,9 +279,9 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 - Build `src/app/(frontend)/layout.tsx` — root layout wrapping Nav + Footer
 
 **Success criteria:**
-- [ ] Payload admin shows Pages, Resources, Media + Navigation, Footer in left sidebar
-- [ ] `npx tsc --noEmit` passes with zero errors
-- [ ] Nav and footer render on localhost, responsive at 375px and 1280px
+- [x] Payload admin shows Pages, Resources, Media + Navigation, Footer in left sidebar
+- [x] `npx tsc --noEmit` passes with zero errors
+- [x] Nav and footer render on localhost, responsive at 375px and 1280px
 
 ### Day 3 — WordPress → Payload Migration Scripts
 
@@ -610,6 +610,28 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 
 ---
 
+## Known Issues & Learnings
+
+> Accumulated during the pilot. Check this section before installing packages or debugging errors.
+
+### Wrong package names (Day 1)
+- **`@payloadcms/storage-cloudflare-r2` does NOT exist.** Use `@payloadcms/storage-s3` instead — Cloudflare R2 is S3-compatible, so the S3 adapter works with the R2 endpoint, access key, and secret.
+- **`@cloudflare/turnstile` does NOT exist on npm.** Use `@marsidev/react-turnstile` for the React Turnstile widget.
+
+### Payload config
+- The template uses `DATABASE_URL` but our convention is `DATABASE_URI`. Already changed in `payload.config.ts` — do not revert.
+- `create-payload-app` CLI fails without a TTY (non-interactive). We scaffold manually from the `with-postgres` template instead.
+
+### Neon connection
+- Neon connection strings trigger a `pg` SSL deprecation warning (`SECURITY WARNING: The SSL modes 'prefer', 'require'...`). This is cosmetic — the connection works. Will be resolved in pg v9.
+- Neon project ID: `fancy-silence-41824119`, branch: `main` (br-royal-mud-ad0kzzaz).
+
+### npm install
+- `npm install` can take 2+ minutes due to the size of the Payload dependency tree (823 packages). Do not kill it prematurely.
+- Template included `pnpm` engine requirement — removed since we use `npm`.
+
+---
+
 ## References
 
 1. [Payload CMS v3 Documentation](https://payloadcms.com/docs) — Collections, Globals, Blocks, Local API, versions, draft/publish, afterChange hooks, R2 storage adapter
@@ -617,7 +639,7 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 3. [Next.js 15 App Router](https://nextjs.org/docs/app) — Server Components, generateMetadata(), generateStaticParams(), ISR, API Route Handlers
 4. [Neon PostgreSQL](https://neon.tech/docs) — Serverless Postgres, branch-per-PR, connection string format
 5. [Cloudflare R2](https://developers.cloudflare.com/r2) — Zero-egress object storage
-6. [@payloadcms/storage-cloudflare-r2](https://www.npmjs.com/package/@payloadcms/storage-cloudflare-r2) — Payload R2 storage adapter
+6. [@payloadcms/storage-s3](https://www.npmjs.com/package/@payloadcms/storage-s3) — Payload S3/R2 storage adapter (R2 is S3-compatible)
 7. [Resend API](https://resend.com/docs) — Transactional email
 8. [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile) — Bot protection
 9. [Radix UI Collapsible](https://www.radix-ui.com/primitives/docs/components/collapsible) — Accessible accordion
