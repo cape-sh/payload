@@ -1,0 +1,1705 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Hydra Cluster Management API"
+  },
+  "host": "localhost",
+  "basePath": "/v2",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/clusters": {
+      "get": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "List all clusters",
+        "operationId": "listClusters",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of clusters",
+            "schema": {
+              "$ref": "#/definitions/ListClustersResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Create a Cluster",
+        "operationId": "createCluster",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "cluster",
+            "description": "Cluster params",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Cluster_post"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Create Cluster response",
+            "schema": {
+              "$ref": "#/definitions/ClusterResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/clusters/automated": {
+      "post": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Deprecated",
+        "operationId": "automatedClusterBuild",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "cluster",
+            "description": "Cluster params",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/AutomatedClusterRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Create Cluster response",
+            "schema": {
+              "$ref": "#/definitions/ClusterResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/clusters/{clusterId}": {
+      "get": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Retrieve cluster",
+        "operationId": "retrieveClusterById",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The id of the cluster to retrieve",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/ClusterResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Delete cluster",
+        "operationId": "deleteClusterById",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The id of the cluster to delete",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Update cluster",
+        "operationId": "updateClusterById",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The id of the cluster",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "cluster",
+            "description": "Cluster parameters",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/Cluster_update"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/ClusterResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/clusters/{clusterId}/autobuild": {
+      "get": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Retrieve cluster build status",
+        "operationId": "retrieveAutoClusterById",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The id of the cluster to retrieve",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/autoBuildStatus"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Teardown cluster",
+        "operationId": "deleteAutoClusterById",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The id of the cluster to delete",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Create cluster",
+        "operationId": "createAutoClusterById",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The id of the cluster",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/clusters/{clusterId}/namespace": {
+      "get": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Retrieve cluster namespaces",
+        "operationId": "retrieveClusternamespaces",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The id of the cluster to retrieve namespaces from",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/GetNamespacesResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/clusters/{clusterId}/pvc": {
+      "get": {
+        "tags": [
+          "clusters"
+        ],
+        "summary": "Retrieve cluster pvcs",
+        "operationId": "retrieveClusterPvc",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "clusterId",
+            "in": "path",
+            "description": "The id of the cluster to retrieve pvcs from",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "schema": {
+              "$ref": "#/definitions/GetPVCResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/cluster_group": {
+      "get": {
+        "tags": [
+          "cluster groups"
+        ],
+        "summary": "Lists all cluster groups",
+        "operationId": "listClusterGroups",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of cluster groups",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/ListClusterGroupsResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "cluster groups"
+        ],
+        "summary": "Creates a cluster group",
+        "operationId": "createClusterGroup",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "clusterGroup",
+            "description": "Cluster group params",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/clusterGroup_data"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Create ClusterGroup response",
+            "schema": {
+              "$ref": "#/definitions/ClusterGroupResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/cluster_group/{group_name}": {
+      "get": {
+        "tags": [
+          "cluster groups"
+        ],
+        "summary": "retrieves a cluster group",
+        "operationId": "getClusterGroup",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "group_name",
+            "in": "path",
+            "description": "cluster group name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get cluster group",
+            "schema": {
+              "$ref": "#/definitions/ClusterGroupResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "cluster groups"
+        ],
+        "summary": "Deletes a cluster group",
+        "operationId": "deleteClusterGroup",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "group_name",
+            "in": "path",
+            "description": "cluster group name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "cluster groups"
+        ],
+        "summary": "Updates a cluster group",
+        "operationId": "updateClusterGroup",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "group_name",
+            "in": "path",
+            "description": "cluster group name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "clusterGroup",
+            "description": "Update ClusterGroup params",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/clusterGroup_update"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Update ClusterGroup response",
+            "schema": {
+              "$ref": "#/definitions/ClusterGroupResponse"
+            }
+          },
+          "400": {
+            "description": "Errors",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/cluster_group/{group_name}/members": {
+      "post": {
+        "tags": [
+          "cluster groups"
+        ],
+        "summary": "Add a cluster to a Cluster Group",
+        "operationId": "updateClusterGroupMember",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "group_name",
+            "in": "path",
+            "description": "cluster group name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "clusterGroup",
+            "description": "Update ClusterGroup params",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/AddClusterGroupMemberRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/ClusterGroupResponse"
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "cluster groups"
+        ],
+        "summary": "Remove a cluster from a Cluster Group",
+        "operationId": "deleteClusterGroupMember",
+        "parameters": [
+          {
+            "name": "organization",
+            "in": "header",
+            "description": "organization name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "group_name",
+            "in": "path",
+            "description": "cluster group name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "clusterGroup",
+            "description": "Update ClusterGroup params",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/RemoveClusterGroupMemberRequest"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Response"
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Cluster": {
+      "type": "object",
+      "required": [
+        "description",
+        "environment",
+        "id",
+        "name",
+        "provider",
+        "autoBuildCluster"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Cluster Identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of Cluster",
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the cluster"
+        },
+        "provider": {
+          "$ref": "#/definitions/ClusterProvider"
+        },
+        "environment": {
+          "$ref": "#/definitions/ClusterEnvironment"
+        },
+        "infrastructure": {
+          "$ref": "#/definitions/ClusterInfrastructure"
+        },
+        "createPlaybook": {
+          "$ref": "#/definitions/AutomatedClusterPlaybook"
+        },
+        "autoBuildCluster": {
+          "type": "boolean",
+          "default": false
+        },
+        "teardownPlaybook": {
+          "$ref": "#/definitions/AutomatedClusterPlaybook"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "nodes": {
+          "type": "integer",
+          "description": "Number of Nodes"
+        },
+        "region": {
+          "type": "string",
+          "description": "Geo-location of Cluster"
+        },
+        "agent": {
+          "$ref": "#/definitions/ClusterAgent"
+        },
+        "groups": {
+          "type": "array",
+          "description": "List of custom groups a cluster belongs to",
+          "items": {
+            "$ref": "#/definitions/ClusterCustomGroup"
+          }
+        },
+        "status": {
+          "$ref": "#/definitions/Cluster_status"
+        },
+        "clusterHealth": {
+          "$ref": "#/definitions/ClusterHealth"
+        },
+        "backup": {
+          "$ref": "#/definitions/DRBackup"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "backupLocation": {
+          "type": "object",
+          "$ref": "#/definitions/backupLocation"
+        },
+        "backupAgentInstallationFailure": {
+          "type": "string"
+        }
+      }
+    },
+    "backupLocation": {
+      "type": "object",
+      "properties": {
+        "readOnly": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/backupLocationRef"
+          }
+        },
+        "readWrite": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/backupLocationRef"
+          }
+        }
+      }
+    },
+    "backupLocationRef": {
+      "type": "object",
+      "properties": {
+        "backupLocationRef": {
+          "type": "string"
+        }
+      }
+    },
+    "ClusterGroup": {
+      "type": "object",
+      "required": [
+        "description",
+        "id",
+        "name",
+        "namespace",
+        "status",
+        "type"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Cluster group Identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of Cluster group",
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of cluster group"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "status": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "inbuilt",
+            "custom"
+          ]
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "ClusterCustomGroup": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Cluster group Identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of Cluster group",
+          "maxLength": 100
+        }
+      }
+    },
+    "ChildReference": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "apiVersion": {
+          "type": "string"
+        }
+      }
+    },
+    "ClusterAgent": {
+      "properties": {
+        "registerURL": {
+          "type": "string"
+        },
+        "connected": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "connected"
+      ]
+    },
+    "ListClustersResponse": {
+      "type": "object",
+      "properties": {
+        "clusters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Cluster"
+          }
+        }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/error"
+      },
+      "x-omitempty": true
+    },
+    "error": {
+      "type": "object",
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "ClusterProvider": {
+      "type": "string",
+      "description": "Cluster Provider",
+      "example": "EKS",
+      "enum": [
+        "EKS",
+        "AKS",
+        "GKE",
+        "K3s",
+        "K8s",
+        "OKE",
+        "RKE",
+        "EDGE"
+      ]
+    },
+    "ClusterEnvironment": {
+      "type": "string",
+      "description": "Cluster Environment",
+      "example": "development",
+      "enum": [
+        "development",
+        "production",
+        "qa",
+        "staging",
+        "smoketest",
+        "uat",
+        "others"
+      ]
+    },
+    "ClusterInfrastructure": {
+      "type": "string",
+      "description": "Cluster Infrastructure Type",
+      "example": "edge",
+      "enum": [
+        "cloud",
+        "edge",
+        "on-prem",
+        "airgapped"
+      ]
+    },
+    "Cluster_post": {
+      "type": "object",
+      "required": [
+        "description",
+        "environment",
+        "name",
+        "provider"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "fordemo",
+          "description": "Cluster name",
+          "maxLength": 64,
+          "pattern": "^[a-z0-9A-Z-_.]*$"
+        },
+        "description": {
+          "type": "string"
+        },
+        "agentMode": {
+          "type": "boolean",
+          "description": "create cluster with agentMode",
+          "default": false
+        },
+        "kubeconfig": {
+          "$ref": "#/definitions/Kubeconfig"
+        },
+        "region": {
+          "type": "string",
+          "example": "us-east-1",
+          "description": "Cluster geo-location"
+        },
+        "provider": {
+          "$ref": "#/definitions/ClusterProvider"
+        },
+        "environment": {
+          "$ref": "#/definitions/ClusterEnvironment"
+        },
+        "infrastructure": {
+          "$ref": "#/definitions/ClusterInfrastructure"
+        },
+        "autoBuildCluster": {
+          "type": "boolean",
+          "default": false
+        },
+        "createPlaybook": {
+          "$ref": "#/definitions/AutomatedClusterPlaybook"
+        },
+        "teardownPlaybook": {
+          "$ref": "#/definitions/AutomatedClusterPlaybook"
+        },
+        "groups": {
+          "type": "array",
+          "description": "List of custom groups that the cluster should be added to",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "backupLocation": {
+          "type": "object",
+          "$ref": "#/definitions/backupLocation"
+        }
+      }
+    },
+    "Cluster_update": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "fordemo",
+          "description": "Cluster name",
+          "maxLength": 64,
+          "pattern": "^[a-z0-9A-Z-_.]*$"
+        },
+        "description": {
+          "type": "string"
+        },
+        "agentMode": {
+          "type": "boolean",
+          "description": "create cluster with agentMode",
+          "default": false
+        },
+        "kubeconfig": {
+          "$ref": "#/definitions/Kubeconfig"
+        },
+        "region": {
+          "type": "string",
+          "example": "us-east-1",
+          "description": "Cluster geo-location"
+        },
+        "provider": {
+          "$ref": "#/definitions/ClusterProvider"
+        },
+        "environment": {
+          "$ref": "#/definitions/ClusterEnvironment"
+        },
+        "infrastructure": {
+          "$ref": "#/definitions/ClusterInfrastructure"
+        },
+        "autoBuildCluster": {
+          "type": "boolean",
+          "default": false
+        },
+        "createPlaybook": {
+          "$ref": "#/definitions/AutomatedClusterPlaybook"
+        },
+        "teardownPlaybook": {
+          "$ref": "#/definitions/AutomatedClusterPlaybook"
+        },
+        "groups": {
+          "type": "array",
+          "description": "List of custom groups that the cluster should be added to",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "AutomatedClusterRequest": {
+      "type": "object",
+      "required": [
+        "description",
+        "name",
+        "provider"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "fordemo",
+          "description": "Cluster name",
+          "maxLength": 64,
+          "pattern": "^[a-z0-9A-Z-_.]*$"
+        },
+        "description": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string",
+          "example": "us-east-1",
+          "description": "Cluster geo-location"
+        },
+        "environment": {
+          "$ref": "#/definitions/ClusterEnvironment"
+        },
+        "infrastructure": {
+          "$ref": "#/definitions/ClusterInfrastructure"
+        },
+        "provider": {
+          "$ref": "#/definitions/ClusterProvider"
+        },
+        "createPlaybook": {
+          "$ref": "#/definitions/AutomatedClusterPlaybook"
+        },
+        "teardownPlaybook": {
+          "$ref": "#/definitions/AutomatedClusterPlaybook"
+        },
+        "groups": {
+          "type": "array",
+          "description": "List of custom groups that the cluster should be added to",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "AutomatedClusterPlaybook": {
+      "type": "object",
+      "required": [
+        "repoRef",
+        "repoBranch",
+        "scriptPath",
+        "sshCredentialRef",
+        "sshTarget"
+      ],
+      "properties": {
+        "repoRef": {
+          "type": "string"
+        },
+        "repoBranch": {
+          "type": "string"
+        },
+        "sshTarget": {
+          "type": "string",
+          "description": "ssh machine address"
+        },
+        "sshPort": {
+          "type": "integer",
+          "description": "Port number for the ssh connection",
+          "default": 22
+        },
+        "sshCredentialRef": {
+          "type": "string",
+          "description": "credentials to the ssh machine"
+        },
+        "scriptPath": {
+          "type": "string",
+          "description": "path to the cluster creation script"
+        }
+      }
+    },
+    "Kubeconfig": {
+      "type": "string",
+      "format": "byte",
+      "description": "Base64 encoded kubernetes credential Please Refer to https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/ for more details.\n",
+      "example": "YXBpVmVyc2lvbjogdjEKa2luZDogQ29uZmlnCg=="
+    },
+    "DRBackup": {
+      "type": "object",
+      "properties": {
+        "installed": {
+          "type": "boolean",
+          "description": "Is Backup & DR components installed"
+        },
+        "active_count": {
+          "type": "integer",
+          "description": "Total number of active backups"
+        },
+        "failed_count": {
+          "type": "integer",
+          "description": "Total number of failed backups"
+        },
+        "time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of last Backup operation"
+        },
+        "velero_spec": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      "required": [
+        "installed"
+      ]
+    },
+    "Namespace": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "namespace name"
+        },
+        "uid": {
+          "type": "string",
+          "description": "kubernetes namespace object uid"
+        }
+      }
+    },
+    "PVC": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "pvc name"
+        },
+        "size": {
+          "type": "string",
+          "description": "size of pvc"
+        },
+        "namespace": {
+          "type": "string",
+          "description": "namespace where pvc exists"
+        },
+        "storageclass": {
+          "type": "string",
+          "description": "pvc storage class"
+        }
+      }
+    },
+    "ClusterResponse": {
+      "type": "object",
+      "properties": {
+        "cluster": {
+          "$ref": "#/definitions/Cluster"
+        }
+      }
+    },
+    "GetNamespacesResponse": {
+      "type": "object",
+      "properties": {
+        "namespaces": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Namespace"
+          }
+        }
+      }
+    },
+    "GetPVCResponse": {
+      "type": "object",
+      "properties": {
+        "pvcs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PVC"
+          }
+        }
+      }
+    },
+    "clusterGroup_data": {
+      "type": "object",
+      "required": [
+        "description",
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "clusterGroup_update": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "ClusterGroupResponse": {
+      "type": "object",
+      "properties": {
+        "clusterGroup": {
+          "$ref": "#/definitions/ClusterGroup"
+        }
+      }
+    },
+    "ListClusterGroupsResponse": {
+      "type": "object",
+      "properties": {
+        "clusterGroups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClusterGroup"
+          }
+        }
+      }
+    },
+    "AddClusterGroupMemberRequest": {
+      "type": "object",
+      "required": [
+        "members"
+      ],
+      "properties": {
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "RemoveClusterGroupMemberRequest": {
+      "type": "object",
+      "required": [
+        "members",
+        "retain_deployments"
+      ],
+      "properties": {
+        "retain_deployments": {
+          "type": "boolean",
+          "description": "Whether or not to retain existing deployments linked to this cluster group"
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ClusterHealth": {
+      "type": "string",
+      "enum": [
+        "Healthy",
+        "Unhealthy",
+        "Pending",
+        "Deleting",
+        "Blocked"
+      ]
+    },
+    "Cluster_status": {
+      "type": "object",
+      "properties": {
+        "childReferences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ChildReference"
+          }
+        },
+        "phase": {
+          "type": "string",
+          "description": "Health Phase"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last updated timestamp"
+        }
+      },
+      "description": "Cluster Health Status"
+    },
+    "autoBuildStatus": {
+      "required": [
+        "clusterStatus"
+      ],
+      "properties": {
+        "clusterStatus": {
+          "type": "string",
+          "enum": [
+            "creating",
+            "teardown",
+            "complete",
+            "failed"
+          ]
+        },
+        "failureReason": {
+          "type": "string"
+        }
+      }
+    },
+    "accessGroup": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "bearerAuth": {
+      "name": "Authorization",
+      "in": "header",
+      "type": "apiKey",
+      "description": "JWT Authorization header"
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

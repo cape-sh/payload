@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { getPayload } from '@/lib/payload'
 
 export async function Footer() {
@@ -16,7 +17,10 @@ export async function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <span className="text-lg font-bold text-white">CAEPE</span>
+            <div className="flex items-center gap-2">
+              <Image src="/images/caepe-icon.png" alt="CAEPE" width={28} height={28} className="h-7 w-7" />
+              <span className="text-lg font-bold text-white">CAEPE</span>
+            </div>
             <p className="mt-2 text-sm text-accent-light">
               Deploy anywhere, manage everything.
             </p>

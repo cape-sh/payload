@@ -1,0 +1,1062 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Notification Management API",
+    "description": "API for the management of notification channels and configuration",
+    "version": "3.0.0"
+  },
+  "servers": [
+    {
+      "url": "/v3"
+    }
+  ],
+  "paths": {
+    "/notification/channel": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "List notification channels",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/getNotificationChannel"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Create notification channel",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/getNotificationChannel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/postNotificationChannelRequest"
+        }
+      }
+    },
+    "/notification/channel/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "description": "Channel ID or Name"
+        },
+        {
+          "in": "header",
+          "name": "organization",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Retrieve details for a notification channel",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/getNotificationChannel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "responses": {
+          "200": {
+            "description": "Partial update of a notification channel",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/getNotificationChannel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/patchNotificationChannelRequest"
+        }
+      },
+      "delete": {
+        "responses": {
+          "204": {
+            "description": "Deleted"
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/notification/rules": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/getNotificationRules"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/getNotificationRules"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/postNotificationRulesRequest"
+        }
+      }
+    },
+    "/notification/rules/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          },
+          "description": "Rule ID or Name"
+        },
+        {
+          "in": "header",
+          "name": "organization",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Retrieve details for a notification channel",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/getNotificationRules"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "responses": {
+          "200": {
+            "description": "Partial update of a notification channel",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/getNotificationRules"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "$ref": "#/components/requestBodies/patchNotificationRulesRequest"
+        }
+      },
+      "delete": {
+        "responses": {
+          "204": {
+            "description": "Deleted"
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errors"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/notification/messages": {
+      "description": "Placeholder for WSS connection for retrieving real-time user notifications",
+      "get": {
+        "description": "Placeholder for WSS connection for retrieving real-time user notifications",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "text/event-stream": {
+                "schema": {
+                  "$ref": "#/components/schemas/notificationMessage"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "notificationRules": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string",
+            "readOnly": true
+          }
+        }
+      },
+      "notificationResource": {
+        "type": "object",
+        "properties": {
+          "resourceType": {
+            "type": "string",
+            "enum": [
+              "cluster",
+              "deployment",
+              "application",
+              "smoketest",
+              "credential",
+              "repository",
+              "schedule",
+              "applicationgroup",
+              "clustergroup",
+              "imageregistry",
+              "backuplocation",
+              "snapshot",
+              "snapshotinstance",
+              "snapshotrestore",
+              "notificationrule",
+              "notificationchannel"
+            ]
+          },
+          "resourceAction": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "action": {
+                  "type": "string",
+                  "enum": [
+                    "create",
+                    "update",
+                    "delete"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "resourceType",
+          "resourceAction"
+        ]
+      },
+      "notificationTarget": {
+        "type": "object",
+        "properties": {
+          "targetType": {
+            "$ref": "#/components/schemas/notificationTargetType"
+          },
+          "targetId": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "id": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "targetId",
+          "targetType"
+        ]
+      },
+      "getNotificationTarget": {
+        "type": "object",
+        "properties": {
+          "targetType": {
+            "$ref": "#/components/schemas/notificationTargetType"
+          },
+          "targetId": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patchNotificationTarget": {
+        "type": "object",
+        "properties": {
+          "targetType": {
+            "$ref": "#/components/schemas/notificationTargetType"
+          },
+          "targetId": {
+            "type": "array",
+            "items": {
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "action": {
+                  "type": "string",
+                  "enum": [
+                    "add",
+                    "delete"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "action"
+              ]
+            }
+          }
+        },
+        "required": [
+          "targetType",
+          "targetId"
+        ]
+      },
+      "notificationTargetType": {
+        "properties": {
+          "targetType": {
+            "type": "string",
+            "enum": [
+              "slack",
+              "teams",
+              "email",
+              "user"
+            ]
+          }
+        }
+      },
+      "getNotificationRules": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/notificationRules"
+          },
+          {
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "enabled": {
+                "type": "boolean",
+                "default": true
+              },
+              "notificationResources": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/notificationResource"
+                }
+              },
+              "notificationTargets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/getNotificationTarget"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "postNotificationRules": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/notificationRules"
+          },
+          {
+            "properties": {
+              "notificationResources": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/components/schemas/notificationResource"
+                }
+              },
+              "notificationTargets": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/components/schemas/notificationTarget"
+                }
+              }
+            }
+          }
+        ],
+        "required": [
+          "name"
+        ]
+      },
+      "patchNotificationRules": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/notificationRules"
+          },
+          {
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "notificationResources": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/notificationResource"
+                }
+              },
+              "notificationTargets": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/patchNotificationTarget"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "notificationChannel": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          }
+        }
+      },
+      "notificationMessage": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "organization": {
+            "title": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "dateTime"
+          }
+        }
+      },
+      "notificationMessages": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/notificationMessage"
+        }
+      },
+      "getNotificationChannel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/notificationChannel"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "channelDetails": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/emailChannelGet"
+                  },
+                  {
+                    "$ref": "#/components/schemas/slackChannel"
+                  },
+                  {
+                    "$ref": "#/components/schemas/teamsChannel"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "patchNotificationChannel": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/notificationChannel"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "channelDetails": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/emailChannelPatch"
+                  },
+                  {
+                    "$ref": "#/components/schemas/slackChannel"
+                  },
+                  {
+                    "$ref": "#/components/schemas/teamsChannel"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "postNotificationChannel": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/notificationChannel"
+          },
+          {
+            "properties": {
+              "channelDetails": {
+                "oneOf": [
+                  {
+                    "$ref": "#/components/schemas/emailChannelPost"
+                  },
+                  {
+                    "$ref": "#/components/schemas/slackChannel"
+                  },
+                  {
+                    "$ref": "#/components/schemas/teamsChannel"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "required": [
+          "name",
+          "channelDetails"
+        ]
+      },
+      "slackChannel": {
+        "type": "object",
+        "properties": {
+          "channelType": {
+            "type": "string",
+            "enum": [
+              "slack"
+            ]
+          },
+          "webhookURL": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "channelType",
+          "webhookURL"
+        ]
+      },
+      "teamsChannel": {
+        "properties": {
+          "channelType": {
+            "type": "string",
+            "enum": [
+              "teams"
+            ]
+          },
+          "webhookURL": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "channelType",
+          "webhookURL"
+        ]
+      },
+      "emailChannel": {
+        "properties": {
+          "channelType": {
+            "type": "string",
+            "enum": [
+              "email"
+            ]
+          }
+        },
+        "required": [
+          "channelType"
+        ]
+      },
+      "emailChannelPost": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/emailChannel"
+          },
+          {
+            "properties": {
+              "users": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "#/components/schemas/emailUsersPost"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "emailChannelPatch": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/emailChannel"
+          },
+          {
+            "properties": {
+              "users": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "#/components/schemas/emailUsersPatch"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "emailChannelGet": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/emailChannel"
+          },
+          {
+            "properties": {
+              "users": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "$ref": "#/components/schemas/emailUsersGet"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "emailUsersPost": {
+        "type": "object",
+        "properties": {
+          "userEmail": {
+            "type": "string",
+            "format": "email"
+          }
+        }
+      },
+      "emailUsersPatch": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/emailUsersPost"
+          },
+          {
+            "properties": {
+              "userAction": {
+                "type": "string",
+                "enum": [
+                  "add",
+                  "delete"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "emailUsersGet": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/emailUsersPost"
+          }
+        ]
+      },
+      "error": {
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ]
+      },
+      "errors": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/error"
+        }
+      }
+    },
+    "requestBodies": {
+      "postNotificationChannelRequest": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/postNotificationChannel"
+            }
+          }
+        }
+      },
+      "patchNotificationChannelRequest": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/patchNotificationChannel"
+            }
+          }
+        }
+      },
+      "postNotificationRulesRequest": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/postNotificationRules"
+            }
+          }
+        }
+      },
+      "patchNotificationRulesRequest": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/patchNotificationRules"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerToken": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "jwt"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerToken": []
+    }
+  ]
+}

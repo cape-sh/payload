@@ -1,0 +1,476 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "CAPE Scheduler",
+    "description": "CAPE Scheduler",
+    "version": "1.0.0"
+  },
+  "host": "www",
+  "basePath": "/v2",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/Scheduler": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "post": {
+        "operationId": "create",
+        "tags": [
+          "Scheduler"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/schedule"
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "scheduler_post",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/schedule_data"
+            }
+          }
+        ]
+      },
+      "get": {
+        "operationId": "list",
+        "tags": [
+          "Scheduler"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/schedule"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Scheduler/{schedule}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "schedule",
+          "type": "string",
+          "required": true,
+          "description": "ID or Name"
+        }
+      ],
+      "patch": {
+        "operationId": "update",
+        "tags": [
+          "Scheduler"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/schedule"
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "scheduler_patch",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/schedule_data"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "delete",
+        "tags": [
+          "Scheduler"
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "get",
+        "tags": [
+          "Scheduler"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/schedule"
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Scheduler/Timezones": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "operationId": "gettimezones",
+        "tags": [
+          "Timezones"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/timezone"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "schedule": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "minute": {
+          "type": "string",
+          "pattern": "^([1-9]|[1-5][0-9]|0)$"
+        },
+        "hour": {
+          "type": "string",
+          "pattern": "^([0-9]|1[0-9]|2[0-3]|[*])$"
+        },
+        "day": {
+          "type": "string",
+          "pattern": "^([1-2][0-9]|[1-9]|3[0-1]|[*])$"
+        },
+        "week": {
+          "type": "string",
+          "pattern": "^([0-9]|[1-4][0-9]|5[0-2]|[*])$"
+        },
+        "month": {
+          "type": "string",
+          "pattern": "^([0-9]|1[0-2]|[*])$"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "pattern": "^(([0-6](,[0-6])*|[*]))$"
+        },
+        "action": {
+          "type": "string",
+          "enum": [
+            "block",
+            "schedule"
+          ]
+        },
+        "deployment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/deployment"
+          }
+        },
+        "duration": {
+          "type": "object",
+          "$ref": "#/definitions/duration"
+        },
+        "clusters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/cluster"
+          }
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "description": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "schedule_data": {
+      "properties": {
+        "Name": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "minute": {
+          "type": "string",
+          "pattern": "^([1-9]|[1-5][0-9]|0)$"
+        },
+        "hour": {
+          "type": "string",
+          "pattern": "^([0-9]|1[0-9]|2[0-3]|[*])$"
+        },
+        "day": {
+          "type": "string",
+          "pattern": "^([1-2][0-9]|[1-9]|3[0-1]|[*])$"
+        },
+        "week": {
+          "type": "string",
+          "pattern": "^([0-9]|[1-4][0-9]|5[0-2]|[*])$"
+        },
+        "month": {
+          "type": "string",
+          "pattern": "^([0-9]|1[0-2]|[*])$"
+        },
+        "dayOfWeek": {
+          "type": "string",
+          "pattern": "^(([0-6](,[0-6])*|[*]))$"
+        },
+        "action": {
+          "type": "string",
+          "enum": [
+            "block",
+            "schedule"
+          ]
+        },
+        "deployment": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/deployment"
+          }
+        },
+        "duration": {
+          "type": "object",
+          "$ref": "#/definitions/duration"
+        },
+        "clusters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/cluster"
+          }
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "description": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "cluster": {
+      "properties": {
+        "clusterName": {
+          "type": "string"
+        }
+      }
+    },
+    "deployment": {
+      "properties": {
+        "deploymentName": {
+          "type": "string"
+        }
+      }
+    },
+    "timezone": {
+      "properties": {
+        "timezone": {
+          "type": "string"
+        }
+      }
+    },
+    "duration": {
+      "properties": {
+        "minute": {
+          "type": "string",
+          "pattern": "^([1-9]|[1-5][0-9]|60)$"
+        },
+        "hour": {
+          "type": "string",
+          "pattern": "^([0-9]|1[0-9]|2[0-3]|[*])$"
+        }
+      }
+    },
+    "error": {
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ]
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/error"
+      }
+    },
+    "accessGroup": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "bearerAuth": {
+      "name": "Authorization",
+      "in": "header",
+      "type": "apiKey",
+      "description": "JWT Authorization header"
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

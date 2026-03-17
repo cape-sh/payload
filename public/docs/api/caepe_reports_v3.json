@@ -1,0 +1,657 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "description" : "Caepe Server Reports API",
+    "title" : "Caepe Reports",
+    "version" : "1.0.0"
+  },
+  "servers" : [
+    {
+      "url" : "https://www/v3"
+    }
+  ],
+  "security" : [
+    {
+      "bearerToken" : [ ]
+    }
+  ],
+  "paths" : {
+    "/auditlog" : {
+      "get" : {
+        "description" : "Audit trail retrieval",
+        "parameters" : [
+          {
+            "in" : "header",
+            "name" : "organization",
+            "required" : true,
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "pageSize",
+            "schema" : {
+              "default" : 10,
+              "type" : "integer"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "pageNumber",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "resourceType",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "resourceName",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "user",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "action",
+            "schema" : {
+              "enum" : [ "create", "update", "delete" ],
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "fromDateTime",
+            "schema" : {
+              "format" : "date-time",
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "toDateTime",
+            "schema" : {
+              "format" : "date-time",
+              "type" : "string"
+            }
+          },
+          {
+            "description" : "Comma seperated values for sorting eg sort=user or sort=user,action",
+            "explode" : false,
+            "in" : "query",
+            "name" : "sort",
+            "schema" : {
+              "items" : {
+                "enum" : [ "datetime", "user", "resourceType", "resourceName", "action" ],
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "style" : "form"
+          },
+          {
+            "in" : "query",
+            "name" : "order",
+            "schema" : {
+              "default" : "dsc",
+              "enum" : [ "asc", "dsc" ],
+              "type" : "string"
+            }
+          }
+        ],
+        "responses" : {
+          "200" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "items" : {
+                    "$ref" : "#/components/schemas/auditLog"
+                  },
+                  "type" : "array"
+                }
+              }
+            },
+            "description" : "OK"
+          },
+          "400" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/errors"
+                }
+              }
+            },
+            "description" : "Errors"
+          },
+          "401" : {
+            "content" : { },
+            "description" : "Unauthorized"
+          },
+          "422" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            },
+            "description" : "Unprocessable Entity"
+          }
+        },
+        "summary" : "Returns the audit trail."
+      }
+    },
+    "/recommendations/workload": {
+      "get": {
+        "parameters" : [
+          {
+            "in" : "header",
+            "name" : "organization",
+            "required" : true,
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "pageSize",
+            "schema" : {
+              "default" : 10,
+              "type" : "integer"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "pageNumber",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "resource",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "cluster",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "impact",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "status",
+            "schema" : {
+              "enum" : [
+                "Resolved",
+                "Unresolved"
+              ],
+              "type" : "string"
+            }
+          },
+          {
+            "description" : "Comma seperated values for sorting eg sort=user or sort=user,action",
+            "explode" : false,
+            "in" : "query",
+            "name" : "sort",
+            "schema" : {
+              "items" : {
+                "enum" : [
+                  "resource",
+                  "cluster",
+                  "imapct",
+                  "status"
+                ],
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "style" : "form"
+          },
+          {
+            "in" : "query",
+            "name" : "order",
+            "schema" : {
+              "default" : "dsc",
+              "enum" : [
+                "asc",
+                "dsc"
+              ],
+              "type" : "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/recommandations"
+                }
+              }
+            }
+          },
+          "400" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/errors"
+                }
+              }
+            },
+            "description" : "Errors"
+          },
+          "401" : {
+            "content" : { },
+            "description" : "Unauthorized"
+          },
+          "422" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            },
+            "description" : "Unprocessable Entity"
+          }
+        }
+      }
+    },
+    "/recommendations/cluster": {
+      "get": {
+        "parameters" : [
+          {
+            "in" : "header",
+            "name" : "organization",
+            "required" : true,
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "pageSize",
+            "schema" : {
+              "default" : 10,
+              "type" : "integer"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "pageNumber",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "resource",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "cluster",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "impact",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "status",
+            "schema" : {
+              "enum" : [
+                "Resolved",
+                "Unresolved"
+              ],
+              "type" : "string"
+            }
+          },
+          {
+            "description" : "Comma seperated values for sorting eg sort=user or sort=user,action",
+            "explode" : false,
+            "in" : "query",
+            "name" : "sort",
+            "schema" : {
+              "items" : {
+                "enum" : [
+                  "resource",
+                  "cluster",
+                  "imapct",
+                  "status"
+                ],
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "style" : "form"
+          },
+          {
+            "in" : "query",
+            "name" : "order",
+            "schema" : {
+              "default" : "dsc",
+              "enum" : [
+                "asc",
+                "dsc"
+              ],
+              "type" : "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/recommandations"
+                }
+              }
+            }
+          },
+          "400" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/errors"
+                }
+              }
+            },
+            "description" : "Errors"
+          },
+          "401" : {
+            "content" : { },
+            "description" : "Unauthorized"
+          },
+          "422" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            },
+            "description" : "Unprocessable Entity"
+          }
+        }
+      }
+    },
+    "/recommendations/security": {
+      "get": {
+        "parameters" : [
+          {
+            "in" : "header",
+            "name" : "organization",
+            "required" : true,
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "pageSize",
+            "schema" : {
+              "default" : 10,
+              "type" : "integer"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "pageNumber",
+            "schema" : {
+              "type" : "integer"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "resource",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "cluster",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "impact",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          {
+            "in" : "query",
+            "name" : "status",
+            "schema" : {
+              "enum" : [
+                "Resolved",
+                "Unresolved"
+              ],
+              "type" : "string"
+            }
+          },
+          {
+            "description" : "Comma seperated values for sorting eg sort=user or sort=user,action",
+            "explode" : false,
+            "in" : "query",
+            "name" : "sort",
+            "schema" : {
+              "items" : {
+                "enum" : [
+                  "resource",
+                  "cluster",
+                  "imapct",
+                  "status"
+                ],
+                "type" : "string"
+              },
+              "type" : "array"
+            },
+            "style" : "form"
+          },
+          {
+            "in" : "query",
+            "name" : "order",
+            "schema" : {
+              "default" : "dsc",
+              "enum" : [
+                "asc",
+                "dsc"
+              ],
+              "type" : "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/recommandations"
+                }
+              }
+            }
+          },
+          "400" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/errors"
+                }
+              }
+            },
+            "description" : "Errors"
+          },
+          "401" : {
+            "content" : { },
+            "description" : "Unauthorized"
+          },
+          "422" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/error"
+                }
+              }
+            },
+            "description" : "Unprocessable Entity"
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "auditLog" : {
+        "properties" : {
+          "resourceType" : {
+            "type" : "string"
+          },
+          "resourceName" : {
+            "type" : "string"
+          },
+          "action" : {
+            "enum" : [ "create", "update", "delete" ],
+            "type" : "string"
+          },
+          "user" : {
+            "type" : "string"
+          },
+          "datetime" : {
+            "format" : "date-time",
+            "type" : "string"
+          },
+          "metadata" : {
+            "$ref" : "#/components/schemas/metadata"
+          }
+        },
+        "type" : "object"
+      },
+      "recommendation" : {
+        "properties" : {
+          "id" : {
+            "format" : "uuid",
+            "type" : "string"
+          },
+          "impact" : {
+            "enum" : [ "High", "Medium", "Low" ],
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "resource" : {
+            "type" : "string"
+          },
+          "cluster" : {
+            "type" : "string"
+          },
+          "status" : {
+            "enum" : [ "Resolved", "Unresolved" ],
+            "type" : "string"
+          }
+        },
+        "type" : "object"
+      },
+      "recommandations" : {
+        "properties" : {
+          "recommandations" : {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/recommendation"
+            }
+          },
+          "metadata" : {
+            "$ref" : "#/components/schemas/metadata"
+          }
+        },
+        "type" : "object"
+      },
+      "metadata" : {
+        "properties" : {
+          "totalCount" : {
+            "type" : "integer"
+          },
+          "pageSize" : {
+            "type" : "integer"
+          }
+        },
+        "type" : "object"
+      },
+      "errors" : {
+        "items" : {
+          "$ref" : "#/components/schemas/error"
+        },
+        "type" : "array",
+        "x-omitempty" : true
+      },
+      "error" : {
+        "properties" : {
+          "code" : {
+            "format" : "int32",
+            "type" : "integer"
+          },
+          "reason" : {
+            "type" : "string"
+          },
+          "message" : {
+            "type" : "string"
+          },
+          "status" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "code", "message" ],
+        "type" : "object"
+      }
+    },
+    "securitySchemes" : {
+      "bearerToken" : {
+        "description" : "JWT Authorization header",
+        "in" : "header",
+        "name" : "Authorization",
+        "type" : "apiKey"
+      }
+    }
+  },
+  "x-original-swagger-version" : "2.0"
+}

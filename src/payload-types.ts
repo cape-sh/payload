@@ -306,6 +306,8 @@ export interface Page {
             blockType: 'pricingTable';
           }
         | CTAFormBlock
+        | FeatureGridBlock
+        | CardGridBlock
       )[]
     | null;
   meta?: {
@@ -397,6 +399,65 @@ export interface CTAFormBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'ctaForm';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FeatureGridBlock".
+ */
+export interface FeatureGridBlock {
+  /**
+   * Small label above the headline (e.g. "Why CAEPE")
+   */
+  eyebrow?: string | null;
+  /**
+   * Section headline
+   */
+  headline?: string | null;
+  items?:
+    | {
+        title: string;
+        description: string;
+        icon?: ('deploy' | 'shield' | 'cube' | 'dollar' | 'rocket' | 'check' | 'clock' | 'code') | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Optional CTA button text
+   */
+  cta_label?: string | null;
+  /**
+   * Optional CTA button link
+   */
+  cta_href?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'featureGrid';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CardGridBlock".
+ */
+export interface CardGridBlock {
+  /**
+   * Small label above the headline
+   */
+  eyebrow?: string | null;
+  /**
+   * Section headline
+   */
+  headline?: string | null;
+  cards?:
+    | {
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  cta_label?: string | null;
+  cta_href?: string | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'cardGrid';
 }
 /**
  * Articles, guides, and other resources
@@ -685,6 +746,8 @@ export interface PagesSelect<T extends boolean = true> {
               blockName?: T;
             };
         ctaForm?: T | CTAFormBlockSelect<T>;
+        featureGrid?: T | FeatureGridBlockSelect<T>;
+        cardGrid?: T | CardGridBlockSelect<T>;
       };
   meta?:
     | T
@@ -723,6 +786,45 @@ export interface CTAFormBlockSelect<T extends boolean = true> {
   subheadline?: T;
   form_id?: T;
   body_copy?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FeatureGridBlock_select".
+ */
+export interface FeatureGridBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  headline?: T;
+  items?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        icon?: T;
+        id?: T;
+      };
+  cta_label?: T;
+  cta_href?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CardGridBlock_select".
+ */
+export interface CardGridBlockSelect<T extends boolean = true> {
+  eyebrow?: T;
+  headline?: T;
+  cards?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  cta_label?: T;
+  cta_href?: T;
   id?: T;
   blockName?: T;
 }

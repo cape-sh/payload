@@ -1,0 +1,914 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Snapshot API",
+    "description": "Snapshot API",
+    "version": "1.0.0"
+  },
+  "host": "www",
+  "basePath": "/v2",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/snapshot": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "operationId": "listsnapshot",
+        "tags": [
+          "Snapshot"
+        ],
+        "summary": "Returns a list of snapshots definitions",
+        "description": "Optional extended description in Markdown.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/snapshot"
+              }
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createsnapshot",
+        "tags": [
+          "Snapshot"
+        ],
+        "summary": "Creates a new snapshots definition",
+        "description": "Creates a new snapshots definition",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "post_snapshot",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/snapshot_post"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/snapshot"
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/snapshot/{snapshot}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "snapshot",
+          "type": "string",
+          "required": true,
+          "description": "Snapshot Name or ID"
+        }
+      ],
+      "get": {
+        "operationId": "getsnapshot",
+        "tags": [
+          "Snapshot"
+        ],
+        "summary": "Gets a snapshots definition",
+        "description": "Gets a snapshots definition",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/definitions/snapshot"
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "updatesnapshot",
+        "tags": [
+          "Snapshot"
+        ],
+        "summary": "Updates a snapshots definition",
+        "description": "Updates a snapshots definition",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "patch_snapshot",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/snapshot_patch"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/definitions/snapshot"
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deletesnapshot",
+        "tags": [
+          "Snapshot"
+        ],
+        "summary": "Deletes a snapshots definition",
+        "description": "Deletes a snapshots definition",
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/snapshot/snapshotInstance": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "post": {
+        "operationId": "createsnapshotinstance",
+        "tags": [
+          "SnapshotInstance"
+        ],
+        "parameters": [
+          {
+            "name": "post_snapshotinstance",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/snapshotInstance_Post"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/snapshotInstance"
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "listsnapshotinstance",
+        "tags": [
+          "SnapshotInstance"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/snapshotInstance"
+              }
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/snapshot/snapshotInstance/{snapshot_instance}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "snapshot_instance",
+          "type": "string",
+          "required": true,
+          "description": "Snapshot Instance Name or ID"
+        }
+      ],
+      "get": {
+        "operationId": "getsnapshotinstance",
+        "tags": [
+          "SnapshotInstance"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/definitions/snapshotInstance"
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deletesnapshotinstance",
+        "tags": [
+          "SnapshotInstance"
+        ],
+        "responses": {
+          "204": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/snapshot/snapshotDeployment": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "post": {
+        "operationId": "createsnapshotdeployment",
+        "tags": [
+          "SnapshotInstanceDeployment"
+        ],
+        "parameters": [
+          {
+            "name": "post_snapshotinstancedeployment",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/snapshotInstanceDeployments_Post"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Ok",
+            "schema": {
+              "$ref": "#/definitions/snapshotInstanceDeployments"
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "listsnapshotdeployment",
+        "tags": [
+          "SnapshotInstanceDeployment"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/snapshotInstanceDeployments"
+              }
+            }
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/snapshot/snapshotDeployment/{snapshot_deployment}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "in": "path",
+          "name": "snapshot_deployment",
+          "type": "string",
+          "required": true,
+          "description": "Snapshot Deployment Name or ID"
+        }
+      ],
+      "delete": {
+        "operationId": "deletesnapshotdeployment",
+        "tags": [
+          "SnapshotInstanceDeployment"
+        ],
+        "responses": {
+          "204": {
+            "description": "Ok"
+          },
+          "400": {
+            "description": "Error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "error": {
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ]
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/error"
+      }
+    },
+    "label": {
+      "properties": {
+        "labelKey": {
+          "type": "string"
+        },
+        "labelValue": {
+          "type": "string"
+        }
+      }
+    },
+    "namespace": {
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "pvc": {
+      "properties": {
+        "namespace": {
+          "type": "string"
+        },
+        "volumeName": {
+          "type": "string"
+        }
+      }
+    },
+    "resource": {
+      "properties": {
+        "resourceName": {
+          "type": "string"
+        }
+      }
+    },
+    "snapshot": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "name": {
+          "type": "string"
+        },
+        "testRunRef": {
+          "type": "string"
+        },
+        "deleteSnapshotInstance": {
+          "type": "boolean"
+        },
+        "removeSnapshotInstance": {
+          "type": "boolean"
+        },
+        "defaultClusterRef": {
+          "type": "string",
+          "description": "Cluster Group name inbuilt or custom"
+        },
+        "namespaces": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/namespace"
+          }
+        },
+        "pvc": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/pvc"
+          }
+        },
+        "label": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/label"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/resource"
+          }
+        },
+        "snapshotLocationRef": {
+          "type": "string"
+        },
+        "snapshotInstances": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/snapshotInstance"
+          }
+        },
+        "snapshotType": {
+          "type": "string",
+          "enum": [
+            "Smoke Test"
+          ]
+        },
+        "sourceClusterRef": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "snapshot_post": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "testRunRef": {
+          "type": "string"
+        },
+        "deleteSnapshotInstance": {
+          "type": "boolean"
+        },
+        "removeSnapshotInstance": {
+          "type": "boolean"
+        },
+        "defaultClusterRef": {
+          "type": "string",
+          "description": "Cluster Group name inbuilt or custom"
+        },
+        "namespaces": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/namespace"
+          }
+        },
+        "label": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/label"
+          }
+        },
+        "pvc": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/pvc"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/resource"
+          }
+        },
+        "snapshotLocationRef": {
+          "type": "string"
+        },
+        "snapshotType": {
+          "type": "string",
+          "enum": [
+            "Smoke Test"
+          ]
+        },
+        "sourceClusterRef": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "snapshotLocationRef",
+        "snapshotType"
+
+      ]
+    },
+    "snapshot_patch": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "testRunRef": {
+          "type": "string"
+        },
+        "deleteSnapshotInstance": {
+          "type": "boolean"
+        },
+        "removeSnapshotInstance": {
+          "type": "boolean"
+        },
+        "defaultClusterRef": {
+          "type": "string",
+          "description": "Cluster Group name inbuilt or custom"
+        },
+        "namespaces": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/namespace"
+          }
+        },
+        "label": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/label"
+          }
+        },
+        "pvc": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/pvc"
+          }
+        },
+        "resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/resource"
+          }
+        },
+        "snapshotLocationRef": {
+          "type": "string"
+        },
+        "snapshotType": {
+          "type": "string",
+          "enum": [
+            "Smoke Test"
+          ]
+        },
+        "sourceClusterRef": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "snapshotInstance_Post": {
+      "properties": {
+        "snapshotRef": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "clusterRef": {
+          "type": "string",
+          "description": "If provided deploys the snapshot"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "snapshotInstance": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "errorMessage": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Completed",
+            "Failed",
+            "Pending",
+            "Validating",
+            "FailedValidation",
+            "Running",
+            "Deleting",
+            "FailedDeleting"
+          ]
+        },
+        "deployedCluster": {
+          "type": "string"
+        },
+        "snapshotRef": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "snapshotInstanceDeployments": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "version": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Success",
+            "Failed",
+            "Pending"
+          ]
+        },
+        "deployedCluster": {
+          "type": "string"
+        },
+        "snapshotInstanceRef": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "testRunRef": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "snapshotInstanceDeployments_Post": {
+      "properties": {
+        "snapshotInstanceRef": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "clusterRef": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "accessGroup": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "bearerAuth": {
+      "name": "Authorization",
+      "in": "header",
+      "type": "apiKey",
+      "description": "JWT Authorization header"
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

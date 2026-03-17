@@ -12,6 +12,7 @@ const nextConfig = {
       { source: '/wp-admin', destination: '/', permanent: true },
       { source: '/wp-admin/:path*', destination: '/', permanent: true },
       { source: '/wp-login.php', destination: '/', permanent: true },
+      { source: '/docs/index', destination: '/docs', permanent: true },
     ]
   },
   webpack: (webpackConfig) => {

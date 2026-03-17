@@ -1,0 +1,56 @@
+{
+  "$schema": "https://caepe.sh/caepe/schema#",
+  "$id": "https://caepe.sh/caepe/schema/org-resources.schema.json",
+  "title": "Organization Resource Record",
+  "type": "object",
+  "properties": {
+    "organization": {
+      "type": "string"
+    },
+    "caepeId": {
+      "type": "string"
+    },
+    "organizationResources": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/resource"
+      }
+    }
+  },
+  "required": [
+  ],
+  "$defs": {
+    "resource": {
+      "type": "object",
+      "properties": {
+        "resourceType": {
+          "type": "string"
+        },
+        "resourceName": {
+          "type": "string"
+        },
+        "resourceId": {
+          "type": "string"
+        },
+        "accessTags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/accessTag"
+          }
+        }
+      },
+      "required": [
+        "resourceId"
+      ]
+    },
+    "accessTag": {
+      "type": "object",
+      "properties": {
+        "accessTagName": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

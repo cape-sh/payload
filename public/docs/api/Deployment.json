@@ -1,0 +1,1733 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Deployment API",
+    "description": "API for CAPE Deployments",
+    "version": "1.0.0"
+  },
+  "host": "www",
+  "basePath": "/v2",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/Deployments": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "post": {
+        "operationId": "create",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/deployment"
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "post_deployments",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/deployment_data"
+            }
+          }
+        ]
+      },
+      "get": {
+        "operationId": "list",
+        "tags": [
+          "deployment"
+        ],
+        "parameters": [
+          {
+            "name": "deploymentType",
+            "in": "query",
+            "type": "string",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/deployment"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Deployments/{deployment}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        },
+        {
+          "description": "Deployment Name or ID",
+          "name": "deployment",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "patch": {
+        "operationId": "update",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/deployment"
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "patch_deployment",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/deployment_patch"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "delete",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Deployments/{deployment}/rollback": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        },
+        {
+          "description": "Deployment Name or ID",
+          "name": "deployment",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "post": {
+        "operationId": "rollback",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/deployment"
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/DeploymentStatus/{deployment}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "get": {
+        "operationId": "get",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/deploymentStatus"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "description": "Deployment status",
+            "name": "deployment",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/Deployments/{deployment}/rollout": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        },
+        {
+          "in": "path",
+          "name": "deployment",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "patch": {
+        "operationId": "rollout",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/deployment"
+            }
+          },
+          "400": {
+            "description": "Failure response",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Deployments/canary": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "post": {
+        "operationId": "canary_create",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/canaryDeployment"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "deployments",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/canaryDeployment_data"
+            }
+          }
+        ]
+      }
+    },
+    "/Deployments/canary/{id}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        },
+        {
+          "in": "path",
+          "name": "id",
+          "type": "string",
+          "required": true,
+          "description": "Canary Deployment Name or Strategy ID"
+        }
+      ],
+      "delete": {
+        "operationId": "delete_canary",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "patch_canary",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/canaryDeployment"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "patch_canary_deployment",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/canaryDeployment_patch"
+            }
+          }
+        ]
+      },
+      "get": {
+        "operationId": "get_canary",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/canaryDeployment"
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Deployments/multi": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "post": {
+        "operationId": "create_bulk",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/deployment"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "deployments",
+            "in": "body",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/deployment_data"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/Deployments/multi/{strategy}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        },
+        {
+          "in": "path",
+          "name": "strategy",
+          "type": "string",
+          "required": true,
+          "description": "Strategy Name or Strategy ID"
+        }
+      ],
+      "delete": {
+        "operationId": "delete_bulk",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "operationId": "patch_bulk",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/deployment"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "patch_multi_deployment",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/deployment_multi_patch"
+            }
+          }
+        ]
+      }
+    },
+    "/Deployments/estimate": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "post": {
+        "operationId": "estimate",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/timeAndSize"
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "post_deployments",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/deployment_estimate"
+            }
+          }
+        ]
+      }
+    },
+    "/Deployments/dryrun": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "post": {
+        "operationId": "dryrun",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/responseData"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "post_deployments",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/deployment_dryrun"
+            }
+          }
+        ]
+      }
+    },
+    "/Deployments/preflight/{cluster}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        },
+        {
+          "description": "Cluster Name or ID",
+          "name": "cluster",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "post": {
+        "operationId": "preflight",
+        "tags": [
+          "deployment"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/preflight"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "preflight",
+            "in": "body",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/preflight_post"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/Deployments/queue": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "post": {
+        "operationId": "updateQueue",
+        "tags": [
+          "deploymentQueue"
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/deploymentQueue"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "post_deploymentsQueue",
+            "in": "body",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/deploymentQueue"
+              }
+            }
+          }
+        ]
+      },
+      "get": {
+        "operationId": "listQueue",
+        "tags": [
+          "deploymentQueue"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/deploymentQueue"
+              }
+            }
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "deployment": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "cluster": {
+          "type": "object",
+          "$ref": "#/definitions/cluster"
+        },
+        "application": {
+          "type": "string"
+        },
+        "deploymentType": {
+          "$ref": "#/definitions/deploymentType"
+        },
+        "postDeployActivities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/postDeployment"
+          }
+        },
+        "status": {
+          "type": "string"
+        },
+        "clusterStatus": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/clusterStatus"
+          }
+        },
+        "release": {
+          "type": "object",
+          "$ref": "#/definitions/release"
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "smoketest": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/smoketest"
+          }
+        },
+        "deploymentHistory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/deploymentHistory"
+          }
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "strategy": {
+          "type": "object",
+          "$ref": "#/definitions/strategy"
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/arguments"
+          }
+        },
+        "responseData": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/responseData"
+          }
+        },
+        "priority": {
+          "type": "string",
+          "enum": [
+            "highest",
+            "high",
+            "normal",
+            "low",
+            "lowest"
+          ]
+        }
+      },
+      "required": [
+        "application",
+        "name",
+        "cluster"
+      ]
+    },
+    "deployment_data": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "cluster": {
+          "type": "object",
+          "$ref": "#/definitions/cluster"
+        },
+        "application": {
+          "type": "string"
+        },
+        "deploymentType": {
+          "$ref": "#/definitions/deploymentType"
+        },
+        "postDeployActivities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/postDeployment"
+          }
+        },
+        "release": {
+          "type": "object",
+          "$ref": "#/definitions/release"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "strategy": {
+          "type": "object",
+          "$ref": "#/definitions/strategy_data"
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/arguments"
+          }
+        },
+        "priority": {
+          "type": "string",
+          "enum": [
+            "highest",
+            "high",
+            "normal",
+            "low",
+            "lowest"
+          ]
+        }
+      },
+      "required": [
+        "application",
+        "name",
+        "cluster"
+      ]
+    },
+    "deployment_estimate": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "cluster": {
+          "type": "object",
+          "$ref": "#/definitions/cluster"
+        },
+        "application": {
+          "type": "string"
+        },
+        "deploymentType": {
+          "$ref": "#/definitions/deploymentType"
+        },
+        "postDeployActivities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/postDeployment"
+          }
+        },
+        "release": {
+          "type": "object",
+          "$ref": "#/definitions/release"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "strategy": {
+          "type": "object",
+          "$ref": "#/definitions/strategy_data"
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/arguments"
+          }
+        },
+        "bandwidth": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "application",
+        "name",
+        "cluster"
+      ]
+    },
+    "deployment_dryrun": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "cluster": {
+          "type": "object",
+          "$ref": "#/definitions/cluster"
+        },
+        "application": {
+          "type": "string"
+        },
+        "deploymentType": {
+          "type": "string",
+          "enum": [
+            "dry-run"
+          ],
+          "default": "dry-run"
+        },
+        "release": {
+          "type": "object",
+          "$ref": "#/definitions/release"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "strategy": {
+          "type": "object",
+          "$ref": "#/definitions/strategy_data"
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/arguments"
+          }
+        }
+      },
+      "required": [
+        "application",
+        "name",
+        "cluster"
+      ]
+    },
+    "canaryDeployment": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "routerType": {
+          "type": "string",
+          "enum": [
+            "nginx",
+            "istio",
+            "linkerd"
+          ]
+        },
+        "existingDeployment": {
+          "type": "string"
+        },
+        "existingDeploymentTraffic": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99
+        },
+        "canaryDeployment": {
+          "$ref": "#/definitions/deployment"
+        }
+      }
+    },
+    "canaryDeployment_data": {
+      "properties": {
+        "routerType": {
+          "type": "string",
+          "enum": [
+            "nginx",
+            "istio",
+            "linkerd"
+          ]
+        },
+        "existingDeployment": {
+          "type": "string"
+        },
+        "existingDeploymentTraffic": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99
+        },
+        "canaryDeployment": {
+          "$ref": "#/definitions/deployment_data"
+        }
+      }
+    },
+    "canaryDeployment_patch": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "existingDeploymentTraffic": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99
+        }
+      }
+    },
+    "release": {
+      "properties": {
+        "branch": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "chartVersion": {
+          "type": "string"
+        }
+      }
+    },
+    "deployment_multi_patch": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "deployment_patch": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "cluster": {
+          "type": "object",
+          "$ref": "#/definitions/cluster"
+        },
+        "application": {
+          "type": "string"
+        },
+        "deploymentType": {
+          "$ref": "#/definitions/deploymentType"
+        },
+        "postDeployActivities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/postDeployment"
+          }
+        },
+        "release": {
+          "type": "object",
+          "$ref": "#/definitions/release"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "strategy": {
+          "type": "object",
+          "$ref": "#/definitions/strategy_data"
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/arguments"
+          }
+        },
+        "priority": {
+          "type": "string",
+          "enum": [
+            "highest",
+            "high",
+            "normal",
+            "low",
+            "lowest"
+          ]
+        }
+      }
+    },
+    "deploymentStatus": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "objectType": {
+          "type": "string"
+        },
+        "deploymentName": {
+          "type": "string"
+        },
+        "creationDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastUpdate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deploymentCluster": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/cluster"
+          }
+        }
+      }
+    },
+    "cluster": {
+      "properties": {
+        "clusterName": {
+          "type": "string"
+        },
+        "clusterId": {
+          "type": "string",
+          "format": "uuid"
+        }
+      },
+      "required": [
+        "clusterName"
+      ]
+    },
+    "clusterStatus": {
+      "properties": {
+        "clusterName": {
+          "type": "string"
+        },
+        "clusterId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "deploymentStatus": {
+          "type": "string",
+          "enum": [
+            "success",
+            "failed",
+            "pending"
+          ]
+        },
+        "deploymentMessage": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "clusterName"
+      ]
+    },
+    "error": {
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ]
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/error"
+      }
+    },
+    "postDeployment": {
+      "properties": {
+        "postDeployActivities": {
+          "type": "string",
+          "enum": [
+            "smoketest"
+          ]
+        }
+      }
+    },
+    "deploymentHistory": {
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "Success",
+            "Pending",
+            "Failed"
+          ]
+        },
+        "application": {
+          "type": "string"
+        },
+        "appVersion": {
+          "type": "string"
+        },
+        "deployedDate": {
+          "type": "string"
+        },
+        "cluster": {
+          "type": "object",
+          "$ref": "#/definitions/cluster"
+        },
+        "user": {
+          "type": "object",
+          "$ref": "#/definitions/user"
+        },
+        "deploymentSize": {
+          "type": "string"
+        },
+        "deploymentTime": {
+          "type": "string"
+        }
+      }
+    },
+    "user": {
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        }
+      }
+    },
+    "accessGroup": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "strategy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "maxUnavailable": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "maxSurge": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },    
+    "strategy_data": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "maxUnavailable": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "maxSurge": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "arguments": {
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "clusterOrGroup": {
+          "type": "string"
+        }
+      }
+    },
+    "timeAndSize": {
+      "properties": {
+        "time": {
+          "type": "string"
+        },
+        "size": {
+          "type": "string"
+        }
+      }
+    },
+    "preflight": {
+      "properties": {
+        "application": {
+          "type": "string",
+          "enum": [
+            "nginx",
+            "postgresSql",
+            "mysql",
+            "mariaDB"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "status": {
+          "type": "boolean"
+        },
+        "dateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "output": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "preflight_post": {
+      "properties": {
+        "application": {
+          "type": "string",
+          "enum": [
+            "nginx",
+            "postgresSql",
+            "mysql",
+            "mariaDB"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "labelValue": {
+          "type": "string"
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "responseData": {
+      "properties": {
+        "lineItem": {
+          "type": "string"
+        },
+        "dateTime": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "smoketest": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "name": {
+          "type": "string"
+        },
+        "appRef": {
+          "type": "string"
+        },
+        "smoketestType": {
+          "type": "string",
+          "enum": [
+            "ssh",
+            "webhook"
+          ]
+        },
+        "ssh": {
+          "$ref": "#/definitions/sshProperties"
+        },
+        "webhook": {
+          "$ref": "#/definitions/webhookProperties"
+        },
+        "smoketestHistory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/smoketestHistory"
+          }
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "webhookProperties": {
+      "properties": {
+        "webhookURI": {
+          "type": "string"
+        },
+        "authenticationType": {
+          "type": "string",
+          "enum": [
+            "Basic",
+            "Bearer"
+          ]
+        },
+        "credentialRef": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "webhookURI"
+      ]
+    },
+    "sshProperties": {
+      "properties": {
+        "sshTarget": {
+          "type": "string"
+        },
+        "credentialRef": {
+          "type": "string"
+        },
+        "scriptPath": {
+          "type": "string"
+        },
+        "repoRef": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        }
+      }
+    },
+    "smoketestHistory": {
+      "properties": {
+        "dateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Passed",
+            "Failed",
+            "Pending"
+          ]
+        }
+      }
+    },
+    "deploymentType": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "smoketest",
+        "ab",
+        "highlander",
+        "rolling",
+        "blue-green",
+        "dry-run"
+      ],
+      "default": "standard"
+    },
+    "deploymentQueue": {
+      "properties": {
+        "deploymentId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "queuePosition": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "bearerAuth": {
+      "name": "Authorization",
+      "in": "header",
+      "type": "apiKey",
+      "description": "JWT Authorization header"
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

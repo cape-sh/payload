@@ -1,0 +1,421 @@
+[
+  {
+    "title": "What is CAEPE",
+    "slug": ""
+  },
+  {
+    "title": "About CAEPE",
+    "children": [
+      {
+        "title": "Features",
+        "slug": "introduction/features"
+      },
+      {
+        "title": "Architecture",
+        "slug": "introduction/architecture"
+      },
+      {
+        "title": "Pricing & Availability",
+        "slug": "introduction/pricing_and_availability"
+      }
+    ]
+  },
+  {
+    "title": "Test Drive Instructions",
+    "slug": "getting_started/testdrive"
+  },
+  {
+    "title": "Quick start",
+    "slug": "getting_started/index"
+  },
+  {
+    "title": "Deployments",
+    "slug": "deployments"
+  },
+  {
+    "title": "Configuration",
+    "children": [
+      {
+        "title": "Clusters",
+        "slug": "configuration/clusters"
+      },
+      {
+        "title": "Applications",
+        "slug": "configuration/applications"
+      },
+      {
+        "title": "Application Source",
+        "slug": "configuration/application_source"
+      },
+      {
+        "title": "Credentials",
+        "slug": "configuration/credentials"
+      },
+      {
+        "title": "Schedules",
+        "slug": "configuration/schedules"
+      }
+    ]
+  },
+  {
+    "title": "CAEPE Management",
+    "children": [
+      {
+        "title": "Manage Users",
+        "slug": "caepe_management/manage_users"
+      },
+      {
+        "title": "Manage Subscriptions",
+        "slug": "caepe_management/manage_subscriptions"
+      },
+      {
+        "title": "Notifications",
+        "slug": "caepe_management/notifications"
+      },
+      {
+        "title": "Audit Trails",
+        "slug": "caepe_management/audit_trails"
+      }
+    ]
+  },
+  {
+    "title": "Smoke Tests",
+    "slug": "smoke_tests"
+  },
+  {
+    "title": "AI Recommendations",
+    "slug": "ai_recommendations"
+  },
+  {
+    "title": "CLI",
+    "children": [
+      {
+        "title": "Overview",
+        "slug": "cli/cli"
+      },
+      {
+        "title": "Command overview",
+        "slug": "cli/cli_commands/caepe"
+      },
+      {
+        "title": "Cluster",
+        "children": [
+          {
+            "title": "Cluster",
+            "slug": "cli/cli_commands/caepe_cluster"
+          },
+          {
+            "title": "Create Cluster",
+            "slug": "cli/cli_commands/caepe_cluster_create"
+          },
+          {
+            "title": "Create Cluster Autobuild",
+            "slug": "cli/cli_commands/caepe_cluster_create_autobuild"
+          },
+          {
+            "title": "Create Cluster Standard",
+            "slug": "cli/cli_commands/caepe_cluster_create_standard"
+          },
+          {
+            "title": "Delete Cluster",
+            "slug": "cli/cli_commands/caepe_cluster_delete"
+          },
+          {
+            "title": "Cluster Get",
+            "slug": "cli/cli_commands/caepe_cluster_get"
+          },
+          {
+            "title": "Cluster Get Namespaces",
+            "slug": "cli/cli_commands/caepe_cluster_get-namespaces"
+          },
+          {
+            "title": "Cluster Get pvcs",
+            "slug": "cli/cli_commands/caepe_cluster_get-pvcs"
+          },
+          {
+            "title": "Cluster Group",
+            "children": [
+              {
+                "title": "Cluster Group",
+                "slug": "cli/cli_commands/caepe_cluster_group"
+              },
+              {
+                "title": "Cluster Group Add Members",
+                "slug": "cli/cli_commands/caepe_cluster_group_add-members"
+              },
+              {
+                "title": "Cluster Group Create",
+                "slug": "cli/cli_commands/caepe_cluster_group_create"
+              },
+              {
+                "title": "Cluster Group Delete",
+                "slug": "cli/cli_commands/caepe_cluster_group_delete"
+              },
+              {
+                "title": "Cluster Group Get",
+                "slug": "cli/cli_commands/caepe_cluster_group_get"
+              },
+              {
+                "title": "Cluster Group List",
+                "slug": "cli/cli_commands/caepe_cluster_group_list"
+              },
+              {
+                "title": "Cluster Group Remove Members",
+                "slug": "cli/cli_commands/caepe_cluster_group_remove-members"
+              },
+              {
+                "title": "Cluster Group Update",
+                "slug": "cli/cli_commands/caepe_cluster_group_update"
+              }
+            ]
+          },
+          {
+            "title": "Cluster List",
+            "slug": "cli/cli_commands/caepe_cluster_list"
+          },
+          {
+            "title": "Cluster Update",
+            "slug": "cli/cli_commands/caepe_cluster_update"
+          }
+        ]
+      },
+      {
+        "title": "Completion",
+        "slug": "cli/cli_commands/caepe_completion"
+      },
+      {
+        "title": "Configure",
+        "children": [
+          {
+            "title": "Configure",
+            "slug": "cli/cli_commands/caepe_configure"
+          },
+          {
+            "title": "Configure Edit",
+            "slug": "cli/cli_commands/caepe_configure_edit"
+          },
+          {
+            "title": "Configure Set",
+            "slug": "cli/cli_commands/caepe_configure_set"
+          }
+        ]
+      },
+      {
+        "title": "Deployment",
+        "children": [
+          {
+            "title": "Deployment",
+            "slug": "cli/cli_commands/caepe_deployment"
+          },
+          {
+            "title": "Deployment Canary",
+            "children": [
+              {
+                "title": "Deployment Canary",
+                "slug": "cli/cli_commands/caepe_deployment_canary"
+              },
+              {
+                "title": "Deployment Canary Create",
+                "slug": "cli/cli_commands/caepe_deployment_canary_create"
+              },
+              {
+                "title": "Deployment Canary Delete",
+                "slug": "cli/cli_commands/caepe_deployment_canary_delete"
+              },
+              {
+                "title": "Deployment Canary Get",
+                "slug": "cli/cli_commands/caepe_deployment_canary_get"
+              },
+              {
+                "title": "Deployment Canary Update",
+                "slug": "cli/cli_commands/caepe_deployment_canary_update"
+              }
+            ]
+          },
+          {
+            "title": "Deployment Create",
+            "slug": "cli/cli_commands/caepe_deployment_create"
+          },
+          {
+            "title": "Deployment Delete",
+            "slug": "cli/cli_commands/caepe_deployment_delete"
+          },
+          {
+            "title": "Deployment Dryrun",
+            "slug": "cli/cli_commands/caepe_deployment_dryrun"
+          },
+          {
+            "title": "Deployment Estimate",
+            "slug": "cli/cli_commands/caepe_deployment_estimate"
+          },
+          {
+            "title": "Deployment Preflight",
+            "slug": "cli/cli_commands/caepe_deployment_preflight"
+          },
+          {
+            "title": "Deployment Rollback",
+            "slug": "cli/cli_commands/caepe_deployment_rollback"
+          },
+          {
+            "title": "Deployment List",
+            "slug": "cli/cli_commands/caepe_deployment_list"
+          },
+          {
+            "title": "Deployment Rollout",
+            "slug": "cli/cli_commands/caepe_deployment_rollout"
+          },
+          {
+            "title": "Deployment Update",
+            "slug": "cli/cli_commands/caepe_deployment_update"
+          }
+        ]
+      },
+      {
+        "title": "Login",
+        "slug": "cli/cli_commands/caepe_login"
+      },
+      {
+        "title": "Smoketest",
+        "children": [
+          {
+            "title": "Smoketest",
+            "slug": "cli/cli_commands/caepe_smoketest"
+          },
+          {
+            "title": "Smoketest Callback",
+            "slug": "cli/cli_commands/caepe_smoketest_callback"
+          },
+          {
+            "title": "Smoketest Create",
+            "children": [
+              {
+                "title": "Smoketest Create",
+                "slug": "cli/cli_commands/caepe_smoketest_create"
+              },
+              {
+                "title": "Smoketest Create CLI",
+                "slug": "cli/cli_commands/caepe_smoketest_create_cli"
+              },
+              {
+                "title": "Smoketest Create Webhook",
+                "slug": "cli/cli_commands/caepe_smoketest_create_webhook"
+              }
+            ]
+          },
+          {
+            "title": "Smoketest Delete",
+            "slug": "cli/cli_commands/caepe_smoketest_delete"
+          },
+          {
+            "title": "Smoketest Execute",
+            "slug": "cli/cli_commands/caepe_smoketest_execute"
+          },
+          {
+            "title": "Smoketest Get",
+            "slug": "cli/cli_commands/caepe_smoketest_get"
+          },
+          {
+            "title": "Smoketest list",
+            "slug": "cli/cli_commands/caepe_smoketest_list"
+          },
+          {
+            "title": "Smoketest Update",
+            "slug": "cli/cli_commands/caepe_smoketest_update"
+          }
+        ]
+      },
+      {
+        "title": "Snapshot",
+        "children": [
+          {
+            "title": "Snapshot",
+            "slug": "cli/cli_commands/caepe_snapshot"
+          },
+          {
+            "title": "Snapshot Definition",
+            "children": [
+              {
+                "title": "Snapshot Definition",
+                "slug": "cli/cli_commands/caepe_snapshot_definition"
+              },
+              {
+                "title": "Snapshot Definition Create",
+                "slug": "cli/cli_commands/caepe_snapshot_definition_create"
+              },
+              {
+                "title": "Snapshot Definition Delete",
+                "slug": "cli/cli_commands/caepe_snapshot_definition_delete"
+              },
+              {
+                "title": "Snapshot Definition Get",
+                "slug": "cli/cli_commands/caepe_snapshot_definition_get"
+              },
+              {
+                "title": "Snapshot Definition List",
+                "slug": "cli/cli_commands/caepe_snapshot_definition_list"
+              },
+              {
+                "title": "Snapshot Definition Update",
+                "slug": "cli/cli_commands/caepe_snapshot_definition_update"
+              }
+            ]
+          },
+          {
+            "title": "Snapshot Deployment",
+            "children": [
+              {
+                "title": "Snapshot Deployment",
+                "slug": "cli/cli_commands/caepe_snapshot_deployment"
+              },
+              {
+                "title": "Snapshot Deployment Create",
+                "slug": "cli/cli_commands/caepe_snapshot_deployment_create"
+              },
+              {
+                "title": "Snapshot Deployment Delete",
+                "slug": "cli/cli_commands/caepe_snapshot_deployment_delete"
+              },
+              {
+                "title": "Snapshot Deployment List",
+                "slug": "cli/cli_commands/caepe_snapshot_deployment_list"
+              }
+            ]
+          },
+          {
+            "title": "Snapshot Instance",
+            "children": [
+              {
+                "title": "Snapshot Instance",
+                "slug": "cli/cli_commands/caepe_snapshot_instance"
+              },
+              {
+                "title": "Snapshot Instance Create",
+                "slug": "cli/cli_commands/caepe_snapshot_instance_create"
+              },
+              {
+                "title": "Snapshot Instance Delete",
+                "slug": "cli/cli_commands/caepe_snapshot_instance_delete"
+              },
+              {
+                "title": "Snapshot Instance Get",
+                "slug": "cli/cli_commands/caepe_snapshot_instance_get"
+              },
+              {
+                "title": "Snapshot Instance List",
+                "slug": "cli/cli_commands/caepe_snapshot_instance_list"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "API",
+    "slug": "api"
+  },
+  {
+    "title": "CAEPE MCP Server",
+    "slug": "mcp"
+  }
+]

@@ -1,0 +1,214 @@
+{
+  "$schema": "https://caepe.sh/caepe/schema#",
+  "$id": "https://caepe.sh/caepe/schema/organization.schema.json",
+  "title": "Organization Record",
+  "type": "object",
+  "properties": {
+    "organization": {
+      "description": "Organization Name",
+      "type": "string",
+      "uniqueItems": true
+    },
+    "idp": {
+      "description":  "Identity Provider",
+      "type": "string",
+      "pattern": "^https?://(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b[-a-zA-Z0-9()@:%_+.~#?&/=]*$"
+    },
+    "openIDConfig": {
+      "description": "openID Well-known Configuration Endpoint",
+      "type": "string",
+      "pattern": "^https?://(?:www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b[-a-zA-Z0-9()@:%_+.~#?&/=]*$"
+    },
+    "caepeRegion": {
+      "description": "CAEPE Region Location",
+      "type": "string",
+      "enum": [
+        "asia",
+        "america",
+        "europe"
+      ]
+    },
+    "status": {
+      "description": "Subscription Status",
+      "type": "string",
+      "enum": [
+        "new",
+        "keycloak-provisioned",
+        "stripe-subscribed",
+        "caepe-provisioned",
+        "pilot",
+        "active",
+        "suspended",
+        "cancel-requested",
+        "cancelled"
+      ]
+    },
+    "caepeSubscriptionId": {
+      "description": "CAEPE Subscription ID",
+      "type": "string",
+      "uniqueItems": true
+    },
+    "subscriptionDetails": {
+      "description": "Subscription Details",
+      "type": "object",
+      "properties": {
+        "subscriptionSource": {
+          "description": "Subscription Source",
+          "type": "string",
+          "enum": [
+            "Azure",
+            "CAEPE"
+          ]
+        },
+        "username": {
+          "description": "Main subscriber username",
+          "type": "string"
+        },
+        "email": {
+          "description": "Main subscriber email",
+          "type": "string",
+          "pattern": "^[\\w-.]+@([\\w-]+\\.)+[\\w-]{2,4}$"
+        },
+        "subscriptionData": {
+          "oneOf": [
+            {
+              "description": "Azure Subscription Details",
+              "type": "object",
+              "properties": {
+                "azOfferId": {
+                  "description": "Azure Offer ID",
+                  "type": "string"
+                },
+                "azSaasSubscriptionId": {
+                  "description": "Azure Subscription ID",
+                  "type": "string"
+                },
+                "azStatus": {
+                  "description": "Azure Subscription Status",
+                  "type": "string"
+                },
+                "azNewCustomer": {
+                  "description": "New customer signup flag",
+                  "type": "boolean"
+                },
+                "azPlanId": {
+                  "description": "Azure Plan ID",
+                  "type": "string"
+                },
+                "azQuantity": {
+                  "description": "Azure Offer Quantity",
+                  "type": "string"
+                },
+                "upto25SubscriptionDim": {
+                  "description": "Azure price dimension upto 25",
+                  "type": "string"
+                },
+                "over25SubscriptionDim": {
+                  "description": "Azure price dimension over 25",
+                  "type": "string"
+                },
+                "address1": {
+                  "description": "Address Line 1",
+                  "type": "string"
+                },
+                "address2": {
+                  "description": "Address Line 2",
+                  "type": "string"
+                },
+                "city": {
+                  "description": "City",
+                  "type": "string"
+                },
+                "country": {
+                  "description": "Country",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "azOfferId",
+                "azSaasSubscriptionId",
+                "azStatus"
+              ]
+            },
+            {
+              "description": "CAEPE Subscription Details",
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "description": "First Name",
+                  "type": "string"
+                },
+                "lastName": {
+                  "description": "Last Name",
+                  "type": "string"
+                },
+                "address1": {
+                  "description": "Address Line 1",
+                  "type": "string"
+                },
+                "address2": {
+                  "description": "Address Line 2",
+                  "type": "string"
+                },
+                "city": {
+                  "description": "City",
+                  "type": "string"
+                },
+                "country": {
+                  "description": "Country",
+                  "type": "string"
+                },
+                "stripe": {
+                  "description": "Stripe customer details",
+                  "type": "object",
+                  "properties": {
+                    "customerId": {
+                      "description": "Stripe customer id",
+                      "type": "string"
+                    },
+                    "subscriptionId": {
+                      "description": "Stripe subscription id",
+                      "type": "string"
+                    },
+                    "upto25SubscriptionId": {
+                      "description": "Standard price subscription item",
+                      "type": "string"
+                    },
+                    "over25SubscriptionId": {
+                      "description": "Volume price subscription item",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "customerId",
+                    "subscriptionId",
+                    "upto25SubscriptionId",
+                    "over25SubscriptionId"
+                  ]
+                }
+              },
+              "required": [
+                "firstName",
+                "lastName",
+                "address1",
+                "address2",
+                "city",
+                "country"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "subscriptionSource",
+        "email"
+      ]
+    }
+  },
+  "required": [
+    "organization",
+    "status",
+    "subscriptionDetails",
+    "caepeSubscriptionId"
+  ]
+}

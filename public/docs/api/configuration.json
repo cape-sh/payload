@@ -1,0 +1,1673 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Config",
+    "description": "Configuration API",
+    "version": "1.0.0"
+  },
+  "host": "www",
+  "basePath": "/v2",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/Config/imageregistry": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/imageregistry"
+              }
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "imageregistry_post",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/imageregistry_data"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "created",
+            "schema": {
+              "$ref": "#/definitions/imageregistry"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "409": {
+            "description": "conflict",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Config/imageregistry/{imageregistry}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        },
+        {
+          "description": "Image registry ID or Name",
+          "name": "imageregistry",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/imageregistry"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "parameters": [
+          {
+            "name": "imageregistry_data",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/imageregistry_patch"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "updated",
+            "schema": {
+              "$ref": "#/definitions/imageregistry"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Config/credentials/": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/credential"
+              }
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "credential_post",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/credential_data"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "created",
+            "schema": {
+              "$ref": "#/definitions/credential"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Config/credentials/{credential}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "description": "Credential ID or Name",
+          "name": "credential",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "delete": {
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "parameters": [
+          {
+            "name": "credential_patch",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/credential_patch"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "updated",
+            "schema": {
+              "$ref": "#/definitions/credential"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/credential"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Config/backupLocation/": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/backupLocation"
+              }
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "credential_post",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/backupLocation_data"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "created",
+            "schema": {
+              "$ref": "#/definitions/backupLocation"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Config/backupLocation/{backupLocation}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "description": "Backup Location ID or Name",
+          "name": "backupLocation",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "delete": {
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "parameters": [
+          {
+            "name": "credential_patch",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/backupLocation_patch"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "updated",
+            "schema": {
+              "$ref": "#/definitions/backupLocation"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/backupLocation"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Config/backupLocation/{backupLocation}/clusters": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "description": "Backup Location ID or Name",
+          "name": "backupLocation",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "put": {
+        "parameters": [
+          {
+            "name": "backup_location_clusters",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/backuplocation_clusters"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "updated",
+            "schema": {
+              "$ref": "#/definitions/backupLocation"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/backuplocation_clusters"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Config/repository/": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/repository"
+              }
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "name": "repository_post",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/repository_post"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "created",
+            "schema": {
+              "$ref": "#/definitions/repository"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Config/repository/{repository}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "description": "Repository ID or Name",
+          "name": "repository",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }
+      ],
+      "delete": {
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "parameters": [
+          {
+            "name": "repository_patch",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/repository_patch"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "updated",
+            "schema": {
+              "$ref": "#/definitions/repository"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/repository"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "imageregistry": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "name": {
+          "type": "string",
+          "description": "Display name"
+        },
+        "registry_uri": {
+          "type": "string"
+        },
+        "registryType": {
+          "type": "string",
+          "enum": [
+            "DockerHub",
+            "ACR",
+            "ECR",
+            "GCR",
+            "Harbour",
+            "Custom"
+          ]
+        },
+        "credentialRef": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "name",
+        "registryType",
+        "registry_uri",
+        "credentialRef",
+        "id"
+      ]
+    },
+    "imageregistry_data": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Display name"
+        },
+        "registryType": {
+          "type": "string",
+          "enum": [
+            "DockerHub",
+            "ACR",
+            "ECR",
+            "GCR",
+            "Harbour",
+            "Custom"
+          ]
+        },
+        "registry_uri": {
+          "type": "string"
+        },
+        "credentialRef": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "registryType",
+        "registry_uri",
+        "credentialRef"
+      ]
+    },
+    "imageregistry_patch": {
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Display name"
+        },
+        "registryType": {
+          "type": "string",
+          "enum": [
+            "DockerHub",
+            "ACR",
+            "ECR",
+            "GCR",
+            "Harbour",
+            "Custom"
+          ]
+        },
+        "registry_uri": {
+          "type": "string"
+        },
+        "credentialRef": {
+          "type": "string"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "error": {
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ]
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/error"
+      }
+    },
+    "credential": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "idType": {
+          "type": "string",
+          "enum": [
+            "useridPassword",
+            "token",
+            "aws",
+            "ssh_key",
+            "ssh_interactive",
+            "openAi"
+          ]
+        },
+        "username": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        },
+        "accountId": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "inUse"
+          ]
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "idType"
+      ]
+    },
+    "credential_data": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "idType": {
+          "type": "string",
+          "enum": [
+            "useridPassword",
+            "token",
+            "aws",
+            "ssh_key",
+            "ssh_interactive",
+            "openAi"
+          ]
+        },
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "idToken": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        },
+        "clientSecret": {
+          "type": "string"
+        },
+        "accountId": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "private_key": {
+          "type": "string",
+          "format": "byte"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "name",
+        "idType"
+      ]
+    },
+    "credential_patch": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "idType": {
+          "type": "string",
+          "enum": [
+            "useridPassword",
+            "token",
+            "aws",
+            "ssh_key",
+            "ssh_interactive",
+            "openAi"
+          ]
+        },
+        "username": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "idToken": {
+          "type": "string"
+        },
+        "clientId": {
+          "type": "string"
+        },
+        "clientSecret": {
+          "type": "string"
+        },
+        "accountId": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "private_key": {
+          "type": "string",
+          "format": "byte"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "accessGroup": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "backupLocation": {
+      "description": "Backup Storage Location",
+      "required": [
+        "provider",
+        "bucket",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9A-Z-_.]*$"
+        },
+        "namespace": {
+          "type": "string",
+          "default": "velero"
+        },
+        "bucket": {
+          "type": "string",
+          "example": "velero"
+        },
+        "prefix": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string",
+          "description": "Backup location Cloud provider",
+          "enum": [
+            "alibabacloud",
+            "minio",
+            "aws",
+            "gcp",
+            "huawei",
+            "azure",
+            "generic_s3"
+          ],
+          "example": "minio"
+        },
+        "region": {
+          "type": "string"
+        },
+        "s3": {
+          "type": "object",
+          "required": [
+            "access_key_id",
+            "access_secret_key"
+          ],
+          "properties": {
+            "access_key_id": {
+              "type": "string",
+              "minLength": 3
+            },
+            "access_secret_key": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 40
+            },
+            "hostname": {
+              "type": "string",
+              "format": "uri"
+            },
+            "fqdn": {
+              "type": "string",
+              "format": "uri",
+              "description": "FDQN of minio exposed through ingress"
+            }
+          }
+        },
+        "azure": {
+          "$ref": "#/definitions/azureLocationCreds"
+        },
+        "gcp": {
+          "$ref": "#/definitions/gcpLocationCreds"
+        },
+        "vsc": {
+          "type": "boolean",
+          "description": "Enable volume snapshots",
+          "default": false
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "backupLocation_data": {
+      "description": "Backup Storage Location",
+      "required": [
+        "provider",
+        "bucket",
+        "name"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9A-Z-_.]*$"
+        },
+        "namespace": {
+          "type": "string",
+          "default": "velero"
+        },
+        "bucket": {
+          "type": "string",
+          "example": "velero"
+        },
+        "prefix": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string",
+          "description": "Backup location Cloud provider",
+          "enum": [
+            "alibabacloud",
+            "minio",
+            "aws",
+            "gcp",
+            "huawei",
+            "azure",
+            "generic_s3"
+          ],
+          "example": "minio"
+        },
+        "region": {
+          "type": "string"
+        },
+        "s3": {
+          "type": "object",
+          "required": [
+            "access_key_id",
+            "access_secret_key"
+          ],
+          "properties": {
+            "access_key_id": {
+              "type": "string",
+              "minLength": 3
+            },
+            "access_secret_key": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 40
+            },
+            "hostname": {
+              "type": "string",
+              "format": "uri"
+            },
+            "fqdn": {
+              "type": "string",
+              "format": "uri",
+              "description": "FDQN of minio exposed through ingress"
+            }
+          }
+        },
+        "azure": {
+          "$ref": "#/definitions/azureLocationCreds"
+        },
+        "gcp": {
+          "$ref": "#/definitions/gcpLocationCreds"
+        },
+        "vsc": {
+          "type": "boolean",
+          "description": "Enable volume snapshots"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "backupLocation_patch": {
+      "description": "Backup Storage Location",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9A-Z-_.]*$"
+        },
+        "namespace": {
+          "type": "string",
+          "default": "velero"
+        },
+        "bucket": {
+          "type": "string",
+          "example": "velero"
+        },
+        "prefix": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string",
+          "description": "Backup location Cloud provider",
+          "enum": [
+            "alibabacloud",
+            "minio",
+            "aws",
+            "gcp",
+            "huawei",
+            "azure",
+            "generic_s3"
+          ],
+          "example": "minio"
+        },
+        "region": {
+          "type": "string"
+        },
+        "s3": {
+          "type": "object",
+          "properties": {
+            "access_key_id": {
+              "type": "string",
+              "minLength": 3
+            },
+            "access_secret_key": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 40
+            },
+            "hostname": {
+              "type": "string",
+              "format": "uri"
+            },
+            "fqdn": {
+              "type": "string",
+              "format": "uri",
+              "description": "FDQN of minio exposed through ingress"
+            }
+          }
+        },
+        "azure": {
+          "$ref": "#/definitions/azureLocationCreds_patch"
+        },
+        "gcp": {
+          "$ref": "#/definitions/gcpLocationCreds_patch"
+        },
+        "vsc": {
+          "type": "boolean",
+          "description": "Enable volume snapshots",
+          "default": false
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "backuplocation_clusters": {
+      "properties": {
+        "ro": {
+          "description": "Read only clusters",
+          "type": "array",
+          "items": {
+            "properties": {
+              "clusterRef": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "rw": {
+          "description": "Read Write clusters",
+          "type": "array",
+          "items": {
+            "properties": {
+              "clusterRef": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "gcpLocationCreds": {
+      "type": "object",
+      "required": [
+        "service_account_file"
+      ],
+      "properties": {
+        "service_account_file": {
+          "type": "string",
+          "format": "byte",
+          "description": "Bas64 encoded string for your service account key"
+        }
+      }
+    },
+    "azureLocationCreds": {
+      "type": "object",
+      "required": [
+        "client_id",
+        "client_secret",
+        "storage_account",
+        "subscription",
+        "tenant",
+        "resource_group"
+      ],
+      "properties": {
+        "client_id": {
+          "type": "string"
+        },
+        "client_secret": {
+          "type": "string"
+        },
+        "resource_group": {
+          "type": "string"
+        },
+        "storage_account": {
+          "type": "string"
+        },
+        "subscription": {
+          "type": "string"
+        },
+        "tenant": {
+          "type": "string"
+        }
+      }
+    },
+    "gcpLocationCreds_patch": {
+      "type": "object",
+      "properties": {
+        "service_account_file": {
+          "type": "string",
+          "format": "byte",
+          "description": "Bas64 encoded string for your service account key"
+        }
+      }
+    },
+    "azureLocationCreds_patch": {
+      "type": "object",
+      "properties": {
+        "client_id": {
+          "type": "string"
+        },
+        "client_secret": {
+          "type": "string"
+        },
+        "resource_group": {
+          "type": "string"
+        },
+        "storage_account": {
+          "type": "string"
+        },
+        "subscription": {
+          "type": "string"
+        },
+        "tenant": {
+          "type": "string"
+        }
+      }
+    },
+    "repository": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "repoType": {
+          "type": "string",
+          "enum": [
+            "git",
+            "helm",
+            "kustomize"
+          ]
+        },
+        "repoProvider": {
+          "type": "string",
+          "enum": [
+            "github",
+            "bitbucket",
+            "gitlab",
+            "custom"
+          ]
+        },
+        "repoURL": {
+          "type": "string"
+        },
+        "credentialRef": {
+          "type": "string"
+        },
+        "enableLFS": {
+          "type": "boolean",
+          "default": false
+        },
+        "skipSSL": {
+          "type": "boolean",
+          "default": false
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "repoType",
+        "repoProvider",
+        "repoURL",
+        "id"
+      ]
+    },
+    "repository_post": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "repoType": {
+          "type": "string",
+          "enum": [
+            "git",
+            "helm",
+            "kustomize"
+          ]
+        },
+        "repoProvider": {
+          "type": "string",
+          "enum": [
+            "github",
+            "bitbucket",
+            "gitlab",
+            "custom"
+          ]
+        },
+        "repoURL": {
+          "type": "string"
+        },
+        "credentialRef": {
+          "type": "string"
+        },
+        "enableLFS": {
+          "type": "boolean",
+          "default": false
+        },
+        "skipSSL": {
+          "type": "boolean",
+          "default": false
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "repoType",
+        "repoProvider",
+        "repoURL"
+      ]
+    },
+    "repository_patch": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "repoType": {
+          "type": "string",
+          "enum": [
+            "git",
+            "helm",
+            "kustomize"
+          ]
+        },
+        "repoProvider": {
+          "type": "string",
+          "enum": [
+            "github",
+            "bitbucket",
+            "gitlab",
+            "custom",
+            "helm"
+          ]
+        },
+        "repoURL": {
+          "type": "string"
+        },
+        "credentialRef": {
+          "type": "string"
+        },
+        "enableLFS": {
+          "type": "boolean",
+          "default": false
+        },
+        "skipSSL": {
+          "type": "boolean",
+          "default": false
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "bearerAuth": {
+      "name": "Authorization",
+      "in": "header",
+      "type": "apiKey",
+      "description": "JWT Authorization header"
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

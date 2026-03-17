@@ -1,0 +1,504 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Smoketest API",
+    "description": "Smoketest",
+    "version": "1.0.0"
+  },
+  "host": "www",
+  "basePath": "/v2",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/Smoketest": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "parameters": [
+          {
+            "name": "appRef",
+            "in": "query",
+            "type": "string",
+            "required": false,
+            "description": "Optional parameter for filtering by App Ref"
+          }
+        ],
+        "operationId": "listSmoketest",
+        "tags": [
+          "smoketest"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/smoketest"
+              }
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "createSmoketest",
+        "tags": [
+          "smoketest"
+        ],
+        "parameters": [
+          {
+            "name": "smoketest_post",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/smoketest_post"
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "created",
+            "schema": {
+              "$ref": "#/definitions/smoketest"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Smoketest/{smoketest}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "name": "smoketest",
+          "type": "string",
+          "in": "path",
+          "required": true,
+          "description": "Smoketest Name or ID"
+        }
+      ],
+      "get": {
+        "tags": [
+          "smoketest"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/smoketest"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "smoketest"
+        ],
+        "parameters": [
+          {
+            "name": "smoketest_post",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/smoketest_post"
+            }
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/smoketest"
+            }
+          },
+          "400": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "smoketest"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Smoketest/execute/{smoketest_id}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        },
+        {
+          "name": "smoketest_id",
+          "type": "string",
+          "in": "path",
+          "required": true
+        },
+        {
+          "in": "query",
+          "name": "callback",
+          "type": "string",
+          "description": "optional address of self for callback",
+          "required": false
+        }
+      ],
+      "post": {
+        "operationId": "executeSmoketest",
+        "description": "Endpoint for the execution of a smoketest",
+        "tags": [
+          "smoketest"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/Smoketest/callback/{callback_id}": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string"
+        }
+      ],
+      "post": {
+        "operationId": "callbackSmoketest",
+        "description": "Endpoint for callback from the external test solution",
+        "tags": [
+          "smoketest"
+        ],
+        "parameters": [
+          {
+            "name": "callback_body",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/callback"
+            }
+          },
+          {
+            "name": "callback_id",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "smoketest_post": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "appRef": {
+          "type": "string"
+        },
+        "smoketestType": {
+          "type": "string",
+          "enum": [
+            "ssh",
+            "webhook"
+          ]
+        },
+        "ssh": {
+          "$ref": "#/definitions/sshProperties"
+        },
+        "webhook": {
+          "$ref": "#/definitions/webhookProperties"
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        }
+      }
+    },
+    "smoketest": {
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "name": {
+          "type": "string"
+        },
+        "appRef": {
+          "type": "string"
+        },
+        "smoketestType": {
+          "type": "string",
+          "enum": [
+            "ssh",
+            "webhook"
+          ]
+        },
+        "ssh": {
+          "$ref": "#/definitions/sshProperties"
+        },
+        "webhook": {
+          "$ref": "#/definitions/webhookProperties"
+        },
+        "smoketestHistory": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/smoketestHistory"
+          }
+        },
+        "accessGroups": {
+          "type": "array",
+          "description": "List of access groups with permission to this object",
+          "items": {
+            "$ref": "#/definitions/accessGroup"
+          }
+        },
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "webhookProperties": {
+      "properties": {
+        "webhookURI": {
+          "type": "string"
+        },
+        "authenticationType": {
+          "type": "string",
+          "enum": [
+            "Basic",
+            "Bearer"
+          ]
+        },
+        "credentialRef": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "webhookURI"
+      ]
+    },
+    "sshProperties": {
+      "properties": {
+        "sshTarget": {
+          "type": "string"
+        },
+        "credentialRef": {
+          "type": "string"
+        },
+        "scriptPath": {
+          "type": "string"
+        },
+        "repoRef": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        }
+      }
+    },
+    "smoketestHistory": {
+      "properties": {
+        "dateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "Passed",
+            "Failed",
+            "Pending"
+          ]
+        }
+      }
+    },
+    "callback": {
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "Passed",
+            "Failed"
+          ]
+        }
+      }
+    },
+    "error": {
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ]
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/error"
+      }
+    },
+    "accessGroup": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "bearerAuth": {
+      "name": "Authorization",
+      "in": "header",
+      "type": "apiKey",
+      "description": "JWT Authorization header"
+    }
+  }
+}

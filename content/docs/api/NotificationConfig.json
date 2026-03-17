@@ -1,0 +1,218 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Notification Configuration",
+    "description": "Configuration of Notifications",
+    "version": "1.0.0"
+  },
+  "host": "api",
+  "basePath": "/v2",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/NotificationConfig": {
+      "parameters": [
+        {
+          "in": "header",
+          "name": "organization",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Get the current notification settings",
+            "schema": {
+              "$ref": "#/definitions/notificationConfiguration"
+            }
+          },
+          "400": {
+            "description": "Failure response",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "consumes": [
+          "application/json"
+        ]
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Create notification setting",
+            "schema": {
+              "$ref": "#/definitions/notificationConfiguration"
+            }
+          },
+          "400": {
+            "description": "Failure response",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "notificationSettings_post",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/notificationConfiguration"
+            }
+          }
+        ]
+      },
+      "put": {
+        "responses": {
+          "200": {
+            "description": "Overwrite notification settings",
+            "schema": {
+              "$ref": "#/definitions/notificationConfiguration"
+            }
+          },
+          "400": {
+            "description": "Failure response",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "notificationSettings_put",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/notificationConfiguration"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "Delete notification settings",
+            "schema": {
+              "$ref": "#/definitions/notificationConfiguration"
+            }
+          },
+          "400": {
+            "description": "Failure response",
+            "schema": {
+              "type": "object",
+              "$ref": "#/definitions/errors"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },"422": {
+            "description": "Unprocessable Entity",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "notificationConfiguration": {
+      "properties": {
+        "messageType": {
+          "type": "string",
+          "enum": [
+            "slack",
+            "teams"
+          ]
+        },
+        "webhook": {
+          "type": "string"
+        },
+        "activeNotificationTypes": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "notificationType": {
+                "type": "string",
+                "enum": [
+                  "deployment"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "messageType",
+        "webhook"
+      ]
+    },
+    "error": {
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "message"
+      ]
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/error"
+      }
+    }
+  },
+  "securityDefinitions": {
+    "bearerAuth": {
+      "name": "Authorization",
+      "in": "header",
+      "type": "apiKey",
+      "description": "JWT Authorization header"
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
