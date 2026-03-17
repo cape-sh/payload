@@ -2,6 +2,8 @@ import { HeroBlock } from './HeroBlock'
 import { FeatureAccordionBlock } from './FeatureAccordionBlock'
 import { PricingTableBlock } from './PricingTableBlock'
 import { CTAFormBlock } from './CTAFormBlock'
+import { FeatureGridBlock } from './FeatureGridBlock'
+import { CardGridBlock } from './CardGridBlock'
 
 interface Block {
   blockType: string
@@ -33,6 +35,10 @@ export function BlockRenderer({ blocks }: BlockRendererProps) {
             return <PricingTableBlock key={i} {...(block as any)} />
           case 'ctaForm':
             return <CTAFormBlock key={i} {...(block as any)} />
+          case 'featureGrid':
+            return <FeatureGridBlock key={i} {...(block as any)} />
+          case 'cardGrid':
+            return <CardGridBlock key={i} {...(block as any)} />
           default:
             return null
         }

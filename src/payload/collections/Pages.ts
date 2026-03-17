@@ -4,6 +4,8 @@ import { Hero } from '../blocks/Hero'
 import { FeatureAccordion } from '../blocks/FeatureAccordion'
 import { PricingTable } from '../blocks/PricingTable'
 import { CTAForm } from '../blocks/CTAForm'
+import { FeatureGrid } from '../blocks/FeatureGrid'
+import { CardGrid } from '../blocks/CardGrid'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -24,8 +26,12 @@ export const Pages: CollectionConfig = {
     afterChange: [
       ({ doc }) => {
         if (doc._status === 'published') {
-          const slug = doc.slug === 'home' ? '/' : `/${doc.slug}`
-          revalidatePath(slug)
+          try {
+            const slug = doc.slug === 'home' ? '/' : `/${doc.slug}`
+            revalidatePath(slug)
+          } catch {
+            // revalidatePath not available outside Next.js request context (e.g. seed scripts)
+          }
         }
       },
     ],
@@ -51,7 +57,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      blocks: [Hero, FeatureAccordion, PricingTable, CTAForm],
+      blocks: [Hero, FeatureAccordion, PricingTable, CTAForm, FeatureGrid, CardGrid],
       admin: {
         description: 'Add and arrange content blocks to build the page',
       },

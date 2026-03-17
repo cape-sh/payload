@@ -20,8 +20,12 @@ export const Resources: CollectionConfig = {
     afterChange: [
       ({ doc }) => {
         if (doc._status === 'published') {
-          revalidatePath(`/resources/${doc.slug}`)
-          revalidatePath('/resources')
+          try {
+            revalidatePath(`/resources/${doc.slug}`)
+            revalidatePath('/resources')
+          } catch {
+            // revalidatePath not available outside Next.js request context (e.g. seed scripts)
+          }
         }
       },
     ],
