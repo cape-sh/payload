@@ -31,6 +31,21 @@ export const CardGrid: Block = {
           name: 'description',
           type: 'textarea',
         },
+        {
+          name: 'icon',
+          type: 'select',
+          defaultValue: 'globe',
+          options: [
+            { label: 'Star', value: 'star' },
+            { label: 'Tachometer', value: 'tachometer' },
+            { label: 'Arrow Up Circle', value: 'arrow-up-circle' },
+            { label: 'Sitemap', value: 'sitemap' },
+            { label: 'Globe', value: 'globe' },
+            { label: 'Pointer', value: 'pointer' },
+            { label: 'Briefcase', value: 'briefcase' },
+            { label: 'Users Cog', value: 'users-cog' },
+          ],
+        },
       ],
     },
     {

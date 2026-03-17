@@ -1,8 +1,20 @@
+import React from 'react'
 import Link from 'next/link'
+import {
+  StarIcon,
+  TachometerIcon,
+  ArrowUpCircleIcon,
+  SitemapIcon,
+  GlobeIcon,
+  PointerIcon,
+  BriefcaseIcon,
+  UsersCogIcon,
+} from '@/components/icons/FeatureIcons'
 
 interface Card {
   title: string
   description?: string | null
+  icon?: string | null
   id?: string
 }
 
@@ -12,6 +24,17 @@ interface CardGridBlockProps {
   cards?: Card[] | null
   cta_label?: string | null
   cta_href?: string | null
+}
+
+const icons: Record<string, React.ReactNode> = {
+  star: <StarIcon className="h-5 w-5" />,
+  tachometer: <TachometerIcon className="h-5 w-5" />,
+  'arrow-up-circle': <ArrowUpCircleIcon className="h-5 w-5" />,
+  sitemap: <SitemapIcon className="h-5 w-5" />,
+  globe: <GlobeIcon className="h-5 w-5" />,
+  pointer: <PointerIcon className="h-5 w-5" />,
+  briefcase: <BriefcaseIcon className="h-5 w-5" />,
+  'users-cog': <UsersCogIcon className="h-5 w-5" />,
 }
 
 export function CardGridBlock({ eyebrow, headline, cards, cta_label, cta_href }: CardGridBlockProps) {
@@ -37,8 +60,8 @@ export function CardGridBlock({ eyebrow, headline, cards, cta_label, cta_href }:
               key={card.id ?? i}
               className="rounded-lg border border-dark-light bg-dark-light p-6"
             >
-              <div className="mb-3 flex h-8 w-8 items-center justify-center rounded bg-accent/10 text-sm font-bold text-accent">
-                {i + 1}
+              <div className="mb-3 flex h-8 w-8 items-center justify-center rounded bg-accent/10 text-accent">
+                {card.icon && icons[card.icon] ? icons[card.icon] : (i + 1)}
               </div>
               <h3 className="font-semibold text-white">{card.title}</h3>
               {card.description && (

@@ -417,7 +417,26 @@ export interface FeatureGridBlock {
     | {
         title: string;
         description: string;
-        icon?: ('deploy' | 'shield' | 'cube' | 'dollar' | 'rocket' | 'check' | 'clock' | 'code') | null;
+        icon?:
+          | (
+              | 'star'
+              | 'tachometer'
+              | 'arrow-up-circle'
+              | 'sitemap'
+              | 'globe'
+              | 'pointer'
+              | 'briefcase'
+              | 'users-cog'
+              | 'deploy'
+              | 'shield'
+              | 'cube'
+              | 'dollar'
+              | 'rocket'
+              | 'check'
+              | 'clock'
+              | 'code'
+            )
+          | null;
         id?: string | null;
       }[]
     | null;
@@ -450,6 +469,9 @@ export interface CardGridBlock {
     | {
         title: string;
         description?: string | null;
+        icon?:
+          | ('star' | 'tachometer' | 'arrow-up-circle' | 'sitemap' | 'globe' | 'pointer' | 'briefcase' | 'users-cog')
+          | null;
         id?: string | null;
       }[]
     | null;
@@ -821,6 +843,7 @@ export interface CardGridBlockSelect<T extends boolean = true> {
     | {
         title?: T;
         description?: T;
+        icon?: T;
         id?: T;
       };
   cta_label?: T;
