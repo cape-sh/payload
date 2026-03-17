@@ -219,7 +219,95 @@ export interface Page {
   /**
    * Add and arrange content blocks to build the page
    */
-  layout?: unknown[] | null;
+  layout?:
+    | (
+        | {
+            /**
+             * Main heading text — appears as the large H1
+             */
+            headline: string;
+            /**
+             * Supporting text below the headline
+             */
+            subheadline?: string | null;
+            /**
+             * Primary button text (e.g. "Get Started")
+             */
+            cta_label?: string | null;
+            /**
+             * Primary button link (e.g. "/test-drive")
+             */
+            cta_href?: string | null;
+            /**
+             * Optional hero image
+             */
+            image?: (number | null) | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero';
+          }
+        | FeatureAccordionBlock
+        | {
+            /**
+             * Section heading above the pricing tiers
+             */
+            headline?: string | null;
+            /**
+             * Supporting text below the headline
+             */
+            subheadline?: string | null;
+            /**
+             * Features included in all plans — shown above the tier cards
+             */
+            included_features?:
+              | {
+                  feature: string;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * Pricing tiers — typically 3 columns
+             */
+            tiers?:
+              | {
+                  /**
+                   * Tier heading (e.g. "Up to 25 clusters")
+                   */
+                  tier_name: string;
+                  /**
+                   * Price display (e.g. "500.00" or "custom")
+                   */
+                  price: string;
+                  /**
+                   * Text after the price (e.g. "Per cluster* (monthly)")
+                   */
+                  price_suffix?: string | null;
+                  /**
+                   * Highlight this tier with a border accent
+                   */
+                  highlight?: boolean | null;
+                  /**
+                   * Button text (e.g. "Get Started" or "Talk to us")
+                   */
+                  cta_label?: string | null;
+                  /**
+                   * Button link (e.g. "/test-drive" or "mailto:letschat@caepe.sh")
+                   */
+                  cta_href?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * Small print below the pricing tiers
+             */
+            footnote?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pricingTable';
+          }
+        | CTAFormBlock
+      )[]
+    | null;
   meta?: {
     /**
      * SEO title — appears in search results (50-60 characters ideal)
@@ -237,6 +325,78 @@ export interface Page {
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FeatureAccordionBlock".
+ */
+export interface FeatureAccordionBlock {
+  /**
+   * Eyebrow text above the section title (e.g. "Unique CAEPE Features")
+   */
+  section_label?: string | null;
+  /**
+   * Section heading (e.g. "Deployment", "Smoke Testing")
+   */
+  section_title: string;
+  /**
+   * Feature items within this accordion section
+   */
+  items?:
+    | {
+        /**
+         * Feature name shown in bold
+         */
+        feature_name: string;
+        /**
+         * Feature description paragraph
+         */
+        feature_description: string;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'featureAccordion';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CTAFormBlock".
+ */
+export interface CTAFormBlock {
+  /**
+   * Form section headline (e.g. "Request a Demo")
+   */
+  headline: string;
+  /**
+   * Supporting text below the headline
+   */
+  subheadline?: string | null;
+  /**
+   * Which form to display in this block
+   */
+  form_id: 'demo-request' | 'contact' | 'newsletter';
+  /**
+   * Optional additional content below the form
+   */
+  body_copy?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'ctaForm';
 }
 /**
  * Articles, guides, and other resources
@@ -483,7 +643,49 @@ export interface MediaSelect<T extends boolean = true> {
 export interface PagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
-  layout?: T | {};
+  layout?:
+    | T
+    | {
+        hero?:
+          | T
+          | {
+              headline?: T;
+              subheadline?: T;
+              cta_label?: T;
+              cta_href?: T;
+              image?: T;
+              id?: T;
+              blockName?: T;
+            };
+        featureAccordion?: T | FeatureAccordionBlockSelect<T>;
+        pricingTable?:
+          | T
+          | {
+              headline?: T;
+              subheadline?: T;
+              included_features?:
+                | T
+                | {
+                    feature?: T;
+                    id?: T;
+                  };
+              tiers?:
+                | T
+                | {
+                    tier_name?: T;
+                    price?: T;
+                    price_suffix?: T;
+                    highlight?: T;
+                    cta_label?: T;
+                    cta_href?: T;
+                    id?: T;
+                  };
+              footnote?: T;
+              id?: T;
+              blockName?: T;
+            };
+        ctaForm?: T | CTAFormBlockSelect<T>;
+      };
   meta?:
     | T
     | {
@@ -494,6 +696,35 @@ export interface PagesSelect<T extends boolean = true> {
   updatedAt?: T;
   createdAt?: T;
   _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "FeatureAccordionBlock_select".
+ */
+export interface FeatureAccordionBlockSelect<T extends boolean = true> {
+  section_label?: T;
+  section_title?: T;
+  items?:
+    | T
+    | {
+        feature_name?: T;
+        feature_description?: T;
+        id?: T;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CTAFormBlock_select".
+ */
+export interface CTAFormBlockSelect<T extends boolean = true> {
+  headline?: T;
+  subheadline?: T;
+  form_id?: T;
+  body_copy?: T;
+  id?: T;
+  blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

@@ -1,0 +1,533 @@
+{
+  "pages": [
+    {
+      "title": "Features",
+      "slug": "features",
+      "meta": {
+        "meta_title": "CAEPE Features — Enterprise Kubernetes Deployment Platform",
+        "meta_description": "Explore CAEPE features: deployment strategies, smoke testing, edge/air-gapped support, and multi-cluster management for Kubernetes."
+      },
+      "_status": "draft"
+    },
+    {
+      "title": "Pricing",
+      "slug": "pricing",
+      "meta": {
+        "meta_title": "CAEPE Pricing — Simple, Transparent Kubernetes Deployment Pricing",
+        "meta_description": "CAEPE pricing starts at $500/cluster/month for up to 25 clusters. All plans include enterprise support, unlimited apps, RBAC/SSO, and DORA metrics."
+      },
+      "_status": "draft"
+    },
+    {
+      "title": "Test Drive",
+      "slug": "test-drive",
+      "meta": {
+        "meta_title": "CAEPE Test Drive — Try Kubernetes Deployment Free",
+        "meta_description": "Experience CAEPE for free. Secure sandbox, no credit card required. Built-in progressive delivery, pre-flight tests, and CI tool integration."
+      },
+      "_status": "draft"
+    },
+    {
+      "title": "Resources",
+      "slug": "resources",
+      "meta": {
+        "meta_title": "CAEPE Resources — Articles, Guides & Case Studies",
+        "meta_description": "DevOps resources covering continuous deployment, Kubernetes operations, deployment strategies, and infrastructure management best practices."
+      },
+      "_status": "draft"
+    }
+  ],
+  "articles": [
+    {
+      "title": "From Prompt to Production: Secure, AI-Native Infrastructure Management—Now with CAEPE MCP Server",
+      "slug": "caepe-mcp-server",
+      "excerpt": "CAEPE launches MCP Server—secure GitHub Copilot integration for Kubernetes rollouts, cluster health checks, and AI-native infrastructure management.",
+      "content": {
+        "root": {
+          "type": "root",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "FOR IMMEDIATE RELEASE",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Singapore, September 10 2025 — Developers can now manage Kubernetes infrastructure from their IDE using natural language—directly inside GitHub Copilot. CAEPE, the platform for continuous deployment at scale, has launched the CAEPE MCP Server—a secure, GitHub Copilot-compatible integration designed to simplify and streamline everyday Kubernetes deployments and Day 2 operations.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Built to be compatible with the Model Context Protocol (MCP)—an open standard introduced by Anthropic and adopted by GitHub for Copilot—CAEPE MCP Server integrates directly with Copilot Chat Extensions. Teams can trigger rollouts, list clusters, or check deployment status using plain English—no new interfaces, plugins, or context switching required. Unlike many AI tools, it is built with enterprise-grade security and governance from day one.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "CAEPE MCP Server gives developers fast, secure access to infrastructure—without compromising the control and compliance standards platform teams require, It’s simple for developers—and structured for enterprise-scale environments. Mark Mooney, Product Lead, CAEPE",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "How MCP Enables Secure, AI-Native Infrastructure",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "As AI copilots become part of daily developer workflows, protocols like MCP are proving to be one of the most effective ways to connect internal tools securely and intuitively. CAEPE’s implementation is GitHub-native, straightforward to set up, and fully governed by enterprise policies.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "The MCP Server is part of CAEPE’s AI roadmap—focused on delivering practical value to developers and improving productivity without adding risk or complexity.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Built for Teams Who Need Control and Scale",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Seamless with Enterprise Auth Works with your SSO and RBAC setup. Roles and permissions follow your existing CAEPE configuration—ensuring least-privilege access across dev, test, and production.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Granular Policy Enforcement All actions are subject to deployment policy checks. Teams can configure guardrails to prevent unintended or unauthorized changes.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Full Auditability Every interaction is logged, exportable, and SIEM-ready—supporting compliance, forensics, and governance.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Key Capabilities",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Natural Language Infrastructure Access Trigger rollouts, inspect cluster state, or onboard applications directly through GitHub Copilot.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "No Workflow Disruption Developers stay in their IDE—no new consoles, training, or context switching required.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Secure by Default Authentication, RBAC, policy checks, and audit logs are enforced automatically.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Future-Ready Beyond CAEPE-managed infrastructure, customers will be able to expose their own internal tools via MCP-compatible servers.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "“This isn’t about layering AI on top of legacy tools,” added Mooney. “It’s about building a secure, intelligent interface that fits how modern teams work—without compromising enterprise requirements for security and auditability.”",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Availability",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "The CAEPE MCP Server is now available to all CAEPE users.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Learn more in the docs or Test Drive CAEPE today.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Frequently Asked Questions (FAQ)",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "What is CAEPE MCP Server? CAEPE MCP Server is a secure, GitHub Copilot-compatible integration that lets developers manage Kubernetes deployment workflows using natural language directly from their IDE.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "How does MCP integrate with GitHub Copilot? It uses Model Context Protocol (MCP) to securely expose CAEPE infrastructure controls to Copilot Chat, enabling plain English commands for rollouts, health checks, and more.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Is CAEPE MCP Server secure for enterprise environments? Yes. Through the MCP Server, all the security features required for enterprise environments built into CAEPE&#8217;s design are in place, including enterprise auth integration (SSO & RBAC), policy checks, and audibility (SIEM-ready).",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Media Contact: Joanne Goh Head of Content, CAEPE joanne.goh@biqmind.com",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "CAEPE Continuous Deployment",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Manage workloads on Kubernetes anywhere robustly and securely.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Shores up security by simplifying deployment anywhere, supporting managed services, native Kubernetes, self-hosted, edge and secure airgapped deployment targets.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Supports GitOps and provides guided, UI-driven workflows for all major progressive delivery strategies.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Has RBAC built-in, providing inherent enterprise access control for who can deploy.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Supports extended testing capabilities enabling your team to run different tests quickly and easily.",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "text": "Test Drive CAEPE Now!",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "version": 1
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "version": 1
+        }
+      },
+      "author": "CAEPE Team",
+      "publish_date": "2025-09-10",
+      "reading_time": 4,
+      "tags": [
+        {
+          "tag": "News"
+        },
+        {
+          "tag": "Copilot"
+        },
+        {
+          "tag": "deployment"
+        },
+        {
+          "tag": "GitHub"
+        },
+        {
+          "tag": "kubernetes"
+        }
+      ],
+      "meta": {
+        "meta_title": "From Prompt to Production: Secure, AI-Native Infrastructure Management—Now with CAEPE MCP Server",
+        "meta_description": "CAEPE launches MCP Server—secure GitHub Copilot integration for Kubernetes rollouts, cluster health checks, and AI-native infrastructure management."
+      },
+      "featured_media_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      "featured_media_alt": "CAEPE MCP Server",
+      "_status": "draft"
+    }
+  ]
+}

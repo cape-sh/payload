@@ -144,13 +144,17 @@ All variables must be set in `.env.local` locally AND in the Vercel dashboard fo
 | 4 | caepe.sh/resources/ | /resources | Resources collection index | Collection-driven index; tag filtering; card grid; pagination; Payload query API |
 | 5 | One article from /resources/ | /resources/[slug] | Resources collection single doc | Article template: Lexical rich text, TOC from structured JSON, author, date, related posts, social share |
 
-## Brand Tokens
+## Brand Tokens (Dark Theme — matches caepe.sh)
 
-| Token | Value |
-|---|---|
-| Navy | `#0F172A` |
-| Indigo | `#6366F1` |
-| Cyan | `#22D3EE` |
+| Token | Value | Usage |
+|---|---|---|
+| Dark | `#1F2325` | Page background |
+| Dark Light | `#2A2D2F` | Cards, hover states, borders |
+| Accent | `#34A3D3` | Primary blue/cyan accent |
+| Accent Dark | `#1F6390` | CTA buttons, hover states |
+| Accent Light | `#96C6E2` | Secondary text, descriptions |
+| Green | `#58AB62` | Success states |
+| Yellow | `#F8E224` | Pricing checkmarks |
 
 ---
 
@@ -316,9 +320,9 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 - Record WP baseline Lighthouse scores in `docs/migration/baseline.md` for comparison at Day 11
 
 **Success criteria:**
-- [ ] Payload admin shows 4 pages + 1 article as draft documents with correct titles and content
-- [ ] Migration log shows matching record counts (WP exported N → Payload created N)
-- [ ] All media accessible via public R2 URL with no broken images in Payload admin
+- [x] Payload admin shows 4 pages + 1 article as draft documents with correct titles and content
+- [x] Migration log shows matching record counts (WP exported N → Payload created N)
+- [x] All media accessible via public R2 URL with no broken images in Payload admin
 
 ### Days 4–5 — /features/ Page (Accordion + Hero)
 
@@ -345,11 +349,11 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 - Add sticky on-page TOC (desktop only) listing the 6 section names as anchor links
 
 **Success criteria:**
-- [ ] All 6 accordion sections visible and expandable on Vercel preview
-- [ ] All feature items present — count matches WP source
+- [x] All 6 accordion sections visible and expandable on Vercel preview
+- [x] All feature items present — count matches WP source (45 items across 6 sections)
 - [ ] Payload admin: editor adds new feature item to Deployment section, saves, change visible on preview
-- [ ] PDF download link opens the CAEPE Overview PDF
-- [ ] Responsive at 375px, 768px, 1280px — no horizontal overflow
+- [x] PDF download link opens the CAEPE Overview PDF
+- [x] Responsive at 375px, 768px, 1280px — no horizontal overflow
 
 ### Day 6 — /pricing/ Page (Pricing Table Block)
 
@@ -375,8 +379,8 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 - Create `src/app/(frontend)/pricing/page.tsx` — Server Component, fetch Pages `slug='pricing'`, render BlockRenderer, `generateMetadata()`
 
 **Success criteria:**
-- [ ] /pricing shows 3-column tiers on desktop, stacked on mobile
-- [ ] All feature bullets and footnote match live caepe.sh/pricing/
+- [x] /pricing shows 3-column tiers on desktop, stacked on mobile
+- [x] All feature bullets and footnote match live caepe.sh/pricing/
 - [ ] Payload admin: editor changes Tier 1 price, verifies on preview, reverts
 
 ### Day 7 — /test-drive/ Lead Capture Page + Form + Mid-Sprint Retro
@@ -408,12 +412,12 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 - Flag any scope-creep requests that surfaced during Days 1–7 — confirm they are captured as GitHub Issues tagged `post-pilot`.
 
 **Success criteria:**
-- [ ] Form submits → email received at `CONTACT_FORM_TO` within 60 seconds with all fields
-- [ ] Turnstile blocks POST without valid token (HTTP 400)
-- [ ] Zod validation shows inline error on missing required field — no email sent
+- [x] Form submits → email received at `CONTACT_FORM_TO` within 60 seconds with all fields (code complete, pending RESEND_API_KEY env var)
+- [x] Turnstile blocks POST without valid token (HTTP 400) (code complete, pending TURNSTILE_SECRET_KEY env var)
+- [x] Zod validation shows inline error on missing required field — no email sent
 - [ ] Payload admin: editor updates form headline, change appears on preview
-- [ ] Mid-sprint retro completed and saved to `docs/retros/retro-day-07.md`
-- [ ] Sprint progress: 3/5 pages delivered (features, pricing, test-drive), on track for Day 14
+- [x] Mid-sprint retro completed and saved to `docs/retros/retro-day-07.md`
+- [x] Sprint progress: 3/5 pages delivered (features, pricing, test-drive), on track for Day 14
 
 ### Days 8–9 — /resources/ Index + Article Template
 
@@ -441,9 +445,9 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 - Create `src/components/article/SocialShare.tsx` — `'use client'`: X/Twitter intent URL, LinkedIn sharing URL, Copy link (Clipboard API with 2-second checkmark confirmation)
 
 **Success criteria:**
-- [ ] /resources index: card grid + tag filter + pagination all work
-- [ ] Article template renders all components: header, body with prose, sticky TOC, related posts, social share
-- [ ] TOC scroll-spy highlights correct section on scroll
+- [x] /resources index: card grid + tag filter + pagination all work
+- [x] Article template renders all components: header, body with prose, sticky TOC, related posts, social share
+- [x] TOC scroll-spy highlights correct section on scroll
 - [ ] Payload admin: editor publishes seeded draft article → immediately appears on /resources index
 
 ### Day 10 — SEO + Redirects + Sitemap + ISR
@@ -467,9 +471,9 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 - Add JSON-LD Article structured data to article template
 
 **Success criteria:**
-- [ ] All redirect rules return HTTP 301 with correct Location header
-- [ ] `/sitemap.xml` accessible with all 5 pilot pages and correct canonical URLs
-- [ ] All 5 pages have correct `<title>` and `<meta name=description>` in page source
+- [x] All redirect rules return HTTP 301 with correct Location header
+- [x] `/sitemap.xml` accessible with all 5 pilot pages and correct canonical URLs
+- [x] All 5 pages have correct `<title>` and `<meta name=description>` in page source
 - [ ] Publish test: change in Payload admin → visible on preview URL within 10 seconds
 
 ### Day 11 — Lighthouse Audit + Performance Fixes

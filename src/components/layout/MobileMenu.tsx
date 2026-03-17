@@ -21,7 +21,7 @@ export function MobileMenu({ navItems, ctaLabel, ctaHref }: MobileMenuProps) {
     <div className="md:hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="p-2 text-gray-600"
+        className="p-2 text-accent-light"
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
       >
@@ -37,13 +37,13 @@ export function MobileMenu({ navItems, ctaLabel, ctaHref }: MobileMenuProps) {
       </button>
 
       {open && (
-        <div className="absolute left-0 right-0 top-full border-b border-gray-200 bg-white px-6 py-4">
+        <div className="absolute left-0 right-0 top-full border-b border-dark-light bg-dark px-6 py-4">
           <div className="flex flex-col gap-4">
             {navItems.map((item, i) => (
               <Link
                 key={i}
                 href={item.href}
-                className="text-sm font-medium text-gray-600 transition-colors hover:text-navy"
+                className="text-sm font-medium text-accent-light transition-colors hover:text-white"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -52,7 +52,7 @@ export function MobileMenu({ navItems, ctaLabel, ctaHref }: MobileMenuProps) {
             {ctaLabel && ctaHref && (
               <Link
                 href={ctaHref}
-                className="rounded-lg bg-indigo px-4 py-2 text-center text-sm font-semibold text-white"
+                className="rounded bg-accent-dark px-4 py-2 text-center text-sm font-semibold text-white"
                 onClick={() => setOpen(false)}
               >
                 {ctaLabel}

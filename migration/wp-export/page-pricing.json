@@ -1,0 +1,253 @@
+{
+  "id": 2149,
+  "date": "2024-04-15T17:02:49",
+  "date_gmt": "2024-04-15T09:02:49",
+  "guid": {
+    "rendered": "https://caepe.sh/?page_id=2149"
+  },
+  "modified": "2024-10-10T15:32:19",
+  "modified_gmt": "2024-10-10T07:32:19",
+  "slug": "pricing",
+  "status": "publish",
+  "type": "page",
+  "link": "https://caepe.sh/pricing/",
+  "title": {
+    "rendered": "Pricing"
+  },
+  "content": {
+    "rendered": "\n<div class=\"wp-block-stackable-columns alignwide stk-block-columns stk-block stk-047a2de\" data-block-id=\"047a2de\"><style>.stk-047a2de {margin-top:100px !important;margin-bottom:70px !important;}</style><div class=\"stk-row stk-inner-blocks stk-block-content stk-content-align stk-047a2de-column alignwide\">\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-c93ef8a\" data-v=\"4\" data-block-id=\"c93ef8a\"><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-c93ef8a-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-c93ef8a-inner-blocks\">\n<h1 class=\"wp-block-heading\">Pricing Made Simple<span style=\"color: var(--ast-global-color-5);\" class=\"stk-highlight\">.</span></h1>\n\n\n\n<p class=\"has-link-color has-medium-font-size wp-elements-31cbed6d68ca900afe457d431f4e4e64\">Pay only for clusters connected for 24 hours or more.</p>\n</div></div></div>\n</div></div>\n\n\n\n<div class=\"wp-block-stackable-columns alignwide stk-block-columns stk-block stk-61a7777\" data-block-id=\"61a7777\"><div class=\"stk-row stk-inner-blocks stk-block-content stk-content-align stk-61a7777-column alignwide\">\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-f60b382\" data-v=\"4\" data-block-id=\"f60b382\"><style>.stk-f60b382 {border-radius:8px !important;overflow:hidden !important;}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-f60b382-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-f60b382-inner-blocks\">\n<p class=\"has-text-align-center has-medium-font-size\">All CAEPE pricing plans come with:</p>\n</div></div></div>\n</div></div>\n\n\n\n<div class=\"wp-block-stackable-columns stk-block-columns stk-block stk-1ba661e\" data-block-id=\"1ba661e\"><div class=\"stk-row stk-inner-blocks stk-block-content stk-content-align stk-1ba661e-column\">\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-f875976\" data-v=\"4\" data-block-id=\"f875976\"><style>@media screen and (min-width: 768px){.stk-f875976 {flex:var(--stk-flex-grow, 1) 1 calc(33.33% - var(--stk-column-gap, 0px) * 2 / 3 ) !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-f875976-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-f875976-inner-blocks\"></div></div></div>\n\n\n\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-14c5a7d\" data-v=\"4\" data-block-id=\"14c5a7d\"><style>@media screen and (min-width: 768px){.stk-14c5a7d {flex:var(--stk-flex-grow, 1) 1 calc(33.33% - var(--stk-column-gap, 0px) * 2 / 3 ) !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-14c5a7d-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-14c5a7d-inner-blocks\">\n<div class=\"wp-block-stackable-icon-list stk-block-icon-list stk-block stk-ee7c4b1\" data-block-id=\"ee7c4b1\"><style>.stk-ee7c4b1 .stk-block-icon-list-item__content{gap:4px !important;align-items:baseline !important;}.stk-ee7c4b1 {--stk-icon-list-marker-color:var(--stk-global-color-99546, #f8e224) !important;--stk-icon-height:14.75px !important;}</style><svg style=\"display:none\"><defs><g id=\"stk-icon-list__icon-svg-def-ee7c4b1\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 190 190\"><polygon points=\"173.8,28.4 60.4,141.8 15.7,97.2 5.1,107.8 60.4,163 184.4,39 173.8,28.4\"/></svg></g></defs></svg><div class=\"stk-block-icon-list__ul stk-block-icon-list--column\"><ul class=\"stk-block-icon-list__group\">\n<li class=\"wp-block-stackable-icon-list-item stk-block-icon-list-item stk-block stk-13e4d85\" data-block-id=\"13e4d85\"><div class=\"stk-block-icon-list-item__content\"><span class=\"stk--svg-wrapper\"><div class=\"stk--inner-svg\"><svg aria-hidden=\"true\" width=\"32\" height=\"32\"><use xlink:href=\"#stk-icon-list__icon-svg-def-ee7c4b1\"></use></svg></div></span><span class=\"stk-block-icon-list-item__text\">Full enterprise support</span></div></li>\n\n\n\n<li class=\"wp-block-stackable-icon-list-item stk-block-icon-list-item stk-block stk-0c2f22c\" data-block-id=\"0c2f22c\"><div class=\"stk-block-icon-list-item__content\"><span class=\"stk--svg-wrapper\"><div class=\"stk--inner-svg\"><svg aria-hidden=\"true\" width=\"32\" height=\"32\"><use xlink:href=\"#stk-icon-list__icon-svg-def-ee7c4b1\"></use></svg></div></span><span class=\"stk-block-icon-list-item__text\">Unlimited applications, workloads and services</span></div></li>\n\n\n\n<li class=\"wp-block-stackable-icon-list-item stk-block-icon-list-item stk-block stk-d462c0f\" data-block-id=\"d462c0f\"><div class=\"stk-block-icon-list-item__content\"><span class=\"stk--svg-wrapper\"><div class=\"stk--inner-svg\"><svg aria-hidden=\"true\" width=\"32\" height=\"32\"><use xlink:href=\"#stk-icon-list__icon-svg-def-ee7c4b1\"></use></svg></div></span><span class=\"stk-block-icon-list-item__text\">Unlimited nodes</span></div></li>\n\n\n\n<li class=\"wp-block-stackable-icon-list-item stk-block-icon-list-item stk-block stk-7ca6c23\" data-block-id=\"7ca6c23\"><div class=\"stk-block-icon-list-item__content\"><span class=\"stk--svg-wrapper\"><div class=\"stk--inner-svg\"><svg aria-hidden=\"true\" width=\"32\" height=\"32\"><use xlink:href=\"#stk-icon-list__icon-svg-def-ee7c4b1\"></use></svg></div></span><span class=\"stk-block-icon-list-item__text\">RBAC/SSO integration</span></div></li>\n\n\n\n<li class=\"wp-block-stackable-icon-list-item stk-block-icon-list-item stk-block stk-11a7dcd\" data-block-id=\"11a7dcd\"><div class=\"stk-block-icon-list-item__content\"><span class=\"stk--svg-wrapper\"><div class=\"stk--inner-svg\"><svg aria-hidden=\"true\" width=\"32\" height=\"32\"><use xlink:href=\"#stk-icon-list__icon-svg-def-ee7c4b1\"></use></svg></div></span><span class=\"stk-block-icon-list-item__text\">DORA metrics</span></div></li>\n\n\n\n<li class=\"wp-block-stackable-icon-list-item stk-block-icon-list-item stk-block stk-2ba4429\" data-block-id=\"2ba4429\"><div class=\"stk-block-icon-list-item__content\"><span class=\"stk--svg-wrapper\"><div class=\"stk--inner-svg\"><svg aria-hidden=\"true\" width=\"32\" height=\"32\"><use xlink:href=\"#stk-icon-list__icon-svg-def-ee7c4b1\"></use></svg></div></span><span class=\"stk-block-icon-list-item__text\">Option of SaaS or Self-hosted</span></div></li>\n</ul></div></div>\n</div></div></div>\n\n\n\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-3dcce2a\" data-v=\"4\" data-block-id=\"3dcce2a\"><style>@media screen and (min-width: 768px){.stk-3dcce2a {flex:var(--stk-flex-grow, 1) 1 calc(33.33% - var(--stk-column-gap, 0px) * 2 / 3 ) !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-3dcce2a-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-3dcce2a-inner-blocks\"></div></div></div>\n</div></div>\n\n\n\n<div class=\"wp-block-stackable-columns alignwide stk-block-columns stk-block stk-cb2886e\" data-block-id=\"cb2886e\"><style>.stk-cb2886e {padding-top:0px !important;padding-right:0px !important;padding-bottom:0px !important;padding-left:0px !important;}.stk-cb2886e-column{--stk-column-gap:25px !important;row-gap:25px !important;}</style><div class=\"stk-row stk-inner-blocks stk-block-content stk-content-align stk-cb2886e-column alignwide\">\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-af5ae1c\" data-v=\"4\" data-block-id=\"af5ae1c\"><style>.stk-af5ae1c {border-radius:10px !important;overflow:hidden !important;border-style:solid !important;border-color:var(--ast-global-color-6) !important;border-top-width:2px !important;border-right-width:2px !important;border-bottom-width:2px !important;border-left-width:2px !important;}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-af5ae1c-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-af5ae1c-inner-blocks\">\n<div class=\"wp-block-stackable-spacer stk-block-spacer stk--no-padding stk-block stk-f1032f0\" data-block-id=\"f1032f0\"><style>.stk-f1032f0 {height:15px !important;}</style></div>\n\n\n\n<div class=\"wp-block-stackable-pricing-box stk-block-pricing-box stk-block stk-e9a5f77 is-style-basic\" data-v=\"2\" data-block-id=\"e9a5f77\"><style>.stk-e9a5f77 {align-items:flex-start !important;display:flex !important;}.stk-e9a5f77-container{padding-top:30px !important;padding-right:30px !important;padding-bottom:30px !important;padding-left:30px !important;}</style><div class=\"stk-block-pricing-box__content stk-content-align stk-e9a5f77-column stk-container stk-e9a5f77-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks has-text-align-center stk-e9a5f77-inner-blocks\">\n<div class=\"wp-block-stackable-heading stk-block-heading stk-block-heading--v2 stk-block stk-05d63d5\" id=\"up-to-25-clusters\" data-block-id=\"05d63d5\"><style>.stk-05d63d5 {margin-bottom:24.000001907348633px !important;}</style><h5 class=\"stk-block-heading__text\">Up to 25 clusters</h5></div>\n\n\n\n<div class=\"wp-block-stackable-price stk-block-price stk-block stk-858baae\" data-block-id=\"858baae\"><style>.stk-858baae {margin-bottom:24.000001907348633px !important;}</style>\n<span class=\"wp-block-stackable-text stk-block-text stk-block stk-d129fda\" data-block-id=\"d129fda\"><span class=\"stk-block-text__text\">$</span></span>\n\n\n\n<span class=\"wp-block-stackable-text stk-block-text stk-block stk-7d0fcd4 stk-block-price__price\" data-block-id=\"7d0fcd4\"><span class=\"stk-block-text__text\">500</span></span>\n\n\n\n<span class=\"wp-block-stackable-text stk-block-text stk-block stk-5dadacd\" data-block-id=\"5dadacd\"><span class=\"stk-block-text__text\">.00</span></span>\n</div>\n\n\n\n<div class=\"wp-block-stackable-subtitle stk-block-subtitle stk-block stk-e35061c\" data-block-id=\"e35061c\"><style>.stk-e35061c {margin-bottom:0px !important;}.stk-e35061c .stk-block-subtitle__text{color:var(--stk-global-color-53540, #cfcfd2) !important;}</style><p class=\"stk-block-subtitle__text stk-subtitle has-text-color has-stk-global-color-53540-color\">Per cluster* (monthly)</p></div>\n</div></div></div>\n</div></div></div>\n\n\n\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-674b9b4\" data-v=\"4\" data-block-id=\"674b9b4\"><style>.stk-674b9b4 {border-radius:10px !important;overflow:hidden !important;border-style:solid !important;border-color:var(--ast-global-color-5) !important;border-top-width:2px !important;border-right-width:2px !important;border-bottom-width:2px !important;border-left-width:2px !important;}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-674b9b4-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-674b9b4-inner-blocks\">\n<div class=\"wp-block-stackable-pricing-box stk-block-pricing-box stk-block stk-9ebb090 is-style-basic\" data-v=\"2\" data-block-id=\"9ebb090\"><style>.stk-9ebb090 {align-items:flex-start !important;display:flex !important;}.stk-9ebb090-container{padding-top:30px !important;padding-right:30px !important;padding-bottom:30px !important;padding-left:30px !important;}</style><div class=\"stk-block-pricing-box__content stk-content-align stk-9ebb090-column stk-container stk-9ebb090-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks has-text-align-center stk-9ebb090-inner-blocks\">\n<div class=\"wp-block-stackable-spacer stk-block-spacer stk--no-padding stk-block stk-e1abf6d\" data-block-id=\"e1abf6d\"><style>.stk-e1abf6d {height:15px !important;}</style></div>\n\n\n\n<div class=\"wp-block-stackable-heading stk-block-heading stk-block-heading--v2 stk-block stk-da5b44b\" id=\"25-clusters\" data-block-id=\"da5b44b\"><h5 class=\"stk-block-heading__text\">25+ clusters</h5></div>\n\n\n\n<div class=\"wp-block-stackable-price stk-block-price stk-block stk-6f87c1c\" data-block-id=\"6f87c1c\"><style>.stk-6f87c1c {margin-bottom:24.000001907348633px !important;}</style>\n<span class=\"wp-block-stackable-text stk-block-text stk-block stk-59ce825\" data-block-id=\"59ce825\"><span class=\"stk-block-text__text\">$</span></span>\n\n\n\n<span class=\"wp-block-stackable-text stk-block-text stk-block stk-474175f stk-block-price__price\" data-block-id=\"474175f\"><span class=\"stk-block-text__text\">250</span></span>\n\n\n\n<span class=\"wp-block-stackable-text stk-block-text stk-block stk-5198797\" data-block-id=\"5198797\"><span class=\"stk-block-text__text\">.00</span></span>\n</div>\n\n\n\n<div class=\"wp-block-stackable-subtitle stk-block-subtitle stk-block stk-a0825bb\" data-block-id=\"a0825bb\"><style>.stk-a0825bb {margin-bottom:0px !important;}.stk-a0825bb .stk-block-subtitle__text{color:var(--stk-global-color-53540, #cfcfd2) !important;}</style><p class=\"stk-block-subtitle__text stk-subtitle has-text-color has-stk-global-color-53540-color\">Per cluster* (monthly)</p></div>\n</div></div></div>\n</div></div></div>\n\n\n\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-19ce2a1\" data-v=\"4\" data-block-id=\"19ce2a1\"><style>.stk-19ce2a1 {border-radius:10px !important;overflow:hidden !important;border-style:solid !important;border-color:var(--ast-global-color-5) !important;border-top-width:2px !important;border-right-width:2px !important;border-bottom-width:2px !important;border-left-width:2px !important;}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-19ce2a1-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-19ce2a1-inner-blocks\">\n<div class=\"wp-block-stackable-spacer stk-block-spacer stk--no-padding stk-block stk-00fb947\" data-block-id=\"00fb947\"><style>.stk-00fb947 {height:15px !important;}</style></div>\n\n\n\n<div class=\"wp-block-stackable-pricing-box stk-block-pricing-box stk-block stk-6e33d53 is-style-basic\" data-v=\"2\" data-block-id=\"6e33d53\"><style>.stk-6e33d53 {align-items:flex-start !important;display:flex !important;}.stk-6e33d53-container{padding-top:30px !important;padding-right:30px !important;padding-bottom:30px !important;padding-left:30px !important;}</style><div class=\"stk-block-pricing-box__content stk-content-align stk-6e33d53-column stk-container stk-6e33d53-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks has-text-align-center stk-6e33d53-inner-blocks\">\n<div class=\"wp-block-stackable-heading stk-block-heading stk-block-heading--v2 stk-block stk-69a033f\" id=\"100-clusters\" data-block-id=\"69a033f\"><style>.stk-69a033f {margin-bottom:24.000001907348633px !important;}</style><h5 class=\"stk-block-heading__text\">100+ clusters</h5></div>\n\n\n\n<div class=\"wp-block-stackable-price stk-block-price stk-block stk-cd52f6b\" data-block-id=\"cd52f6b\"><style>.stk-cd52f6b {margin-bottom:24.000001907348633px !important;}</style>\n<span class=\"wp-block-stackable-text stk-block-text stk-block stk-a43950f\" data-block-id=\"a43950f\"><span class=\"stk-block-text__text\">$</span></span>\n\n\n\n<span class=\"wp-block-stackable-text stk-block-text stk-block stk-8f26a12 stk-block-price__price\" data-block-id=\"8f26a12\"><style>.stk-8f26a12 .stk-block-text__text{font-size:40px !important;}@media screen and (max-width: 1023px){.stk-8f26a12 .stk-block-text__text{font-size:40px !important;}}</style><span class=\"stk-block-text__text\">custom</span></span>\n\n\n\n<span class=\"wp-block-stackable-text stk-block-text stk-block stk-68d808c\" data-block-id=\"68d808c\"><span class=\"stk-block-text__text\"></span></span>\n</div>\n\n\n\n<div class=\"wp-block-ugb-button ugb-button-wrapper ugb-0938379 ugb-main-block\"><style>@media screen and (min-width:768px){.ugb-0938379.ugb-button-wrapper{margin-top:10px !important;margin-bottom:0px !important}}</style><div class=\"ugb-inner-block\"><div class=\"ugb-block-content\"><div class=\"ugb-button-container\"><a class=\"ugb-button1 ugb-button ugb-button--size-normal\" href=\"mailto:letschat@caepe.sh\" rel=\"\" title=\"\"><span class=\"ugb-button--inner\">Talk to us</span></a></div></div></div></div>\n</div></div></div>\n</div></div></div>\n</div></div>\n\n\n\n<p class=\"has-text-align-center has-small-font-size\"><em>* Clusters charged as active after 24 hours | Pricing in USD</em> </p>\n\n\n\n<div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<div class=\"wp-block-stackable-button-group alignwide stk-block-button-group stk-block stk-453e476\" data-block-id=\"453e476\"><style>.stk-453e476{margin-top:50px !important;margin-bottom:70px !important}.stk-453e476 .stk-button-group{flex-direction:column !important;align-items:center !important}.stk-453e476 .stk-block{flex-basis:auto !important}</style><div class=\"stk-row stk-inner-blocks has-text-align-center stk-block-content stk-button-group\">\n<div class=\"wp-block-stackable-button stk-block-button stk-block stk-932b331\" data-block-id=\"932b331\"><style>.stk-932b331{align-items:center !important;display:flex !important}.stk-932b331 .stk-button{padding-top:20px !important;padding-right:20px !important;padding-bottom:20px !important;padding-left:20px !important;background:#0693e3 !important;border-top-left-radius:8px !important;border-top-right-radius:8px !important;border-bottom-right-radius:8px !important;border-bottom-left-radius:8px !important}.stk-932b331 .stk-button:hover:after{background:var(--ast-global-color-4) !important;opacity:1 !important}.stk-932b331 .stk-button .stk--inner-svg svg:last-child{height:20px !important;width:20px !important}.stk-932b331 .stk-button__inner-text{font-size:20px !important}@media screen and (max-width:1023px){.stk-932b331 .stk-button__inner-text{font-size:20px !important}}</style><a class=\"stk-link stk-button stk--hover-effect-scale\" href=\"https://caepe.sh/start-here/\"><span class=\"stk-button__inner-text\">Get started with CAEPE</span></a></div>\n</div></div>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>Explore CAEPE&#8217;s straightforward and transparent pricing options for Kubernetes Continuous Deployment. Start with a complimentary pilot program lasting 2 to 6 weeks, allowing your team to experience CAEPE&#8217;s powerful features in your actual environment. </p>\n",
+    "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "_uag_custom_page_level_css": "",
+    "site-sidebar-layout": "default",
+    "site-content-layout": "",
+    "ast-site-content-layout": "default",
+    "site-content-style": "default",
+    "site-sidebar-style": "default",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "disabled",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "theme-transparent-header-meta": "",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "set",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "_vp_format_video_url": "",
+    "_vp_image_focal_point": [],
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-2149",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "featured_image_urls_v2": {
+    "full": "",
+    "thumbnail": "",
+    "medium": "",
+    "medium_large": "",
+    "large": "",
+    "1536x1536": "",
+    "2048x2048": "",
+    "vp_sm": "",
+    "vp_md": "",
+    "vp_lg": "",
+    "vp_xl": "",
+    "vp_sm_popup": "",
+    "vp_md_popup": "",
+    "vp_xl_popup": ""
+  },
+  "post_excerpt_stackable_v2": "<p>Explore CAEPE&#8217;s straightforward and transparent pricing options for Kubernetes Continuous Deployment. Start with a complimentary pilot program lasting 2 to 6 weeks, allowing your team to experience CAEPE&#8217;s powerful features in your actual environment. </p>\n",
+  "category_list_v2": "",
+  "author_info_v2": {
+    "name": "Jaclynn Seah",
+    "url": "https://caepe.sh/author/jaclynn-seahbiqmind-com/"
+  },
+  "comments_num_v2": "0 comments",
+  "uagb_featured_image_src": {
+    "full": false,
+    "thumbnail": false,
+    "medium": false,
+    "medium_large": false,
+    "large": false,
+    "1536x1536": false,
+    "2048x2048": false,
+    "vp_sm": false,
+    "vp_md": false,
+    "vp_lg": false,
+    "vp_xl": false,
+    "vp_sm_popup": false,
+    "vp_md_popup": false,
+    "vp_xl_popup": false
+  },
+  "uagb_author_info": {
+    "display_name": "Jaclynn Seah",
+    "author_link": "https://caepe.sh/author/jaclynn-seahbiqmind-com/"
+  },
+  "uagb_comment_info": 0,
+  "uagb_excerpt": "Explore CAEPE's straightforward and transparent pricing options for Kubernetes Continuous Deployment. Start with a complimentary pilot program lasting 2 to 6 weeks, allowing your team to experience CAEPE's powerful features in your actual environment.",
+  "_links": {
+    "self": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/pages/2149",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/users/2"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/comments?post=2149"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 0,
+        "href": "https://caepe.sh/wp-json/wp/v2/pages/2149/revisions"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/media?parent=2149"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

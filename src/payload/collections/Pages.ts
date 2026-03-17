@@ -1,5 +1,9 @@
 import type { CollectionConfig } from 'payload'
 import { revalidatePath } from 'next/cache'
+import { Hero } from '../blocks/Hero'
+import { FeatureAccordion } from '../blocks/FeatureAccordion'
+import { PricingTable } from '../blocks/PricingTable'
+import { CTAForm } from '../blocks/CTAForm'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -47,7 +51,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      blocks: [],
+      blocks: [Hero, FeatureAccordion, PricingTable, CTAForm],
       admin: {
         description: 'Add and arrange content blocks to build the page',
       },

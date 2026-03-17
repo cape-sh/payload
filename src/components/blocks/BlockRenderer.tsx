@@ -1,0 +1,42 @@
+import { HeroBlock } from './HeroBlock'
+import { FeatureAccordionBlock } from './FeatureAccordionBlock'
+import { PricingTableBlock } from './PricingTableBlock'
+import { CTAFormBlock } from './CTAFormBlock'
+
+interface Block {
+  blockType: string
+  [key: string]: unknown
+}
+
+interface BlockRendererProps {
+  blocks: Block[]
+}
+
+export function BlockRenderer({ blocks }: BlockRendererProps) {
+  return (
+    <>
+      {blocks.map((block, i) => {
+        switch (block.blockType) {
+          case 'hero':
+            return <HeroBlock key={i} {...(block as any)} />
+          case 'featureAccordion':
+            return (
+              <FeatureAccordionBlock
+                key={i}
+                section_label={block.section_label as string}
+                section_title={block.section_title as string}
+                items={block.items as any}
+                id={`section-${i}`}
+              />
+            )
+          case 'pricingTable':
+            return <PricingTableBlock key={i} {...(block as any)} />
+          case 'ctaForm':
+            return <CTAFormBlock key={i} {...(block as any)} />
+          default:
+            return null
+        }
+      })}
+    </>
+  )
+}

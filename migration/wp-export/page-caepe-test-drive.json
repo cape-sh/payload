@@ -1,0 +1,253 @@
+{
+  "id": 2372,
+  "date": "2024-09-09T15:42:50",
+  "date_gmt": "2024-09-09T07:42:50",
+  "guid": {
+    "rendered": "https://caepe.sh/?page_id=2372"
+  },
+  "modified": "2025-06-09T16:07:23",
+  "modified_gmt": "2025-06-09T08:07:23",
+  "slug": "caepe-test-drive",
+  "status": "publish",
+  "type": "page",
+  "link": "https://caepe.sh/caepe-test-drive/",
+  "title": {
+    "rendered": "Test Drive"
+  },
+  "content": {
+    "rendered": "\n<div class=\"wp-block-stackable-columns alignwide stk-block-columns stk-block stk-047a2de\" data-block-id=\"047a2de\"><style>.stk-047a2de {margin-top:50px !important;margin-bottom:50px !important;}</style><div class=\"stk-row stk-inner-blocks stk-block-content stk-content-align stk-047a2de-column alignwide\">\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-c93ef8a\" data-v=\"4\" data-block-id=\"c93ef8a\"><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-c93ef8a-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-c93ef8a-inner-blocks\">\n<h1 class=\"wp-block-heading alignwide has-text-align-left\"><strong>Deploy Faster, Smarter, Safer&nbsp;</strong>​<strong>&#8211; Experience CAEPE for Free</strong></h1>\n\n\n\n<div class=\"wp-block-stackable-columns stk-block-columns stk-block stk-6b636e1\" data-block-id=\"6b636e1\"><div class=\"stk-row stk-inner-blocks stk-block-content stk-content-align stk-6b636e1-column\">\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-c4108dc\" data-v=\"4\" data-block-id=\"c4108dc\"><style>@media screen and (min-width: 768px){.stk-c4108dc {flex:var(--stk-flex-grow, 1) 1 calc(25% - var(--stk-column-gap, 0px) * 2 / 3 ) !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-c4108dc-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-c4108dc-inner-blocks\">\n<p><span style=\"color: var(--stk-global-color-17379, #96c6e2);\" class=\"stk-highlight\">✦</span> Built-in Progressive Delivery </p>\n</div></div></div>\n\n\n\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-f3c5505\" data-v=\"4\" data-block-id=\"f3c5505\"><style>@media screen and (min-width: 768px){.stk-f3c5505 {flex:var(--stk-flex-grow, 1) 1 calc(42.599999999999994% - var(--stk-column-gap, 0px) * 2 / 3 ) !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-f3c5505-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-f3c5505-inner-blocks\">\n<p><span style=\"color: var(--stk-global-color-17379, #96c6e2);\" class=\"stk-highlight\">✦</span> Pre-flight Tests, Post-Deployment Actions and Dry Run</p>\n</div></div></div>\n\n\n\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-950d42d\" data-v=\"4\" data-block-id=\"950d42d\"><style>@media screen and (min-width: 768px){.stk-950d42d {flex:var(--stk-flex-grow, 1) 1 calc(32.4% - var(--stk-column-gap, 0px) * 2 / 3 ) !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-950d42d-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-950d42d-inner-blocks\">\n<p> <span style=\"color: var(--stk-global-color-17379, #96c6e2);\" class=\"stk-highlight\">✦</span> Easy integration with existing CI tools</p>\n</div></div></div>\n</div></div>\n</div></div></div>\n</div></div>\n\n\n\n<div class=\"wp-block-stackable-columns alignwide stk-block-columns stk-block stk-0006426\" data-block-id=\"0006426\"><style>.stk-0006426-column{--stk-column-gap:10px !important;}</style><div class=\"stk-row stk-inner-blocks stk-block-content stk-content-align stk-0006426-column alignwide\">\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-c39ec3c\" data-v=\"4\" data-block-id=\"c39ec3c\"><style>@media screen and (min-width: 768px){.stk-c39ec3c {flex:var(--stk-flex-grow, 1) 1 calc(66.666% - var(--stk-column-gap, 0px) * 1 / 2 ) !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-c39ec3c-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-c39ec3c-inner-blocks\">\t\t\t\t\t<div\n\t\t\t\t\t\tclass=\"wp-block-uagb-image-gallery uagb-block-30299c77     \"\n\t\t\t\t\t\tstyle=\"\"\n\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery spectra-image-gallery__layout--carousel\">\n\t\t\t\t\t\t\t\t<div class=\"uagb-slick-carousel uagb-block-30299c77\">\n\t\t\t\t\t\t\t\t\t\t\t\t<div class='spectra-image-gallery__media-wrapper' data-spectra-gallery-image-id='2467'>\n\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media spectra-image-gallery__media--carousel\">\n\t\t\t\t<picture>\n\t\t\t\t\t<source media=\"(min-width: 1024px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Dashboard-4.png\">\n\t\t\t\t\t<source media=\"(min-width: 768px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Dashboard-4.png\">\n\t\t\t\t\t<img decoding=\"async\" class=\"spectra-image-gallery__media-thumbnail spectra-image-gallery__media-thumbnail--carousel\" src=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Dashboard-4-300x216.png\" alt=\"\" loading=\"lazy\" />\n\t\t\t\t</picture>\n\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-blurrer\"></div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption-wrapper spectra-image-gallery__media-thumbnail-caption-wrapper--overlay\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption spectra-image-gallery__media-thumbnail-caption--overlay\">\n\t\t\t\t\tDashboard\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class='spectra-image-gallery__media-wrapper' data-spectra-gallery-image-id='2472'>\n\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media spectra-image-gallery__media--carousel\">\n\t\t\t\t<picture>\n\t\t\t\t\t<source media=\"(min-width: 1024px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Progressive-Delivery-Strategies-4.png\">\n\t\t\t\t\t<source media=\"(min-width: 768px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Progressive-Delivery-Strategies-4.png\">\n\t\t\t\t\t<img decoding=\"async\" class=\"spectra-image-gallery__media-thumbnail spectra-image-gallery__media-thumbnail--carousel\" src=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Progressive-Delivery-Strategies-4-300x216.png\" alt=\"\" loading=\"lazy\" />\n\t\t\t\t</picture>\n\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-blurrer\"></div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption-wrapper spectra-image-gallery__media-thumbnail-caption-wrapper--overlay\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption spectra-image-gallery__media-thumbnail-caption--overlay\">\n\t\t\t\t\tProgressive Delivery Strategies\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class='spectra-image-gallery__media-wrapper' data-spectra-gallery-image-id='2471'>\n\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media spectra-image-gallery__media--carousel\">\n\t\t\t\t<picture>\n\t\t\t\t\t<source media=\"(min-width: 1024px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Pre-flight-4.png\">\n\t\t\t\t\t<source media=\"(min-width: 768px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Pre-flight-4.png\">\n\t\t\t\t\t<img decoding=\"async\" class=\"spectra-image-gallery__media-thumbnail spectra-image-gallery__media-thumbnail--carousel\" src=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Pre-flight-4-300x216.png\" alt=\"\" loading=\"lazy\" />\n\t\t\t\t</picture>\n\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-blurrer\"></div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption-wrapper spectra-image-gallery__media-thumbnail-caption-wrapper--overlay\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption spectra-image-gallery__media-thumbnail-caption--overlay\">\n\t\t\t\t\tPre-flight\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class='spectra-image-gallery__media-wrapper' data-spectra-gallery-image-id='2468'>\n\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media spectra-image-gallery__media--carousel\">\n\t\t\t\t<picture>\n\t\t\t\t\t<source media=\"(min-width: 1024px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Deployment-Priority-4.png\">\n\t\t\t\t\t<source media=\"(min-width: 768px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Deployment-Priority-4.png\">\n\t\t\t\t\t<img decoding=\"async\" class=\"spectra-image-gallery__media-thumbnail spectra-image-gallery__media-thumbnail--carousel\" src=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-Deployment-Priority-4-300x216.png\" alt=\"\" loading=\"lazy\" />\n\t\t\t\t</picture>\n\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-blurrer\"></div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption-wrapper spectra-image-gallery__media-thumbnail-caption-wrapper--overlay\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption spectra-image-gallery__media-thumbnail-caption--overlay\">\n\t\t\t\t\tDeployment Priority\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class='spectra-image-gallery__media-wrapper' data-spectra-gallery-image-id='2469'>\n\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media spectra-image-gallery__media--carousel\">\n\t\t\t\t<picture>\n\t\t\t\t\t<source media=\"(min-width: 1024px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-DryRun-4.png\">\n\t\t\t\t\t<source media=\"(min-width: 768px)\" srcset=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-DryRun-4.png\">\n\t\t\t\t\t<img decoding=\"async\" class=\"spectra-image-gallery__media-thumbnail spectra-image-gallery__media-thumbnail--carousel\" src=\"https://caepe.sh/wp-content/uploads/2024/09/CAEPE-DryRun-4-300x216.png\" alt=\"\" loading=\"lazy\" />\n\t\t\t\t</picture>\n\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-blurrer\"></div>\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption-wrapper spectra-image-gallery__media-thumbnail-caption-wrapper--overlay\">\n\t\t\t\t\t\t\t\t\t\t\t<div class=\"spectra-image-gallery__media-thumbnail-caption spectra-image-gallery__media-thumbnail-caption--overlay\">\n\t\t\t\t\tDry Run\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t</div></div></div>\n\n\n\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-e10ee31\" data-v=\"4\" data-block-id=\"e10ee31\"><style>@media screen and (min-width: 768px){.stk-e10ee31 {flex:var(--stk-flex-grow, 1) 1 calc(33.334% - var(--stk-column-gap, 0px) * 1 / 2 ) !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-e10ee31-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-e10ee31-inner-blocks\">\n<div class=\"wp-block-columns is-not-stacked-on-mobile is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex\">\n<div class=\"wp-block-column is-layout-flow wp-block-column-is-layout-flow\" style=\"flex-basis:100%\">\n<div class=\"wp-block-stackable-heading stk-block-heading stk-block-heading--v2 stk-block stk-9b60494\" id=\"start-your-test-drive\" data-block-id=\"9b60494\"><style>.stk-9b60494 {margin-bottom:9px !important;}</style><h3 class=\"stk-block-heading__text\">Start Your Test Drive</h3></div>\n\n\n\n<div class=\"wp-block-stackable-text stk-block-text stk-block stk-bcfc75d\" data-block-id=\"bcfc75d\"><style>.stk-bcfc75d {margin-bottom:-30px !important;}.stk-bcfc75d .stk-block-text__text{font-size:14px !important;}@media screen and (max-width: 1023px){.stk-bcfc75d .stk-block-text__text{font-size:14px !important;}}</style><p class=\"stk-block-text__text\">Secure sandbox. No credit card required.</p></div>\n\n\n<style id=\"wpforms-css-vars-2374-block-4f1b17be-2940-4b1d-aa94-3df38ce8bb91\">\n\t\t\t\t#wpforms-2374.wpforms-block-4f1b17be-2940-4b1d-aa94-3df38ce8bb91 {\n\t\t\t\t--wpforms-label-color: #ffffff;\n--wpforms-label-sublabel-color: #ffffff;\n\n\t\t\t}\n\t\t\t</style><div class=\"wpforms-container wpforms-container-full wpforms-block wpforms-block-4f1b17be-2940-4b1d-aa94-3df38ce8bb91 wpforms-render-modern\" id=\"wpforms-2374\"><form id=\"wpforms-form-2374\" class=\"wpforms-validate wpforms-form\" data-formid=\"2374\" method=\"post\" enctype=\"multipart/form-data\" action=\"/wp-json/wp/v2/pages?slug=caepe-test-drive\" data-token=\"f10ceb3857c2cfb76959b810a79e6c82\" data-token-time=\"1773299608\"><noscript class=\"wpforms-error-noscript\">Please enable JavaScript in your browser to complete this form.</noscript><div id=\"wpforms-error-noscript\" style=\"display: none;\">Please enable JavaScript in your browser to complete this form.</div><div class=\"wpforms-field-container\">\t\t<div id=\"wpforms-2374-field_2-container\"\n\t\t\tclass=\"wpforms-field wpforms-field-text\"\n\t\t\tdata-field-type=\"text\"\n\t\t\tdata-field-id=\"2\"\n\t\t\t>\n\t\t\t<label class=\"wpforms-field-label\" for=\"wpforms-2374-field_2\" >Email Name</label>\n\t\t\t<input type=\"text\" id=\"wpforms-2374-field_2\" class=\"wpforms-field-medium\" name=\"wpforms[fields][2]\" >\n\t\t</div>\n\t\t<div id=\"wpforms-2374-field_1-container\" class=\"wpforms-field wpforms-field-email\" data-field-id=\"1\"><label class=\"wpforms-field-label\" for=\"wpforms-2374-field_1\">Email <span class=\"wpforms-required-label\" aria-hidden=\"true\">*</span></label><input type=\"email\" id=\"wpforms-2374-field_1\" class=\"wpforms-field-large wpforms-field-required\" name=\"wpforms[fields][1]\" spellcheck=\"false\" aria-errormessage=\"wpforms-2374-field_1-error\" aria-describedby=\"wpforms-2374-field_1-description\" required><div id=\"wpforms-2374-field_1-description\" class=\"wpforms-field-description\">Important: Access details will be sent to your email — make sure it’s correct.</div></div><div id=\"wpforms-2374-field_0-container\" class=\"wpforms-field wpforms-field-name\" data-field-id=\"0\"><fieldset><legend class=\"wpforms-field-label\">Name <span class=\"wpforms-required-label\" aria-hidden=\"true\">*</span></legend><div class=\"wpforms-field-row wpforms-field-large\"><div class=\"wpforms-field-row-block wpforms-first wpforms-one-half\"><input type=\"text\" id=\"wpforms-2374-field_0\" class=\"wpforms-field-name-first wpforms-field-required\" name=\"wpforms[fields][0][first]\" aria-errormessage=\"wpforms-2374-field_0-error\" required><label for=\"wpforms-2374-field_0\" class=\"wpforms-field-sublabel after\">First</label></div><div class=\"wpforms-field-row-block wpforms-one-half\"><input type=\"text\" id=\"wpforms-2374-field_0-last\" class=\"wpforms-field-name-last wpforms-field-required\" name=\"wpforms[fields][0][last]\" aria-errormessage=\"wpforms-2374-field_0-last-error\" required><label for=\"wpforms-2374-field_0-last\" class=\"wpforms-field-sublabel after\">Last</label></div></div></fieldset></div><script>\n\t\t\t\t( function() {\n\t\t\t\t\tconst style = document.createElement( 'style' );\n\t\t\t\t\tstyle.appendChild( document.createTextNode( '#wpforms-2374-field_2-container { position: absolute !important; overflow: hidden !important; display: inline !important; height: 1px !important; width: 1px !important; z-index: -1000 !important; padding: 0 !important; } #wpforms-2374-field_2-container input { visibility: hidden; } #wpforms-conversational-form-page #wpforms-2374-field_2-container label { counter-increment: none; }' ) );\n\t\t\t\t\tdocument.head.appendChild( style );\n\t\t\t\t\tdocument.currentScript?.remove();\n\t\t\t\t} )();\n\t\t\t</script></div><!-- .wpforms-field-container --><div class=\"wpforms-recaptcha-container wpforms-is-recaptcha wpforms-is-recaptcha-type-v3\" ><input type=\"hidden\" name=\"wpforms[recaptcha]\" value=\"\"></div><div class=\"wpforms-submit-container\" ><input type=\"hidden\" name=\"wpforms[id]\" value=\"2374\"><input type=\"hidden\" name=\"page_title\" value=\"\"><input type=\"hidden\" name=\"page_url\" value=\"https://caepe.sh/wp-json/wp/v2/pages?slug=caepe-test-drive\"><input type=\"hidden\" name=\"url_referer\" value=\"\"><button type=\"submit\" name=\"wpforms[submit]\" id=\"wpforms-submit-2374\" class=\"wpforms-submit\" data-alt-text=\"Sending...\" data-submit-text=\"Get Started Now\" aria-live=\"assertive\" value=\"wpforms-submit\">Get Started Now</button></div></form></div>  <!-- .wpforms-container -->\n\n\n<p style=\"margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0\">By signing up, you acknowledge and agree to our&nbsp;<a href=\"https://biqmind.com/privacy-policy/\" target=\"_blank\" rel=\"noopener\">Privacy Policy</a>&nbsp;and&nbsp;<a href=\"https://biqmind.com/terms-of-service/\" target=\"_blank\" rel=\"noopener\">Terms of Service&nbsp;</a></p>\n</div>\n</div>\n</div></div></div>\n</div></div>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>Take CAEPE for a test drive and revolutionize your Kubernetes deployment process. Experience hands-on how CAEPE simplifies A/B deployments and enhances DevOps efficiency. Start your free test drive today and see the difference</p>\n",
+    "protected": false
+  },
+  "author": 4,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "_uag_custom_page_level_css": "",
+    "site-sidebar-layout": "default",
+    "site-content-layout": "",
+    "ast-site-content-layout": "default",
+    "site-content-style": "unboxed",
+    "site-sidebar-style": "default",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "disabled",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "theme-transparent-header-meta": "",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "set",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "_vp_format_video_url": "",
+    "_vp_image_focal_point": [],
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-2372",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "featured_image_urls_v2": {
+    "full": "",
+    "thumbnail": "",
+    "medium": "",
+    "medium_large": "",
+    "large": "",
+    "1536x1536": "",
+    "2048x2048": "",
+    "vp_sm": "",
+    "vp_md": "",
+    "vp_lg": "",
+    "vp_xl": "",
+    "vp_sm_popup": "",
+    "vp_md_popup": "",
+    "vp_xl_popup": ""
+  },
+  "post_excerpt_stackable_v2": "<p>Take CAEPE for a test drive and revolutionize your Kubernetes deployment process. Experience hands-on how CAEPE simplifies A/B deployments and enhances DevOps efficiency. Start your free test drive today and see the difference</p>\n",
+  "category_list_v2": "",
+  "author_info_v2": {
+    "name": "Thomas Yit",
+    "url": "https://caepe.sh/author/thomas-yitbiqmind-com/"
+  },
+  "comments_num_v2": "0 comments",
+  "uagb_featured_image_src": {
+    "full": false,
+    "thumbnail": false,
+    "medium": false,
+    "medium_large": false,
+    "large": false,
+    "1536x1536": false,
+    "2048x2048": false,
+    "vp_sm": false,
+    "vp_md": false,
+    "vp_lg": false,
+    "vp_xl": false,
+    "vp_sm_popup": false,
+    "vp_md_popup": false,
+    "vp_xl_popup": false
+  },
+  "uagb_author_info": {
+    "display_name": "Thomas Yit",
+    "author_link": "https://caepe.sh/author/thomas-yitbiqmind-com/"
+  },
+  "uagb_comment_info": 0,
+  "uagb_excerpt": "Take CAEPE for a test drive and revolutionize your Kubernetes deployment process. Experience hands-on how CAEPE simplifies A/B deployments and enhances DevOps efficiency. Start your free test drive today and see the difference",
+  "_links": {
+    "self": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/pages/2372",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/users/4"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/comments?post=2372"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 0,
+        "href": "https://caepe.sh/wp-json/wp/v2/pages/2372/revisions"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/media?parent=2372"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

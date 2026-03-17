@@ -1,21 +1,33 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
-  --color-navy: #0F172A;
-  --color-indigo: #6366F1;
-  --color-cyan: #22D3EE;
-  --color-navy-light: #1E293B;
-  --color-indigo-light: #818CF8;
+  /* CAEPE brand colors — matched to caepe.sh */
+  --color-dark: #1F2325;
+  --color-dark-light: #2A2D2F;
+  --color-accent: #34A3D3;
+  --color-accent-dark: #1F6390;
+  --color-accent-light: #96C6E2;
+  --color-green: #58AB62;
+  --color-yellow: #F8E224;
+  --color-border: #cfcfd2;
+
+  /* Legacy tokens (keeping for compatibility) */
+  --color-navy: #1F2325;
+  --color-indigo: #34A3D3;
+  --color-cyan: #34A3D3;
+  --color-indigo-light: #96C6E2;
+
   --color-gray-50: #F9FAFB;
   --color-gray-100: #F3F4F6;
-  --color-gray-200: #E5E7EB;
-  --color-gray-300: #D1D5DB;
-  --color-gray-400: #9CA3AF;
-  --color-gray-500: #6B7280;
-  --color-gray-600: #4B5563;
-  --color-gray-700: #374151;
-  --color-gray-800: #1F2937;
-  --color-gray-900: #111827;
+  --color-gray-200: #3A3D3F;
+  --color-gray-300: #cfcfd2;
+  --color-gray-400: #96C6E2;
+  --color-gray-500: #96C6E2;
+  --color-gray-600: #cfcfd2;
+  --color-gray-700: #2A2D2F;
+  --color-gray-800: #1F2325;
+  --color-gray-900: #1A1C1E;
 
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 }

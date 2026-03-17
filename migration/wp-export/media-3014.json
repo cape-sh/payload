@@ -1,0 +1,298 @@
+{
+  "id": 3014,
+  "date": "2025-09-10T14:12:23",
+  "date_gmt": "2025-09-10T06:12:23",
+  "guid": {
+    "rendered": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png"
+  },
+  "modified": "2025-09-10T14:12:34",
+  "modified_gmt": "2025-09-10T06:12:34",
+  "slug": "caepe-mcp-server-small",
+  "status": "inherit",
+  "type": "attachment",
+  "link": "https://caepe.sh/caepe-mcp-server/caepe-mcp-server-small/",
+  "title": {
+    "rendered": "CAEPE-MCP-Server-Small"
+  },
+  "author": 1,
+  "featured_media": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "_uag_custom_page_level_css": "",
+    "site-sidebar-layout": "default",
+    "site-content-layout": "",
+    "ast-site-content-layout": "",
+    "site-content-style": "default",
+    "site-sidebar-style": "default",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "theme-transparent-header-meta": "",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "default",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "_vp_format_video_url": "",
+    "_vp_image_focal_point": []
+  },
+  "class_list": [
+    "post-3014",
+    "attachment",
+    "type-attachment",
+    "status-inherit",
+    "hentry"
+  ],
+  "description": {
+    "rendered": "<p class=\"attachment\"><a href='https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png'><img loading=\"lazy\" decoding=\"async\" width=\"300\" height=\"157\" src=\"https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-300x157.png\" class=\"attachment-medium size-medium\" alt=\"CAEPE MCP Server\" srcset=\"https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-300x157.png 300w, https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-1024x535.png 1024w, https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-768x401.png 768w, https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-500x261.png 500w, https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-800x418.png 800w, https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png 1200w\" sizes=\"auto, (max-width: 300px) 100vw, 300px\" /></a></p>\n"
+  },
+  "caption": {
+    "rendered": ""
+  },
+  "alt_text": "CAEPE MCP Server",
+  "media_type": "image",
+  "mime_type": "image/png",
+  "media_details": {
+    "width": 1200,
+    "height": 627,
+    "file": "2025/09/CAEPE-MCP-Server-Small.png",
+    "filesize": 125597,
+    "sizes": {
+      "medium": {
+        "file": "CAEPE-MCP-Server-Small-300x157.png",
+        "width": 300,
+        "height": 157,
+        "filesize": 11190,
+        "mime_type": "image/png",
+        "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-300x157.png"
+      },
+      "large": {
+        "file": "CAEPE-MCP-Server-Small-1024x535.png",
+        "width": 1024,
+        "height": 535,
+        "filesize": 55894,
+        "mime_type": "image/png",
+        "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-1024x535.png"
+      },
+      "thumbnail": {
+        "file": "CAEPE-MCP-Server-Small-150x150.png",
+        "width": 150,
+        "height": 150,
+        "filesize": 9857,
+        "mime_type": "image/png",
+        "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-150x150.png"
+      },
+      "medium_large": {
+        "file": "CAEPE-MCP-Server-Small-768x401.png",
+        "width": 768,
+        "height": 401,
+        "filesize": 37270,
+        "mime_type": "image/png",
+        "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-768x401.png"
+      },
+      "vp_sm": {
+        "file": "CAEPE-MCP-Server-Small-500x261.png",
+        "width": 500,
+        "height": 261,
+        "filesize": 21613,
+        "mime_type": "image/png",
+        "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-500x261.png"
+      },
+      "vp_md": {
+        "file": "CAEPE-MCP-Server-Small-800x418.png",
+        "width": 800,
+        "height": 418,
+        "filesize": 17959,
+        "mime_type": "image/png",
+        "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-800x418.png"
+      },
+      "vp_sm_popup": {
+        "file": "CAEPE-MCP-Server-Small-500x261.png",
+        "width": 500,
+        "height": 261,
+        "filesize": 21613,
+        "mime_type": "image/png",
+        "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-500x261.png"
+      },
+      "vp_md_popup": {
+        "file": "CAEPE-MCP-Server-Small-800x418.png",
+        "width": 800,
+        "height": 418,
+        "filesize": 17959,
+        "mime_type": "image/png",
+        "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-800x418.png"
+      },
+      "full": {
+        "file": "CAEPE-MCP-Server-Small.png",
+        "width": 1200,
+        "height": 627,
+        "mime_type": "image/png",
+        "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png"
+      }
+    },
+    "image_meta": {
+      "aperture": "0",
+      "credit": "",
+      "camera": "",
+      "caption": "",
+      "created_timestamp": "0",
+      "copyright": "",
+      "focal_length": "0",
+      "iso": "0",
+      "shutter_speed": "0",
+      "title": "",
+      "orientation": "0",
+      "keywords": []
+    }
+  },
+  "post": 2996,
+  "source_url": "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+  "_links": {
+    "self": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/media/3014",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/media"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/types/attachment"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/users/1"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/comments?post=3014"
+      }
+    ],
+    "wp:attached-to": [
+      {
+        "embeddable": true,
+        "post_type": "post",
+        "id": 2996,
+        "href": "https://caepe.sh/wp-json/wp/v2/posts/2996"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

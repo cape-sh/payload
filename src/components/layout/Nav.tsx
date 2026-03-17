@@ -11,9 +11,9 @@ export async function Nav() {
   const ctaHref = navigation?.cta_href
 
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-dark-light bg-dark/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold text-navy">
+        <Link href="/" className="text-xl font-bold text-white">
           CAEPE
         </Link>
 
@@ -23,7 +23,7 @@ export async function Nav() {
             <Link
               key={i}
               href={item.href}
-              className="text-sm font-medium text-gray-600 transition-colors hover:text-navy"
+              className="text-sm font-medium text-accent-light transition-colors hover:text-white"
             >
               {item.label}
             </Link>
@@ -31,7 +31,7 @@ export async function Nav() {
           {ctaLabel && ctaHref && (
             <Link
               href={ctaHref}
-              className="rounded-lg bg-indigo px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-indigo-light"
+              className="rounded bg-accent-dark px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent"
             >
               {ctaLabel}
             </Link>

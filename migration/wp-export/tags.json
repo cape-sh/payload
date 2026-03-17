@@ -1,0 +1,2378 @@
+[
+  {
+    "id": 61,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/ab-testing/",
+    "name": "ab testing",
+    "slug": "ab-testing",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/61",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=61"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 64,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/ado/",
+    "name": "ADO",
+    "slug": "ado",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/64",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=64"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 75,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/argo/",
+    "name": "argo",
+    "slug": "argo",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/75",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=75"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 81,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/arm/",
+    "name": "ARM",
+    "slug": "arm",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/81",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=81"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 63,
+    "count": 2,
+    "description": "",
+    "link": "https://caepe.sh/tag/azure-devops/",
+    "name": "azure devops",
+    "slug": "azure-devops",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/63",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=63"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 66,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/azure-test-drive/",
+    "name": "Azure test drive",
+    "slug": "azure-test-drive",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/66",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=66"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/backup/",
+    "name": "backup",
+    "slug": "backup",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/9",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=9"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/biqmind/",
+    "name": "biqmind",
+    "slug": "biqmind",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/17",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=17"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 68,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/bug-fixes/",
+    "name": "bug fixes",
+    "slug": "bug-fixes",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/68",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=68"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/canary-deployment/",
+    "name": "canary deployment",
+    "slug": "canary-deployment",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/62",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=62"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "count": 2,
+    "description": "",
+    "link": "https://caepe.sh/tag/cheat-sheet/",
+    "name": "cheat sheet",
+    "slug": "cheat-sheet",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/29",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=29"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/cheatsheet01/",
+    "name": "Cheatsheet01",
+    "slug": "cheatsheet01",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/32",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=32"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/cheatsheet02/",
+    "name": "Cheatsheet02",
+    "slug": "cheatsheet02",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/33",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=33"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/cheatsheet03/",
+    "name": "Cheatsheet03",
+    "slug": "cheatsheet03",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/34",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=34"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/cheatsheet04/",
+    "name": "Cheatsheet04",
+    "slug": "cheatsheet04",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/36",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=36"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/cheatsheet05/",
+    "name": "Cheatsheet05",
+    "slug": "cheatsheet05",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/35",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=35"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "count": 6,
+    "description": "",
+    "link": "https://caepe.sh/tag/ci-cd/",
+    "name": "CI/CD",
+    "slug": "ci-cd",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/23",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=23"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 83,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/cloud/",
+    "name": "cloud",
+    "slug": "cloud",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/83",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=83"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/cncf/",
+    "name": "cncf",
+    "slug": "cncf",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/15",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=15"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 70,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/continuous-deployment/",
+    "name": "Continuous Deployment",
+    "slug": "continuous-deployment",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/70",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=70"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 67,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/continuous-deployment-a-primer-continuous-deployment-cd-automates-and-streamlines-the-delivery-of-code-updates-from-development-to-production-it-ensures-new-features/",
+    "name": "Continuous Deployment: A Primer Continuous Deployment (CD) automates and streamlines the delivery of code updates from development to production. It ensures new features",
+    "slug": "continuous-deployment-a-primer-continuous-deployment-cd-automates-and-streamlines-the-delivery-of-code-updates-from-development-to-production-it-ensures-new-features",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/67",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=67"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "count": 3,
+    "description": "",
+    "link": "https://caepe.sh/tag/continuous-development/",
+    "name": "Continuous Development",
+    "slug": "continuous-development",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/25",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=25"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "count": 4,
+    "description": "",
+    "link": "https://caepe.sh/tag/continuous-integration/",
+    "name": "Continuous Integration",
+    "slug": "continuous-integration",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/24",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=24"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 86,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/copilot/",
+    "name": "Copilot",
+    "slug": "copilot",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/86",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=86"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 53,
+    "count": 8,
+    "description": "",
+    "link": "https://caepe.sh/tag/deployment/",
+    "name": "deployment",
+    "slug": "deployment",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/53",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=53"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/deployment-strategies/",
+    "name": "deployment strategies",
+    "slug": "deployment-strategies",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/58",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=58"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 59,
+    "count": 3,
+    "description": "",
+    "link": "https://caepe.sh/tag/dev-teams/",
+    "name": "dev teams",
+    "slug": "dev-teams",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/59",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=59"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "count": 6,
+    "description": "",
+    "link": "https://caepe.sh/tag/developers/",
+    "name": "developers",
+    "slug": "developers",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/60",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=60"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 54,
+    "count": 4,
+    "description": "",
+    "link": "https://caepe.sh/tag/devops/",
+    "name": "Devops",
+    "slug": "devops",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/54",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=54"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/disaster-recovery/",
+    "name": "disaster recovery",
+    "slug": "disaster-recovery",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/10",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=10"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 84,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/docker/",
+    "name": "Docker",
+    "slug": "docker",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/84",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=84"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "count": 2,
+    "description": "",
+    "link": "https://caepe.sh/tag/enterprise/",
+    "name": "enterprise",
+    "slug": "enterprise",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/38",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=38"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/etcd/",
+    "name": "Etcd",
+    "slug": "etcd",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/12",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=12"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/features/",
+    "name": "features",
+    "slug": "features",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/6",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/github/",
+    "name": "GitHub",
+    "slug": "github",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/85",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=85"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 55,
+    "count": 3,
+    "description": "",
+    "link": "https://caepe.sh/tag/github-actions/",
+    "name": "Github Actions",
+    "slug": "github-actions",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/55",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=55"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 37,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/gitops/",
+    "name": "gitops",
+    "slug": "gitops",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/37",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=37"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/high-availability/",
+    "name": "high availability",
+    "slug": "high-availability",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/20",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=20"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "count": 2,
+    "description": "",
+    "link": "https://caepe.sh/tag/kubectl/",
+    "name": "kubectl",
+    "slug": "kubectl",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/30",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=30"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "count": 23,
+    "description": "",
+    "link": "https://caepe.sh/tag/kubernetes/",
+    "name": "kubernetes",
+    "slug": "kubernetes",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/28",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=28"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/launch/",
+    "name": "launch",
+    "slug": "launch",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/16",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=16"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 57,
+    "count": 2,
+    "description": "",
+    "link": "https://caepe.sh/tag/microsoft-azure/",
+    "name": "microsoft azure",
+    "slug": "microsoft-azure",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/57",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=57"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 80,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/multi-architecture/",
+    "name": "Multi-Architecture",
+    "slug": "multi-architecture",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/80",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=80"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 56,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/news/",
+    "name": "news",
+    "slug": "news",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/56",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=56"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 69,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/or-improvements-swiftly-reach-end-users/",
+    "name": "or improvements swiftly reach end-users",
+    "slug": "or-improvements-swiftly-reach-end-users",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/69",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=69"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 65,
+    "count": 2,
+    "description": "",
+    "link": "https://caepe.sh/tag/progressive-delivery/",
+    "name": "progressive delivery",
+    "slug": "progressive-delivery",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/65",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=65"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/promo/",
+    "name": "promo",
+    "slug": "promo",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/21",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=21"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/smoke-testing/",
+    "name": "smoke testing",
+    "slug": "smoke-testing",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/52",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=52"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/superhero-kickstart-offer/",
+    "name": "superhero kickstart offer",
+    "slug": "superhero-kickstart-offer",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/19",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=19"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 50,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/testing/",
+    "name": "testing",
+    "slug": "testing",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/50",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=50"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/troubleshooting/",
+    "name": "troubleshooting",
+    "slug": "troubleshooting",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/31",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=31"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/v1-0-0/",
+    "name": "v1.0.0",
+    "slug": "v1-0-0",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/8",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=8"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/tag/velar/",
+    "name": "velar",
+    "slug": "velar",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/11",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=11"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 82,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/tag/x64/",
+    "name": "x64",
+    "slug": "x64",
+    "taxonomy": "post_tag",
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags/82",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/tags"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/post_tag"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?tags=82"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

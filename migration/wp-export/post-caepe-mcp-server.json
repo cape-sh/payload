@@ -1,0 +1,427 @@
+{
+  "id": 2996,
+  "date": "2025-09-10T13:57:57",
+  "date_gmt": "2025-09-10T05:57:57",
+  "guid": {
+    "rendered": "https://caepe.sh/?p=2996"
+  },
+  "modified": "2025-09-11T00:22:36",
+  "modified_gmt": "2025-09-10T16:22:36",
+  "slug": "caepe-mcp-server",
+  "status": "publish",
+  "type": "post",
+  "link": "https://caepe.sh/caepe-mcp-server/",
+  "title": {
+    "rendered": "From Prompt to Production: Secure, AI-Native Infrastructure Management—Now with CAEPE MCP Server "
+  },
+  "content": {
+    "rendered": "\n<div class=\"wp-block-ugb-container ugb-container ugb-30a43ed ugb-container--v2 ugb-container--design-plain ugb-main-block\"><div class=\"ugb-inner-block\"><div class=\"ugb-block-content\"><div class=\"ugb-container__wrapper ugb-30a43ed-wrapper\"><div class=\"ugb-container__side\"><div class=\"ugb-container__content-wrapper ugb-30a43ed-content-wrapper\">\n<p><strong>FOR IMMEDIATE RELEASE</strong>&nbsp;</p>\n\n\n\n<p><strong>Singapore, September 10 2025</strong> — Developers can now manage Kubernetes infrastructure from their IDE using natural language—directly inside <a href=\"https://github.com/features/copilot\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>GitHub Copilot</strong></a>. <strong>CAEPE</strong>, the platform for continuous deployment at scale, has launched the <strong>CAEPE MCP Server</strong>—a secure, GitHub Copilot-compatible integration designed to simplify and streamline everyday <strong>Kubernetes deployments</strong> and <strong>Day 2 operations</strong>.&nbsp;</p>\n\n\n\n<figure class=\"wp-block-image aligncenter size-vp_sm\"><img loading=\"lazy\" decoding=\"async\" width=\"500\" height=\"202\" src=\"https://caepe.sh/wp-content/uploads/2025/09/Combined-500x202.png\" alt=\"CAEPE MCP Server\" class=\"wp-image-3004\" srcset=\"https://caepe.sh/wp-content/uploads/2025/09/Combined-500x202.png 500w, https://caepe.sh/wp-content/uploads/2025/09/Combined-300x121.png 300w, https://caepe.sh/wp-content/uploads/2025/09/Combined-1024x413.png 1024w, https://caepe.sh/wp-content/uploads/2025/09/Combined-768x310.png 768w, https://caepe.sh/wp-content/uploads/2025/09/Combined-1536x620.png 1536w, https://caepe.sh/wp-content/uploads/2025/09/Combined-800x323.png 800w, https://caepe.sh/wp-content/uploads/2025/09/Combined-1280x516.png 1280w, https://caepe.sh/wp-content/uploads/2025/09/Combined.png 1805w\" sizes=\"auto, (max-width: 500px) 100vw, 500px\" /></figure>\n\n\n\n<div style=\"height:30px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<p>Built to be compatible with the Model Context Protocol (MCP)—an open standard <a href=\"https://www.anthropic.com/news/model-context-protocol\" data-type=\"link\" data-id=\"https://www.anthropic.com/news/model-context-protocol\" target=\"_blank\" rel=\"noreferrer noopener\">introduced</a> by Anthropic and adopted by GitHub for Copilot—CAEPE MCP Server integrates directly with <a href=\"https://github.com/features/copilot/extensions\" data-type=\"link\" data-id=\"https://github.com/features/copilot/extensions\" target=\"_blank\" rel=\"noreferrer noopener\">Copilot Chat Extensions</a>. Teams can trigger rollouts, list clusters, or check deployment status using plain English—no new interfaces, plugins, or context switching required. Unlike many AI tools, it is built with <strong>enterprise-grade security and governance</strong> from day one.&nbsp;</p>\n\n\n\n<blockquote class=\"wp-block-stackable-blockquote stk-block-blockquote stk-block stk-3c8ec36 is-style-default\" data-v=\"2\" data-block-id=\"3c8ec36\"><style>.stk-3c8ec36 {border-radius:8px !important;overflow:hidden !important;}</style><div class=\"has-text-align-left stk-block-blockquote__content stk-container stk-3c8ec36-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks\">\n<div class=\"wp-block-stackable-icon stk-block-icon stk-block stk-c825a71\" data-block-id=\"c825a71\"><style>.stk-c825a71 .stk--svg-wrapper .stk--inner-svg svg:last-child, .stk-c825a71 .stk--svg-wrapper .stk--inner-svg svg:last-child :is(g, path, rect, polygon, ellipse){fill:var(--ast-global-color-6) !important;}</style><span class=\"stk--svg-wrapper\"><div class=\"stk--inner-svg\"><svg style=\"height:0;width:0\"><defs><linearGradient id=\"linear-gradient-c825a71\" x1=\"0\" x2=\"100%\" y1=\"0\" y2=\"0\"><stop offset=\"0%\" style=\"stop-opacity:1;stop-color:var(--linear-gradient-c-825-a-71-color-1)\"></stop><stop offset=\"100%\" style=\"stop-opacity:1;stop-color:var(--linear-gradient-c-825-a-71-color-2)\"></stop></linearGradient></defs></svg><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 50 50\" aria-hidden=\"true\" width=\"32\" height=\"32\"><path d=\"M9.4 14.6c-2.4 2.9-3.6 5.9-3.6 8.9 0 1.3.2 2.4.5 3.3 1.8-1.4 3.8-2.1 6-2.1 2.9 0 5.3.9 7.3 2.7 2 1.8 3 4.2 3 7.3 0 1.9-.5 3.6-1.4 5.1-.9 1.5-2.2 2.7-3.8 3.6s-3.3 1.3-5.1 1.3c-4.1 0-7.3-1.6-9.5-4.9C.9 36.9 0 33.5 0 29.4c0-5.2 1.4-9.9 4.1-14 2.8-4.1 6.9-7.5 12.5-10l1.5 2.8c-3.3 1.3-6.2 3.5-8.7 6.4zm27.5 0c-2.4 2.9-3.6 5.9-3.6 8.9 0 1.3.2 2.4.5 3.3 1.8-1.4 3.8-2.1 6-2.1 2.9 0 5.4.9 7.4 2.7 2 1.8 3 4.2 3 7.3 0 2.8-1 5.2-3 7.1-2 1.9-4.4 2.9-7.3 2.9-4.1 0-7.3-1.6-9.5-4.9-1.8-2.7-2.8-6.2-2.8-10.3 0-5.2 1.4-9.9 4.1-14 2.8-4.1 6.9-7.5 12.5-10l1.5 2.8c-3.5 1.2-6.4 3.4-8.8 6.3z\"></path></svg></div></span></div>\n\n\n\n<div class=\"wp-block-stackable-text stk-block-text stk-block stk-30ae92a\" data-block-id=\"30ae92a\"><style>.stk-30ae92a .stk-block-text__text{color:var(--stk-global-color-53540, #cfcfd2) !important;}</style><p class=\"stk-block-text__text has-text-color\"><em>CAEPE MCP Server gives developers fast, secure access to infrastructure—without compromising the control and compliance standards platform teams require,</em> <em>It’s simple for developers—and structured for enterprise-scale environments.</em><br><br><span style=\"color: var(--stk-global-color-17379, #96c6e2);\" class=\"stk-highlight\">Mark Mooney, Product Lead, CAEPE</span></p></div>\n</div></div></blockquote>\n\n\n\n<div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>How MCP Enables Secure, AI-Native Infrastructure</strong>&nbsp;</h2>\n\n\n\n<p>As <strong>AI copilots</strong> become part of daily developer workflows, protocols like <a href=\"https://modelcontextprotocol.io/docs/getting-started/intro\" target=\"_blank\" rel=\"noreferrer noopener\">MCP</a> are proving to be one of the most effective ways to connect internal tools securely and intuitively. CAEPE’s implementation is GitHub-native, straightforward to set up, and fully governed by enterprise policies.&nbsp;</p>\n\n\n\n<p>The MCP Server is part of <strong>CAEPE’s AI roadmap</strong>—focused on delivering practical value to developers and improving productivity without adding risk or complexity.&nbsp;</p>\n\n\n\n<div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>Built for Teams Who Need Control and Scale</strong>&nbsp;</h2>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Seamless with Enterprise Auth</strong>&nbsp;<br>Works with your <strong>SSO and RBAC setup</strong>. Roles and permissions follow your existing CAEPE configuration—ensuring least-privilege access across dev, test, and production.&nbsp;</li>\n</ul>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Granular Policy Enforcement</strong>&nbsp;<br>All actions are subject to deployment policy checks. Teams can configure guardrails to prevent unintended or unauthorized changes.&nbsp;</li>\n</ul>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Full Auditability</strong>&nbsp;<br>Every interaction is logged, exportable, and <a href=\"https://www.fortinet.com/resources/cyberglossary/what-is-siem\" target=\"_blank\" rel=\"noreferrer noopener\">SIEM-ready</a>—supporting compliance, forensics, and governance.&nbsp;</li>\n</ul>\n\n\n\n<div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>Key Capabilities</strong>&nbsp;</h2>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Natural Language Infrastructure Access</strong>&nbsp;<br>Trigger rollouts, inspect cluster state, or onboard applications directly through <strong>GitHub Copilot</strong>.&nbsp;</li>\n</ul>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>No Workflow Disruption</strong>&nbsp;<br>Developers stay in their IDE—no new consoles, training, or context switching required.&nbsp;</li>\n</ul>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Secure by Default</strong>&nbsp;<br>Authentication, RBAC, policy checks, and audit logs are enforced automatically.&nbsp;</li>\n</ul>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Future-Ready</strong>&nbsp;<br>Beyond CAEPE-managed infrastructure, customers will be able to expose their own internal tools via MCP-compatible servers.&nbsp;</li>\n</ul>\n\n\n\n<p><em>“This isn’t about layering AI on top of legacy tools,”</em> added Mooney. <em>“It’s about building a secure, intelligent interface that fits how modern teams work—without compromising enterprise requirements for security and <strong>auditability</strong>.”</em>&nbsp;</p>\n\n\n\n<div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>Availability</strong>&nbsp;</h2>\n\n\n\n<p>The <strong>CAEPE MCP Server</strong> is now available to all CAEPE users.&nbsp;</p>\n\n\n\n<p><a href=\"https://docs.caepe.sh/mcp\" target=\"_blank\" rel=\"noreferrer noopener\">Learn more in the docs</a> or <a href=\"https://caepe.sh/caepe-test-drive/\" data-type=\"page\" data-id=\"2372\" target=\"_blank\" rel=\"noreferrer noopener\">Test Drive CAEPE today</a>.&nbsp;</p>\n\n\n\n<div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<h2 class=\"wp-block-heading\"><strong>Frequently Asked Questions (FAQ)</strong>&nbsp;</h2>\n\n\n\n<p><strong>What is CAEPE MCP Server?</strong>&nbsp;<br>CAEPE MCP Server is a secure, GitHub Copilot-compatible integration that lets developers manage Kubernetes deployment workflows using natural language directly from their IDE.&nbsp;</p>\n\n\n\n<p><strong>How does MCP integrate with GitHub Copilot?</strong>&nbsp;<br>It uses Model Context Protocol (MCP) to securely expose CAEPE infrastructure controls to Copilot Chat, enabling plain English commands for rollouts, health checks, and more.&nbsp;</p>\n\n\n\n<p><strong>Is CAEPE MCP Server secure for enterprise environments?</strong>&nbsp;<br>Yes. Through the MCP Server, all the security features required for enterprise environments built into <a href=\"https://caepe.sh/simplify-enterprise-kubernetes-application-deployment/\" data-type=\"post\" data-id=\"959\">CAEPE&#8217;s design</a> are in place, including enterprise auth integration (SSO &amp; RBAC), policy checks, and audibility (SIEM-ready).&nbsp;</p>\n\n\n\n<div style=\"height:50px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n\n\n\n<p><strong>Media Contact:</strong>&nbsp;<br>&nbsp;<br>Joanne Goh&nbsp;<br><strong>Head of Content, CAEPE</strong>&nbsp;<br><a href=\"mailto:joanne.goh@biqmind.com\">joanne.goh@biqmind.com</a></p>\n</div></div></div></div></div></div>\n\n\n\n<div class=\"wp-block-ugb-container ugb-container ugb-95fe589 ugb-container--v2 ugb-container--design-basic ugb-main-block\"><style>.ugb-95fe589-wrapper.ugb-container__wrapper{background-color:var(--ast-global-color-3) !important}.ugb-95fe589-wrapper.ugb-container__wrapper:before{background-color:var(--ast-global-color-3) !important}.ugb-95fe589-content-wrapper > h1,.ugb-95fe589-content-wrapper > h2,.ugb-95fe589-content-wrapper > h3,.ugb-95fe589-content-wrapper > h4,.ugb-95fe589-content-wrapper > h5,.ugb-95fe589-content-wrapper > h6{color:#222222}.ugb-95fe589-content-wrapper > p,.ugb-95fe589-content-wrapper > ol li,.ugb-95fe589-content-wrapper > ul li{color:#222222}</style><div class=\"ugb-inner-block\"><div class=\"ugb-block-content\"><div class=\"ugb-container__wrapper ugb-95fe589-wrapper\"><div class=\"ugb-container__side\"><div class=\"ugb-container__content-wrapper ugb-95fe589-content-wrapper\">\n<div class=\"wp-block-stackable-columns stk-block-columns stk-block stk-855af88\" data-block-id=\"855af88\"><div class=\"stk-row stk-inner-blocks stk-block-content stk-content-align stk-855af88-column\">\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-65f0640\" data-v=\"4\" data-block-id=\"65f0640\"><style>.stk-65f0640 {align-self:center !important;}@media screen and (min-width: 768px){.stk-65f0640 {flex:var(--stk-flex-grow, 1) 1 33.3% !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-65f0640-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-65f0640-inner-blocks\">\n<figure class=\"wp-block-image aligncenter size-full\"><img loading=\"lazy\" decoding=\"async\" width=\"266\" height=\"266\" src=\"https://caepe.sh/wp-content/uploads/2022/05/C-icon-4C.png\" alt=\"\" class=\"wp-image-524\" srcset=\"https://caepe.sh/wp-content/uploads/2022/05/C-icon-4C.png 266w, https://caepe.sh/wp-content/uploads/2022/05/C-icon-4C-150x150.png 150w, https://caepe.sh/wp-content/uploads/2022/05/C-icon-4C-100x100.png 100w\" sizes=\"auto, (max-width: 266px) 100vw, 266px\" /></figure>\n</div></div></div>\n\n\n\n<div class=\"wp-block-stackable-column stk-block-column stk-column stk-block stk-5d31532\" data-v=\"4\" data-block-id=\"5d31532\"><style>@media screen and (min-width: 768px){.stk-5d31532 {flex:var(--stk-flex-grow, 1) 1 66.7% !important;}}</style><div class=\"stk-column-wrapper stk-block-column__content stk-container stk-5d31532-container stk--no-background stk--no-padding\"><div class=\"stk-block-content stk-inner-blocks stk-5d31532-inner-blocks\">\n<h3 class=\"wp-block-heading\" id=\"caepe-deploy-applications-on-kubernetes-with-confidence\">CAEPE Continuous Deployment</h3>\n\n\n\n<p>Manage workloads on Kubernetes anywhere robustly and securely.</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Shores up security by simplifying deployment anywhere, supporting managed services, native Kubernetes, self-hosted, edge and secure airgapped deployment targets.&nbsp;</li>\n\n\n\n<li><a href=\"https://caepe.sh/simplify-gitops/\" data-type=\"post\" data-id=\"926\">Supports GitOps</a> and provides guided, UI-driven workflows for all major <a href=\"https://caepe.sh/safe-and-consistent-application-deployments-in-kubernetes/\" data-type=\"post\" data-id=\"1266\">progressive delivery strategies</a>.&nbsp;</li>\n\n\n\n<li>Has RBAC built-in, providing inherent enterprise access control for who can deploy.</li>\n\n\n\n<li>Supports extended testing capabilities enabling your team to<a href=\"https://caepe.sh/kubernetes-application-testing-and-caepe/\" data-type=\"post\" data-id=\"1135\"> run different tests quickly and easily</a>.</li>\n</ul>\n\n\n\n<div class=\"wp-block-stackable-button-group stk-block-button-group stk-block stk-bed6dc2\" data-block-id=\"bed6dc2\"><style>.stk-bed6dc2 .stk-inner-blocks{column-gap:50px !important;}</style><div class=\"stk-row stk-inner-blocks has-text-align-center stk-block-content stk-button-group\">\n<div class=\"wp-block-stackable-button stk-block-button stk-block stk-3c5f164\" data-block-id=\"3c5f164\"><style>.stk-3c5f164 .stk-button{border-top-left-radius:8px !important;border-top-right-radius:8px !important;border-bottom-right-radius:8px !important;border-bottom-left-radius:8px !important;}</style><a data-id=\"gs-na\" class=\"stk-link stk-button stk--hover-effect-darken\" href=\"https://caepe.sh/caepe-test-drive/\" title=\"Get Started NA\" rel=\"noreferrer noopener\"><span class=\"stk-button__inner-text\">Test Drive CAEPE Now!</span></a></div>\n</div></div>\n</div></div></div>\n</div></div>\n</div></div></div></div></div></div>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>CAEPE launches MCP Server—secure GitHub Copilot integration for Kubernetes rollouts, cluster health checks, and AI-native infrastructure management.</p>\n",
+    "protected": false
+  },
+  "author": 8,
+  "featured_media": 3014,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": {
+    "_uag_custom_page_level_css": "",
+    "site-sidebar-layout": "default",
+    "site-content-layout": "",
+    "ast-site-content-layout": "default",
+    "site-content-style": "default",
+    "site-sidebar-style": "default",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "theme-transparent-header-meta": "",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "set",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "_vp_format_video_url": "",
+    "_vp_image_focal_point": [],
+    "footnotes": ""
+  },
+  "categories": [
+    14
+  ],
+  "tags": [
+    86,
+    53,
+    85,
+    28
+  ],
+  "class_list": [
+    "post-2996",
+    "post",
+    "type-post",
+    "status-publish",
+    "format-standard",
+    "has-post-thumbnail",
+    "hentry",
+    "category-news",
+    "tag-copilot",
+    "tag-deployment",
+    "tag-github",
+    "tag-kubernetes"
+  ],
+  "featured_image_urls_v2": {
+    "full": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "thumbnail": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-150x150.png",
+      150,
+      150,
+      true
+    ],
+    "medium": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-300x157.png",
+      300,
+      157,
+      true
+    ],
+    "medium_large": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-768x401.png",
+      768,
+      401,
+      true
+    ],
+    "large": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-1024x535.png",
+      1024,
+      535,
+      true
+    ],
+    "1536x1536": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "2048x2048": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "vp_sm": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-500x261.png",
+      500,
+      261,
+      true
+    ],
+    "vp_md": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-800x418.png",
+      800,
+      418,
+      true
+    ],
+    "vp_lg": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "vp_xl": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "vp_sm_popup": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-500x261.png",
+      500,
+      261,
+      true
+    ],
+    "vp_md_popup": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-800x418.png",
+      800,
+      418,
+      true
+    ],
+    "vp_xl_popup": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ]
+  },
+  "post_excerpt_stackable_v2": "<p>CAEPE launches MCP Server—secure GitHub Copilot integration for Kubernetes rollouts, cluster health checks, and AI-native infrastructure management.</p>\n",
+  "category_list_v2": "<a href=\"https://caepe.sh/category/news/\" rel=\"category tag\">News</a>",
+  "author_info_v2": {
+    "name": "Team CAEPE",
+    "url": "https://caepe.sh/author/biqmindcape/"
+  },
+  "comments_num_v2": "0 comments",
+  "uagb_featured_image_src": {
+    "full": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "thumbnail": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-150x150.png",
+      150,
+      150,
+      true
+    ],
+    "medium": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-300x157.png",
+      300,
+      157,
+      true
+    ],
+    "medium_large": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-768x401.png",
+      768,
+      401,
+      true
+    ],
+    "large": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-1024x535.png",
+      1024,
+      535,
+      true
+    ],
+    "1536x1536": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "2048x2048": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "vp_sm": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-500x261.png",
+      500,
+      261,
+      true
+    ],
+    "vp_md": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-800x418.png",
+      800,
+      418,
+      true
+    ],
+    "vp_lg": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "vp_xl": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ],
+    "vp_sm_popup": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-500x261.png",
+      500,
+      261,
+      true
+    ],
+    "vp_md_popup": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small-800x418.png",
+      800,
+      418,
+      true
+    ],
+    "vp_xl_popup": [
+      "https://caepe.sh/wp-content/uploads/2025/09/CAEPE-MCP-Server-Small.png",
+      1200,
+      627,
+      false
+    ]
+  },
+  "uagb_author_info": {
+    "display_name": "Team CAEPE",
+    "author_link": "https://caepe.sh/author/biqmindcape/"
+  },
+  "uagb_comment_info": 0,
+  "uagb_excerpt": "CAEPE launches MCP Server—secure GitHub Copilot integration for Kubernetes rollouts, cluster health checks, and AI-native infrastructure management.",
+  "_links": {
+    "self": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/posts/2996",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/posts"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/types/post"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/users/8"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/comments?post=2996"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 0,
+        "href": "https://caepe.sh/wp-json/wp/v2/posts/2996/revisions"
+      }
+    ],
+    "wp:featuredmedia": [
+      {
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/media/3014"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://caepe.sh/wp-json/wp/v2/media?parent=2996"
+      }
+    ],
+    "wp:term": [
+      {
+        "taxonomy": "category",
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/categories?post=2996"
+      },
+      {
+        "taxonomy": "post_tag",
+        "embeddable": true,
+        "href": "https://caepe.sh/wp-json/wp/v2/tags?post=2996"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

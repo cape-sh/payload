@@ -1,0 +1,272 @@
+[
+  {
+    "id": 26,
+    "count": 23,
+    "description": "",
+    "link": "https://caepe.sh/category/articles/",
+    "name": "Article",
+    "slug": "articles",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories/26",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?categories=26"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 76,
+    "count": 1,
+    "description": "",
+    "link": "https://caepe.sh/category/case-studies/",
+    "name": "Case Studies",
+    "slug": "case-studies",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories/76",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?categories=76"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "count": 2,
+    "description": "",
+    "link": "https://caepe.sh/category/cheat-sheet/",
+    "name": "Cheat Sheet",
+    "slug": "cheat-sheet",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories/27",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?categories=27"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "count": 0,
+    "description": "Latest CAPE features",
+    "link": "https://caepe.sh/category/features/",
+    "name": "Features",
+    "slug": "features",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories/5",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?categories=5"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "count": 2,
+    "description": "All the latest news and happenings about CAPE.",
+    "link": "https://caepe.sh/category/news/",
+    "name": "News",
+    "slug": "news",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories/14",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?categories=14"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "count": 0,
+    "description": "",
+    "link": "https://caepe.sh/category/uncategorized/",
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "_links": {
+      "self": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories/1",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://caepe.sh/wp-json/wp/v2/posts?categories=1"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]
