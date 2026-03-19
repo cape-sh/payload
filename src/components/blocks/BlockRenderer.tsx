@@ -36,7 +36,7 @@ export function BlockRenderer({ blocks }: BlockRendererProps) {
           case 'ctaForm':
             return <CTAFormBlock key={i} {...(block as any)} />
           case 'featureGrid':
-            return <FeatureGridBlock key={i} {...(block as any)} />
+            return <FeatureGridBlock key={i} {...(block as any)} style={(block as any).style} />
           case 'cardGrid':
             return <CardGridBlock key={i} {...(block as any)} />
           default:

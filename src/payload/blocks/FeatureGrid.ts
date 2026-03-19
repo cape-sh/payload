@@ -23,6 +23,18 @@ export const FeatureGrid: Block = {
       },
     },
     {
+      name: 'style',
+      type: 'select',
+      defaultValue: 'default',
+      options: [
+        { label: 'Default (no background)', value: 'default' },
+        { label: 'Circle (gray circle background)', value: 'circle' },
+      ],
+      admin: {
+        description: 'Icon display style',
+      },
+    },
+    {
       name: 'items',
       type: 'array',
       fields: [
@@ -39,16 +51,25 @@ export const FeatureGrid: Block = {
         {
           name: 'icon',
           type: 'select',
-          defaultValue: 'star',
+          defaultValue: 'extended-gitops',
           options: [
-            { label: 'Star', value: 'star' },
-            { label: 'Tachometer', value: 'tachometer' },
-            { label: 'Arrow Up Circle', value: 'arrow-up-circle' },
-            { label: 'Sitemap', value: 'sitemap' },
-            { label: 'Globe', value: 'globe' },
-            { label: 'Pointer', value: 'pointer' },
-            { label: 'Briefcase', value: 'briefcase' },
-            { label: 'Users Cog', value: 'users-cog' },
+            { label: 'Extended GitOps', value: 'extended-gitops' },
+            { label: 'Enterprise Compliant', value: 'enterprise-compliant' },
+            { label: 'Simplified Kubernetes', value: 'simplified-kubernetes' },
+            { label: 'Transparent Pricing', value: 'transparent-pricing' },
+            { label: 'Progressive Delivery', value: 'progressive-delivery' },
+            { label: 'Confident Delivery', value: 'confident-delivery' },
+            { label: 'Scheduling & Grouping', value: 'scheduling-grouping' },
+            { label: 'API Scripting', value: 'api-scripting' },
+            // Legacy values kept for backward compatibility
+            { label: 'Star (legacy)', value: 'star' },
+            { label: 'Tachometer (legacy)', value: 'tachometer' },
+            { label: 'Arrow Up Circle (legacy)', value: 'arrow-up-circle' },
+            { label: 'Sitemap (legacy)', value: 'sitemap' },
+            { label: 'Globe (legacy)', value: 'globe' },
+            { label: 'Pointer (legacy)', value: 'pointer' },
+            { label: 'Briefcase (legacy)', value: 'briefcase' },
+            { label: 'Users Cog (legacy)', value: 'users-cog' },
             { label: 'Deploy (legacy)', value: 'deploy' },
             { label: 'Shield (legacy)', value: 'shield' },
             { label: 'Cube (legacy)', value: 'cube' },

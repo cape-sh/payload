@@ -44,42 +44,57 @@ async function main() {
     },
     {
       blockType: 'featureGrid' as const,
-      eyebrow: 'Why CAEPE',
-      headline: 'Built for enterprise Kubernetes',
+      style: 'default',
       items: [
         {
-          title: 'Enhance Deployment Quality and Consistency',
-          description: 'Standardise deployment workflows across all clusters and environments with GitOps principles at scale.',
-          icon: 'star' as const,
+          title: 'Extended GitOps',
+          description: 'Distributed deployment management across multiple clusters with GitOps principles at scale.',
+          icon: 'extended-gitops' as const,
         },
         {
-          title: 'Accelerate Time to Market',
-          description: 'Ship faster with automated progressive delivery pipelines and advanced deployment strategies.',
-          icon: 'tachometer' as const,
+          title: 'Enterprise Compliant',
+          description: 'Security, governance, RBAC/SSO integration, and audit trails built for enterprise requirements.',
+          icon: 'enterprise-compliant' as const,
         },
         {
-          title: 'Manage Software Upgrades',
-          description: 'Coordinate Kubernetes and application upgrades across hundreds of clusters with deployment strategies.',
-          icon: 'arrow-up-circle' as const,
+          title: 'Simplified Kubernetes',
+          description: 'Abstracted complexity so teams of all skill levels can deploy with confidence.',
+          icon: 'simplified-kubernetes' as const,
         },
         {
-          title: 'Test Production Applications',
-          description: 'Smoke test deployments and validate Kubernetes version compatibility before and after releases.',
-          icon: 'sitemap' as const,
+          title: 'Transparent Pricing & Support',
+          description: 'Clear per-cluster pricing with full enterprise support included. No hidden fees.',
+          icon: 'transparent-pricing' as const,
         },
       ],
       cta_label: 'See all features',
       cta_href: '/features',
     },
     {
-      blockType: 'cardGrid' as const,
-      eyebrow: 'Use Cases',
-      headline: 'How teams use CAEPE',
-      cards: [
-        { title: 'Support Regional and Global Deployments', description: 'Deploy to edge, air-gapped, and multi-region clusters from a single pane.', icon: 'globe' as const },
-        { title: 'Bridge Kubernetes Skill Gaps', description: 'Enable teams of all skill levels to deploy with guardrails and automation.', icon: 'pointer' as const },
-        { title: 'Address Enterprise Requirements', description: 'Security, governance, RBAC/SSO integration, and audit trails built for enterprise.', icon: 'briefcase' as const },
-        { title: 'Reduce DevOps Team Effort', description: 'Automate repetitive tasks and reduce reliance on specialised DevOps resources.', icon: 'users-cog' as const },
+      blockType: 'featureGrid' as const,
+      headline: 'Features.',
+      style: 'circle',
+      items: [
+        {
+          title: 'Progressive Delivery',
+          description: 'Advanced deployment strategies for smooth rollouts.',
+          icon: 'progressive-delivery' as const,
+        },
+        {
+          title: 'Confident Delivery',
+          description: 'Pre-flight Tests, Post Deployment Actions & Dry Runs.',
+          icon: 'confident-delivery' as const,
+        },
+        {
+          title: 'Scheduling & Grouping',
+          description: 'Controlled deployment and approval workflows.',
+          icon: 'scheduling-grouping' as const,
+        },
+        {
+          title: 'API-first & Powerful Scripting',
+          description: 'Integration and automation at every level.',
+          icon: 'api-scripting' as const,
+        },
       ],
     },
     {
@@ -116,8 +131,7 @@ async function main() {
   }
 
   console.log('\n  - 1 Hero block (main)')
-  console.log('  - 2 FeatureGrid blocks (4 items each)')
-  console.log('  - 1 CardGrid block (6 use cases)')
+  console.log('  - 2 FeatureGrid blocks (4 illustration icons each)')
   console.log('  - 1 Hero block (pilot CTA)')
 
   process.exit(0)

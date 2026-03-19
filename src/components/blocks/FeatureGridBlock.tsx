@@ -1,15 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {
-  StarIcon,
-  TachometerIcon,
-  ArrowUpCircleIcon,
-  SitemapIcon,
-  GlobeIcon,
-  PointerIcon,
-  BriefcaseIcon,
-  UsersCogIcon,
-} from '@/components/icons/FeatureIcons'
+import Image from 'next/image'
 
 interface FeatureGridItem {
   title: string
@@ -24,29 +15,23 @@ interface FeatureGridBlockProps {
   items?: FeatureGridItem[] | null
   cta_label?: string | null
   cta_href?: string | null
+  style?: string | null
 }
 
-const icons: Record<string, React.ReactNode> = {
-  star: <StarIcon className="h-6 w-6" />,
-  tachometer: <TachometerIcon className="h-6 w-6" />,
-  'arrow-up-circle': <ArrowUpCircleIcon className="h-6 w-6" />,
-  sitemap: <SitemapIcon className="h-6 w-6" />,
-  globe: <GlobeIcon className="h-6 w-6" />,
-  pointer: <PointerIcon className="h-6 w-6" />,
-  briefcase: <BriefcaseIcon className="h-6 w-6" />,
-  'users-cog': <UsersCogIcon className="h-6 w-6" />,
-  // Legacy icon mappings (old CMS data)
-  deploy: <StarIcon className="h-6 w-6" />,
-  shield: <BriefcaseIcon className="h-6 w-6" />,
-  cube: <SitemapIcon className="h-6 w-6" />,
-  dollar: <StarIcon className="h-6 w-6" />,
-  rocket: <TachometerIcon className="h-6 w-6" />,
-  check: <ArrowUpCircleIcon className="h-6 w-6" />,
-  clock: <SitemapIcon className="h-6 w-6" />,
-  code: <GlobeIcon className="h-6 w-6" />,
+const iconImages: Record<string, string> = {
+  'extended-gitops': '/images/features/extended-gitops.svg',
+  'enterprise-compliant': '/images/features/enterprise-compliant.svg',
+  'simplified-kubernetes': '/images/features/simplified-kubernetes.svg',
+  'transparent-pricing': '/images/features/transparent-pricing.svg',
+  'progressive-delivery': '/images/features/progressive-delivery.svg',
+  'confident-delivery': '/images/features/confident-delivery.svg',
+  'scheduling-grouping': '/images/features/scheduling-grouping.svg',
+  'api-scripting': '/images/features/api-scripting.svg',
 }
 
-export function FeatureGridBlock({ eyebrow, headline, items, cta_label, cta_href }: FeatureGridBlockProps) {
+export function FeatureGridBlock({ eyebrow, headline, items, cta_label, cta_href, style }: FeatureGridBlockProps) {
+  const isCircleStyle = style === 'circle'
+
   return (
     <section className="px-6 py-16 md:py-24">
       <div className="mx-auto max-w-7xl">
@@ -63,19 +48,37 @@ export function FeatureGridBlock({ eyebrow, headline, items, cta_label, cta_href
           </div>
         )}
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {(items ?? []).map((item, i) => (
-            <div
-              key={item.id ?? i}
-              className="rounded-lg border border-dark-light p-6 transition-colors hover:border-accent/50"
-            >
-              <div className="mb-4 inline-flex rounded-lg bg-accent/10 p-3 text-accent">
-                {icons[item.icon || 'star'] || icons.star}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {(items ?? []).map((item, i) => {
+            const imgSrc = iconImages[item.icon || '']
+
+            return (
+              <div
+                key={item.id ?? i}
+                className="flex flex-col items-center text-center"
+              >
+                {imgSrc ? (
+                  <div className={`mb-6 flex items-center justify-center ${isCircleStyle ? 'h-36 w-36 rounded-full bg-[#C8CDD0]' : 'h-24 w-24'}`}>
+                    <Image
+                      src={imgSrc}
+                      alt={item.title}
+                      width={isCircleStyle ? 100 : 80}
+                      height={isCircleStyle ? 100 : 80}
+                      className={isCircleStyle ? 'h-[100px] w-[100px]' : 'h-20 w-20'}
+                    />
+                  </div>
+                ) : (
+                  <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
+                    </svg>
+                  </div>
+                )}
+                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-accent-light">{item.description}</p>
               </div>
-              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-accent-light">{item.description}</p>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {cta_label && cta_href && (

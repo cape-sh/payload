@@ -413,12 +413,24 @@ export interface FeatureGridBlock {
    * Section headline
    */
   headline?: string | null;
+  /**
+   * Icon display style
+   */
+  style?: ('default' | 'circle') | null;
   items?:
     | {
         title: string;
         description: string;
         icon?:
           | (
+              | 'extended-gitops'
+              | 'enterprise-compliant'
+              | 'simplified-kubernetes'
+              | 'transparent-pricing'
+              | 'progressive-delivery'
+              | 'confident-delivery'
+              | 'scheduling-grouping'
+              | 'api-scripting'
               | 'star'
               | 'tachometer'
               | 'arrow-up-circle'
@@ -818,6 +830,7 @@ export interface CTAFormBlockSelect<T extends boolean = true> {
 export interface FeatureGridBlockSelect<T extends boolean = true> {
   eyebrow?: T;
   headline?: T;
+  style?: T;
   items?:
     | T
     | {
