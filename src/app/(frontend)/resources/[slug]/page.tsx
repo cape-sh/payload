@@ -98,7 +98,7 @@ export default async function ArticlePage({ params }: Props) {
   }
 
   return (
-    <article className="px-6 py-16 md:py-24">
+    <article data-pagefind-body className="px-6 py-16 md:py-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

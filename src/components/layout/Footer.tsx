@@ -12,7 +12,7 @@ export async function Footer() {
   const twitter = footer?.social_twitter
 
   return (
-    <footer className="border-t border-dark-light bg-dark">
+    <footer data-pagefind-ignore className="border-t border-dark-light bg-dark">
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {/* Brand */}

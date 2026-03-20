@@ -57,6 +57,7 @@ export default async function DocsPage({ params }: PageProps) {
     >
       <DocsBreadcrumb slug={slugStr} />
       <article
+        data-pagefind-body
         className="docs-prose prose prose-invert max-w-none"
         dangerouslySetInnerHTML={{ __html: html }}
       />

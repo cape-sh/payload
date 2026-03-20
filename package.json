@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build && npx pagefind --site .next/server/app --output-path .next/static/pagefind",
     "ci": "payload migrate && npm run build",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
@@ -59,6 +59,7 @@
     "@types/react-dom": "19.2.3",
     "eslint": "^9.16.0",
     "eslint-config-next": "15.4.11",
+    "pagefind": "^1.4.0",
     "prettier": "^3.4.2",
     "tsx": "4.21.0",
     "typescript": "5.7.3"

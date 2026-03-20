@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getPayload } from '@/lib/payload'
 import { MobileMenu } from './MobileMenu'
+import { SearchDialog } from '@/components/search/SearchDialog'
 
 export async function Nav() {
   const payload = await getPayload()
@@ -12,7 +13,7 @@ export async function Nav() {
   const ctaHref = navigation?.cta_href
 
   return (
-    <header className="sticky top-0 z-50 border-b border-dark-light bg-dark/95 backdrop-blur-sm">
+    <header data-pagefind-ignore className="sticky top-0 z-50 border-b border-dark-light bg-dark/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2 text-xl font-bold text-white">
           <Image
@@ -36,6 +37,7 @@ export async function Nav() {
               {item.label}
             </Link>
           ))}
+          <SearchDialog />
           {ctaLabel && ctaHref && (
             <Link
               href={ctaHref}
