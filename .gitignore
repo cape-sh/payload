@@ -19,6 +19,9 @@
 # production
 /build
 
+# pagefind (generated at build time)
+/public/pagefind
+
 # misc
 .DS_Store
 *.pem

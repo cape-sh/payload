@@ -24,9 +24,8 @@ export function SearchDialog() {
 
     const loadPagefind = async () => {
       try {
-        // Pagefind outputs to .next/static/pagefind/ which is served at /_next/static/pagefind/
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        const pf = await (Function('return import("/_next/static/pagefind/pagefind.js")')() as Promise<any>)
+        // Pagefind outputs to public/pagefind/ which is served at /pagefind/
+        const pf = await (new Function('return import("/pagefind/pagefind.js")')() as Promise<any>)
         await pf.init()
         setPagefind(pf)
       } catch {
