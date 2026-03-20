@@ -9,32 +9,60 @@ interface SearchResult {
   excerpt?: string
 }
 
+declare global {
+  interface Window {
+    pagefind?: any
+  }
+}
+
+async function loadPagefindModule(): Promise<any> {
+  // Try multiple known paths where pagefind might be served
+  const paths = [
+    '/_next/static/pagefind/pagefind.js',
+    '/pagefind/pagefind.js',
+  ]
+
+  for (const path of paths) {
+    try {
+      const res = await fetch(path, { method: 'HEAD' })
+      if (res.ok) {
+        // Use dynamic import via new Function to avoid webpack bundling
+        const pf = await new Function(`return import("${path}")`)()
+        return pf
+      }
+    } catch {
+      // try next path
+    }
+  }
+  return null
+}
+
 export function SearchDialog() {
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
   const [loading, setLoading] = useState(false)
   const [pagefind, setPagefind] = useState<any>(null)
+  const [loadFailed, setLoadFailed] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
 
   // Load Pagefind on first open
   useEffect(() => {
-    if (!open || pagefind) return
+    if (!open || pagefind || loadFailed) return
 
-    const loadPagefind = async () => {
-      try {
-        // Pagefind outputs to public/pagefind/ which is served at /pagefind/
-        const pf = await (new Function('return import("/pagefind/pagefind.js")')() as Promise<any>)
+    const init = async () => {
+      const pf = await loadPagefindModule()
+      if (pf) {
         await pf.init()
         setPagefind(pf)
-      } catch {
-        // Pagefind index not available (dev mode or not yet built)
+      } else {
+        setLoadFailed(true)
         console.warn('Pagefind index not found. Run `npm run build` to generate the search index.')
       }
     }
-    loadPagefind()
-  }, [open, pagefind])
+    init()
+  }, [open, pagefind, loadFailed])
 
   // Focus input when dialog opens
   useEffect(() => {
@@ -158,7 +186,7 @@ export function SearchDialog() {
                 </div>
               )}
 
-              {!loading && !pagefind && query.length >= 2 && (
+              {!loading && loadFailed && query.length >= 2 && (
                 <div className="px-4 py-8 text-center text-sm text-accent-light">
                   Search index not available. Build the site first.
                 </div>
@@ -183,7 +211,7 @@ export function SearchDialog() {
                 </button>
               ))}
 
-              {query.length < 2 && !loading && (
+              {query.length < 2 && !loading && !loadFailed && (
                 <div className="px-4 py-8 text-center text-sm text-accent-light">
                   Type at least 2 characters to search
                 </div>
