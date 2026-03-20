@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=--no-deprecation next build && pagefind --site .next/server/app --output-path public/_pagefind",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build && npx pagefind --site .next/server/app --output-path public/_pagefind && ls public/_pagefind/pagefind.js",
     "ci": "payload migrate && npm run build",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
