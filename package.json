@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=--no-deprecation next build && npx pagefind --site .next/server/app --output-path .next/static/pagefind",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build && npx pagefind --site .next/server/app --output-path .next/static/chunks/pagefind",
     "ci": "payload migrate && npm run build",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
     "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
@@ -50,6 +50,7 @@
     "shiki": "^3.0.0",
     "tailwindcss": "^4.2.1",
     "unified": "^11.0.5",
+    "pagefind": "^1.4.0",
     "zod": "^3.0.0"
   },
   "devDependencies": {
@@ -59,7 +60,6 @@
     "@types/react-dom": "19.2.3",
     "eslint": "^9.16.0",
     "eslint-config-next": "15.4.11",
-    "pagefind": "^1.4.0",
     "prettier": "^3.4.2",
     "tsx": "4.21.0",
     "typescript": "5.7.3"

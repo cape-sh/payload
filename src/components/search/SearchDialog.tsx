@@ -18,6 +18,7 @@ declare global {
 async function loadPagefindModule(): Promise<any> {
   // Try multiple known paths where pagefind might be served
   const paths = [
+    '/_next/static/chunks/pagefind/pagefind.js',
     '/_next/static/pagefind/pagefind.js',
     '/pagefind/pagefind.js',
   ]
