@@ -6,6 +6,7 @@ import { PricingTable } from '../blocks/PricingTable'
 import { CTAForm } from '../blocks/CTAForm'
 import { FeatureGrid } from '../blocks/FeatureGrid'
 import { CardGrid } from '../blocks/CardGrid'
+import { UseCaseCarousel } from '../blocks/UseCaseCarousel'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -57,7 +58,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      blocks: [Hero, FeatureAccordion, PricingTable, CTAForm, FeatureGrid, CardGrid],
+      blocks: [Hero, FeatureAccordion, PricingTable, CTAForm, FeatureGrid, CardGrid, UseCaseCarousel],
       admin: {
         description: 'Add and arrange content blocks to build the page',
       },

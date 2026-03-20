@@ -308,6 +308,7 @@ export interface Page {
         | CTAFormBlock
         | FeatureGridBlock
         | CardGridBlock
+        | UseCaseCarouselBlock
       )[]
     | null;
   meta?: {
@@ -492,6 +493,29 @@ export interface CardGridBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'cardGrid';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "UseCaseCarouselBlock".
+ */
+export interface UseCaseCarouselBlock {
+  /**
+   * Section headline
+   */
+  headline?: string | null;
+  items?:
+    | {
+        title: string;
+        description: string;
+        icon?:
+          | ('star' | 'tachometer' | 'arrow-up-circle' | 'sitemap' | 'globe' | 'pointer' | 'briefcase' | 'users-cog')
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'useCaseCarousel';
 }
 /**
  * Articles, guides, and other resources
@@ -782,6 +806,7 @@ export interface PagesSelect<T extends boolean = true> {
         ctaForm?: T | CTAFormBlockSelect<T>;
         featureGrid?: T | FeatureGridBlockSelect<T>;
         cardGrid?: T | CardGridBlockSelect<T>;
+        useCaseCarousel?: T | UseCaseCarouselBlockSelect<T>;
       };
   meta?:
     | T
@@ -861,6 +886,23 @@ export interface CardGridBlockSelect<T extends boolean = true> {
       };
   cta_label?: T;
   cta_href?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "UseCaseCarouselBlock_select".
+ */
+export interface UseCaseCarouselBlockSelect<T extends boolean = true> {
+  headline?: T;
+  items?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        icon?: T;
+        id?: T;
+      };
   id?: T;
   blockName?: T;
 }

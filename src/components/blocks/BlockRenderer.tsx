@@ -4,6 +4,7 @@ import { PricingTableBlock } from './PricingTableBlock'
 import { CTAFormBlock } from './CTAFormBlock'
 import { FeatureGridBlock } from './FeatureGridBlock'
 import { CardGridBlock } from './CardGridBlock'
+import { UseCaseCarouselBlock } from './UseCaseCarouselBlock'
 
 interface Block {
   blockType: string
@@ -39,6 +40,8 @@ export function BlockRenderer({ blocks }: BlockRendererProps) {
             return <FeatureGridBlock key={i} {...(block as any)} style={(block as any).style} />
           case 'cardGrid':
             return <CardGridBlock key={i} {...(block as any)} />
+          case 'useCaseCarousel':
+            return <UseCaseCarouselBlock key={i} {...(block as any)} />
           default:
             return null
         }

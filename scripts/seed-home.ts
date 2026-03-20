@@ -98,6 +98,52 @@ async function main() {
       ],
     },
     {
+      blockType: 'useCaseCarousel' as const,
+      headline: 'Use Cases',
+      items: [
+        {
+          title: 'Enhance Deployment Quality and Consistency',
+          description: 'CAEPE addresses the challenges of maintaining consistent deployments, particularly for large and distributed teams, by enforcing deployment quality and consistency in several ways.',
+          icon: 'star' as const,
+        },
+        {
+          title: 'Accelerate Time to Market',
+          description: 'By using CAEPE, engineering teams reduce the time required to onboard and release new applications to end users. CAEPE allows DevOps teams to automate pipelines and manage workflows and tests, while developers and QA engineers can build deployment plans based on guided workflows.',
+          icon: 'tachometer' as const,
+        },
+        {
+          title: 'Manage Software Upgrades and Execute Deployment Strategies',
+          description: 'CAEPE offers guided, UI-based workflows for each deployment strategy, enabling users to efficiently deploy, control routing, and tag new versions based on cluster groups for testing new features.',
+          icon: 'arrow-up-circle' as const,
+        },
+        {
+          title: 'Test Production Applications and Kubernetes Versions',
+          description: 'CAEPE streamlines testing scenarios through its UI, allowing users to deploy applications, initiate tests, and handle rollbacks or deployment to remaining clusters based on test results.',
+          icon: 'sitemap' as const,
+        },
+        {
+          title: 'Support Regional and Global Deployments',
+          description: 'CAEPE simplifies management of regional and global deployments by offering one-click deployment to various environments, enabling users to enforce data protection policies and comply with regional requirements.',
+          icon: 'globe' as const,
+        },
+        {
+          title: 'Bridge Kubernetes Skill Gaps',
+          description: 'CAEPE provides an easy-to-use web-based UI for common and advanced deployment tasks, enabling DevOps engineers to share responsibilities with the larger team and abstracting the process from the native Kubernetes layer.',
+          icon: 'pointer' as const,
+        },
+        {
+          title: 'Address Enterprise Requirements',
+          description: 'CAEPE helps organizations meet their enterprise needs for Kubernetes applications, including deployment permissions and visibility, unified deployment approach, and business continuity planning.',
+          icon: 'briefcase' as const,
+        },
+        {
+          title: 'Reduce DevOps Team Effort and Reliance',
+          description: 'CAEPE significantly cuts down the time and effort DevOps teams spend on deployment, enabling them to focus on optimizing applications in production clusters.',
+          icon: 'users-cog' as const,
+        },
+      ],
+    },
+    {
       blockType: 'hero' as const,
       headline: 'Free Pilot Program',
       subheadline: 'Evaluate CAEPE in your own environment with structured onboarding and full enterprise support. No credit card required.',
@@ -132,6 +178,7 @@ async function main() {
 
   console.log('\n  - 1 Hero block (main)')
   console.log('  - 2 FeatureGrid blocks (4 illustration icons each)')
+  console.log('  - 1 UseCaseCarousel block (8 use cases)')
   console.log('  - 1 Hero block (pilot CTA)')
 
   process.exit(0)
