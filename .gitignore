@@ -20,7 +20,7 @@
 /build
 
 # pagefind (generated at build time)
-/public/pagefind
+/public/_pagefind
 
 # misc
 .DS_Store

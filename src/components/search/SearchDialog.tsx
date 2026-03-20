@@ -18,7 +18,7 @@ declare global {
 async function loadPagefindModule(): Promise<any> {
   // Try multiple known paths where pagefind might be served
   const paths = [
-    '/pagefind/pagefind.js',
+    '/_pagefind/pagefind.js',
   ]
 
   for (const path of paths) {
