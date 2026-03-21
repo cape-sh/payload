@@ -634,6 +634,24 @@ Create: (1) GitHub repo, (2) Neon account at neon.tech — new project, copy con
 - `npm install` can take 2+ minutes due to the size of the Payload dependency tree (823 packages). Do not kill it prematurely.
 - Template included `pnpm` engine requirement — removed since we use `npm`.
 
+### Vercel build command override (critical)
+- **Vercel's Next.js framework integration runs `next build` directly**, bypassing `package.json` scripts entirely. Any post-build steps in your `"build"` script (like Pagefind indexing) will never execute unless you override the build command.
+- **Fix:** Add `vercel.json` with `{"buildCommand": "npm run build"}` to force Vercel to use your custom build pipeline. Without this, only bare `next build` runs.
+- This cost significant debugging time — Vercel builds appeared successful (green "Ready" status) because `next build` itself succeeded, but the pagefind step was silently skipped.
+
+### Pagefind on Vercel + Next.js
+- **Output to `public/_pagefind/`** (the Nextra-proven pattern). Vercel always deploys `public/` contents, even files added after `next build` completes.
+- **Do NOT output to `.next/static/`** — Vercel's `@vercel/next` builder only deploys `.next/static/` files that Next.js tracked during compilation. Post-build additions are excluded from the CDN.
+- **`pagefind` must be in `dependencies`, not `devDependencies`** — Vercel skips devDependencies in production builds (`NODE_ENV=production`). If pagefind is in devDependencies, the binary won't be available at build time.
+- **Build command:** `next build && npx pagefind --site .next/server/app --output-path public/_pagefind`
+- **Client import:** Use `new Function('return import("/_pagefind/pagefind.js")')()` to bypass webpack module resolution. The `/* webpackIgnore: true */` comment also works.
+- **`.gitignore`:** Add `/public/_pagefind` — these files are generated at build time, not committed.
+- The search index covers 87 docs pages + resources with `data-pagefind-body` attributes. Nav and footer use `data-pagefind-ignore` to exclude boilerplate.
+
+### Database enum migration
+- When changing Payload `select` field options, you cannot remove existing enum values that are already stored in PostgreSQL rows. Drizzle's `ALTER COLUMN TYPE` will fail if any row contains a value not in the new enum.
+- **Fix:** Keep old values as "legacy" entries in the select options array. They won't appear in the admin UI for new entries but existing data remains valid.
+
 ---
 
 ## References
