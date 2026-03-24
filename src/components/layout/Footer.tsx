@@ -29,9 +29,9 @@ export async function Footer() {
           {/* Link groups */}
           {linkGroups.map((group, i) => (
             <div key={i}>
-              <h4 className="mb-3 text-sm font-semibold text-white">
+              <p className="mb-3 text-sm font-semibold text-white">
                 {group.group_label}
-              </h4>
+              </p>
               <ul className="space-y-2">
                 {(group.links ?? []).map((link, j) => (
                   <li key={j}>

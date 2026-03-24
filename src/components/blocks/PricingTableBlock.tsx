@@ -89,7 +89,7 @@ export function PricingTableBlock({
                   : 'border-dark-light'
               }`}
             >
-              <h5 className="text-lg font-semibold text-white">{tier.tier_name}</h5>
+              <h3 className="text-lg font-semibold text-white">{tier.tier_name}</h3>
 
               <div className="my-6">
                 {isCustomPrice(tier.price) ? (
@@ -112,7 +112,7 @@ export function PricingTableBlock({
                     href={tier.cta_href}
                     className={`block rounded-lg px-6 py-3 text-center text-sm font-semibold transition-colors ${
                       tier.highlight
-                        ? 'bg-accent text-white hover:bg-accent-dark'
+                        ? 'bg-accent-dark text-white hover:bg-accent'
                         : 'border border-dark-light text-white hover:border-accent hover:text-accent'
                     }`}
                   >

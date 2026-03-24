@@ -14,7 +14,7 @@ export function TagFilter({ tags, activeTag }: TagFilterProps) {
         href="/resources"
         className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${
           !activeTag
-            ? 'bg-accent text-white'
+            ? 'bg-accent-dark text-white'
             : 'bg-dark-light text-accent-light hover:text-white'
         }`}
       >
@@ -26,7 +26,7 @@ export function TagFilter({ tags, activeTag }: TagFilterProps) {
           href={`/resources?tag=${encodeURIComponent(tag)}`}
           className={`rounded-full px-3 py-1 text-sm font-medium transition-colors ${
             activeTag === tag
-              ? 'bg-accent text-white'
+              ? 'bg-accent-dark text-white'
               : 'bg-dark-light text-accent-light hover:text-white'
           }`}
         >

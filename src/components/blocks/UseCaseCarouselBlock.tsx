@@ -75,9 +75,9 @@ export function UseCaseCarouselBlock({ headline, items }: UseCaseCarouselBlockPr
             <div className="mb-6 text-accent">
               {icons[current.icon || 'star'] || icons.star}
             </div>
-            <h3 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+            <p className="mb-4 text-xl font-semibold text-white md:text-2xl">
               {current.title}
-            </h3>
+            </p>
             <p className="max-w-2xl text-sm leading-relaxed text-accent-light md:text-base">
               {current.description}
             </p>
@@ -115,11 +115,13 @@ export function UseCaseCarouselBlock({ headline, items }: UseCaseCarouselBlockPr
               <button
                 key={i}
                 onClick={() => goTo(i)}
-                className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                  i === activeIndex ? 'bg-accent' : 'bg-accent-light/30'
-                }`}
+                className={`h-6 w-6 flex items-center justify-center rounded-full transition-colors`}
                 aria-label={`Go to use case ${i + 1}`}
-              />
+              >
+                <span className={`block h-2.5 w-2.5 rounded-full ${
+                  i === activeIndex ? 'bg-accent' : 'bg-accent-light/30'
+                }`} />
+              </button>
             ))}
           </div>
         )}

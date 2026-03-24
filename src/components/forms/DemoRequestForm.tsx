@@ -153,7 +153,7 @@ export function DemoRequestForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="w-full rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-dark disabled:opacity-50"
+        className="w-full rounded-lg bg-accent-dark px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent disabled:opacity-50"
       >
         {submitting ? 'Sending...' : 'Request a Demo'}
       </button>
