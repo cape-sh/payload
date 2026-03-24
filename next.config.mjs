@@ -13,6 +13,12 @@ const nextConfig = {
       { source: '/wp-admin/:path*', destination: '/', permanent: true },
       { source: '/wp-login.php', destination: '/', permanent: true },
       { source: '/docs/index', destination: '/docs', permanent: true },
+      // Out-of-scope pages — redirect to live site during pilot
+      { source: '/use-cases', destination: 'https://caepe.sh/use-cases/', permanent: false },
+      { source: '/faq', destination: 'https://caepe.sh/faq/', permanent: false },
+      { source: '/contact', destination: 'https://caepe.sh/contact/', permanent: false },
+      { source: '/end-user-subscription-agreement', destination: 'https://caepe.sh/end-user-subscription-agreement/', permanent: false },
+      { source: '/end-user-license-agreement', destination: 'https://caepe.sh/end-user-license-agreement/', permanent: false },
     ]
   },
   webpack: (webpackConfig) => {
