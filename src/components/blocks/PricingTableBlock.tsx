@@ -89,7 +89,7 @@ export function PricingTableBlock({
                   : 'border-dark-light'
               }`}
             >
-              <h3 className="text-lg font-semibold text-white">{tier.tier_name}</h3>
+              <p className="text-lg font-semibold text-white">{tier.tier_name}</p>
 
               <div className="my-6">
                 {isCustomPrice(tier.price) ? (

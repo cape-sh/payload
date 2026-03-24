@@ -63,7 +63,7 @@ export function CardGridBlock({ eyebrow, headline, cards, cta_label, cta_href }:
               <div className="mb-3 flex h-8 w-8 items-center justify-center rounded bg-accent/10 text-accent">
                 {card.icon && icons[card.icon] ? icons[card.icon] : (i + 1)}
               </div>
-              <h3 className="font-semibold text-white">{card.title}</h3>
+              <p className="font-semibold text-white">{card.title}</p>
               {card.description && (
                 <p className="mt-2 text-sm text-accent-light">{card.description}</p>
               )}

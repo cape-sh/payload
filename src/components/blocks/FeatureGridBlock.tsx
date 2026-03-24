@@ -74,7 +74,7 @@ export function FeatureGridBlock({ eyebrow, headline, items, cta_label, cta_href
                     </svg>
                   </div>
                 )}
-                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                <p className="text-lg font-semibold text-white">{item.title}</p>
                 <p className="mt-2 text-sm leading-relaxed text-accent-light">{item.description}</p>
               </div>
             )
