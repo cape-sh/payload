@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#1F2325" rx="8"/>
+
+  <!-- Section heading -->
+  <rect x="120" y="16" width="160" height="12" rx="3" fill="#FFFFFF" opacity="0.8"/>
+
+  <!-- Left arrow -->
+  <circle cx="22" cy="130" r="14" fill="#FFFFFF" opacity="0.06" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.2"/>
+  <path d="M26 124 L20 130 L26 136" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Card 1 (partially visible left) -->
+  <rect x="-10" y="48" width="120" height="150" rx="8" fill="#FFFFFF" opacity="0.03"/>
+
+  <!-- Card 2 (main visible) -->
+  <rect x="50" y="42" width="140" height="162" rx="8" fill="#FFFFFF" opacity="0.06" stroke="#34A3D3" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Image area -->
+  <rect x="58" y="52" width="124" height="60" rx="4" fill="#FFFFFF" opacity="0.06"/>
+  <circle cx="120" cy="78" r="12" fill="#34A3D3" opacity="0.3"/>
+  <!-- Title -->
+  <rect x="62" y="124" width="100" height="9" rx="2" fill="#FFFFFF" opacity="0.65"/>
+  <!-- Description -->
+  <rect x="62" y="142" width="118" height="5" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <rect x="62" y="152" width="100" height="5" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <rect x="62" y="162" width="80" height="5" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <!-- Link -->
+  <rect x="62" y="178" width="55" height="6" rx="2" fill="#34A3D3" opacity="0.5"/>
+
+  <!-- Card 3 -->
+  <rect x="210" y="42" width="140" height="162" rx="8" fill="#FFFFFF" opacity="0.06"/>
+  <!-- Image area -->
+  <rect x="218" y="52" width="124" height="60" rx="4" fill="#FFFFFF" opacity="0.06"/>
+  <circle cx="280" cy="78" r="12" fill="#34A3D3" opacity="0.3"/>
+  <!-- Title -->
+  <rect x="222" y="124" width="110" height="9" rx="2" fill="#FFFFFF" opacity="0.65"/>
+  <!-- Description -->
+  <rect x="222" y="142" width="118" height="5" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <rect x="222" y="152" width="95" height="5" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <rect x="222" y="162" width="105" height="5" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <!-- Link -->
+  <rect x="222" y="178" width="55" height="6" rx="2" fill="#34A3D3" opacity="0.5"/>
+
+  <!-- Card 4 (partially visible right) -->
+  <rect x="370" y="42" width="140" height="162" rx="8" fill="#FFFFFF" opacity="0.03"/>
+
+  <!-- Right arrow -->
+  <circle cx="378" cy="130" r="14" fill="#FFFFFF" opacity="0.06" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.2"/>
+  <path d="M374 124 L380 130 L374 136" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Dots indicator -->
+  <circle cx="180" cy="222" r="4" fill="#34A3D3" opacity="0.7"/>
+  <circle cx="196" cy="222" r="4" fill="#FFFFFF" opacity="0.15"/>
+  <circle cx="212" cy="222" r="4" fill="#FFFFFF" opacity="0.15"/>
+  <circle cx="228" cy="222" r="4" fill="#FFFFFF" opacity="0.15"/>
+
+  <!-- Label -->
+  <text x="200" y="245" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.35">Use Case Carousel</text>
+</svg>

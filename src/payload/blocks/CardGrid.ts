@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const CardGrid: Block = {
   slug: 'cardGrid',
+  imageURL: '/images/blocks/card-grid-preview.svg',
   interfaceName: 'CardGridBlock',
   labels: {
     singular: 'Card Grid',

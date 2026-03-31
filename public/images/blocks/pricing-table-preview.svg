@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#1F2325" rx="8"/>
+
+  <!-- Column 1 -->
+  <rect x="20" y="20" width="110" height="200" rx="6" fill="#FFFFFF" opacity="0.05"/>
+  <rect x="36" y="34" width="60" height="8" rx="2" fill="#FFFFFF" opacity="0.5"/>
+  <rect x="36" y="52" width="40" height="14" rx="3" fill="#FFFFFF" opacity="0.7"/>
+  <rect x="36" y="72" width="70" height="6" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <!-- Checkmarks -->
+  <circle cx="42" cy="94" r="4" fill="#34A3D3" opacity="0.4"/>
+  <rect x="52" y="91" width="60" height="6" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <circle cx="42" cy="110" r="4" fill="#34A3D3" opacity="0.4"/>
+  <rect x="52" y="107" width="50" height="6" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <circle cx="42" cy="126" r="4" fill="#34A3D3" opacity="0.4"/>
+  <rect x="52" y="123" width="55" height="6" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <!-- Button -->
+  <rect x="32" y="185" width="86" height="24" rx="5" fill="#FFFFFF" opacity="0.1"/>
+  <rect x="50" y="194" width="50" height="6" rx="2" fill="#FFFFFF" opacity="0.3"/>
+
+  <!-- Column 2 (featured) -->
+  <rect x="145" y="12" width="110" height="216" rx="6" fill="#34A3D3" opacity="0.15" stroke="#34A3D3" stroke-width="1.5"/>
+  <rect x="161" y="28" width="60" height="8" rx="2" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="161" y="46" width="50" height="14" rx="3" fill="#34A3D3"/>
+  <rect x="161" y="66" width="70" height="6" rx="2" fill="#FFFFFF" opacity="0.25"/>
+  <!-- Checkmarks -->
+  <circle cx="167" cy="88" r="4" fill="#34A3D3" opacity="0.6"/>
+  <rect x="177" y="85" width="60" height="6" rx="2" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="167" cy="104" r="4" fill="#34A3D3" opacity="0.6"/>
+  <rect x="177" y="101" width="50" height="6" rx="2" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="167" cy="120" r="4" fill="#34A3D3" opacity="0.6"/>
+  <rect x="177" y="117" width="55" height="6" rx="2" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="167" cy="136" r="4" fill="#34A3D3" opacity="0.6"/>
+  <rect x="177" y="133" width="45" height="6" rx="2" fill="#FFFFFF" opacity="0.25"/>
+  <!-- Button -->
+  <rect x="157" y="189" width="86" height="24" rx="5" fill="#34A3D3"/>
+  <rect x="175" y="198" width="50" height="6" rx="2" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Column 3 -->
+  <rect x="270" y="20" width="110" height="200" rx="6" fill="#FFFFFF" opacity="0.05"/>
+  <rect x="286" y="34" width="60" height="8" rx="2" fill="#FFFFFF" opacity="0.5"/>
+  <rect x="286" y="52" width="45" height="14" rx="3" fill="#FFFFFF" opacity="0.7"/>
+  <rect x="286" y="72" width="70" height="6" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <!-- Checkmarks -->
+  <circle cx="292" cy="94" r="4" fill="#34A3D3" opacity="0.4"/>
+  <rect x="302" y="91" width="60" height="6" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <circle cx="292" cy="110" r="4" fill="#34A3D3" opacity="0.4"/>
+  <rect x="302" y="107" width="50" height="6" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <circle cx="292" cy="126" r="4" fill="#34A3D3" opacity="0.4"/>
+  <rect x="302" y="123" width="55" height="6" rx="2" fill="#FFFFFF" opacity="0.2"/>
+  <!-- Button -->
+  <rect x="282" y="185" width="86" height="24" rx="5" fill="#FFFFFF" opacity="0.1"/>
+  <rect x="300" y="194" width="50" height="6" rx="2" fill="#FFFFFF" opacity="0.3"/>
+
+  <!-- Label -->
+  <text x="200" y="245" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.35">Pricing Table</text>
+</svg>

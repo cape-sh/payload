@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const PricingTable: Block = {
   slug: 'pricingTable',
+  imageURL: '/images/blocks/pricing-table-preview.svg',
   labels: {
     singular: 'Pricing Table',
     plural: 'Pricing Tables',

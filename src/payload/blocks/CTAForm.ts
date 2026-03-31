@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const CTAForm: Block = {
   slug: 'ctaForm',
+  imageURL: '/images/blocks/cta-form-preview.svg',
   interfaceName: 'CTAFormBlock',
   labels: {
     singular: 'CTA Form',

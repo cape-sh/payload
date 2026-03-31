@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#1F2325" rx="8"/>
+
+  <!-- Left content area -->
+  <!-- Heading lines -->
+  <rect x="30" y="40" width="160" height="14" rx="3" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="30" y="60" width="120" height="14" rx="3" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Subtext lines -->
+  <rect x="30" y="90" width="150" height="8" rx="2" fill="#FFFFFF" opacity="0.3"/>
+  <rect x="30" y="104" width="130" height="8" rx="2" fill="#FFFFFF" opacity="0.3"/>
+  <rect x="30" y="118" width="100" height="8" rx="2" fill="#FFFFFF" opacity="0.3"/>
+
+  <!-- CTA Button -->
+  <rect x="30" y="145" width="100" height="32" rx="6" fill="#34A3D3"/>
+  <rect x="52" y="157" width="56" height="8" rx="2" fill="#FFFFFF" opacity="0.9"/>
+
+  <!-- Right image placeholder -->
+  <rect x="220" y="30" width="150" height="150" rx="8" fill="#FFFFFF" opacity="0.08" stroke="#34A3D3" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- Image icon -->
+  <circle cx="295" cy="90" r="15" fill="none" stroke="#34A3D3" stroke-width="1.5" opacity="0.5"/>
+  <path d="M283 115 L295 100 L307 115" fill="none" stroke="#34A3D3" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="280" cy="85" r="4" fill="#34A3D3" opacity="0.4"/>
+
+  <!-- Label -->
+  <text x="200" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.35">Hero</text>
+</svg>

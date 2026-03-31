@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const FeatureAccordion: Block = {
   slug: 'featureAccordion',
+  imageURL: '/images/blocks/feature-accordion-preview.svg',
   labels: {
     singular: 'Feature Accordion',
     plural: 'Feature Accordions',

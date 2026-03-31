@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const UseCaseCarousel: Block = {
   slug: 'useCaseCarousel',
+  imageURL: '/images/blocks/use-case-carousel-preview.svg',
   interfaceName: 'UseCaseCarouselBlock',
   labels: {
     singular: 'Use Case Carousel',

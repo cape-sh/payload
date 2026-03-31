@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const FeatureGrid: Block = {
   slug: 'featureGrid',
+  imageURL: '/images/blocks/feature-grid-preview.svg',
   interfaceName: 'FeatureGridBlock',
   labels: {
     singular: 'Feature Grid',

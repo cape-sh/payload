@@ -2,6 +2,7 @@ import type { Block } from 'payload'
 
 export const Hero: Block = {
   slug: 'hero',
+  imageURL: '/images/blocks/hero-preview.svg',
   labels: {
     singular: 'Hero',
     plural: 'Heroes',
