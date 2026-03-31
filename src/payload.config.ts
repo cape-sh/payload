@@ -22,6 +22,21 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    livePreview: {
+      url: ({ data, collectionConfig }) => {
+        const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+        if (collectionConfig?.slug === 'pages') {
+          const slug = data?.slug
+          if (!slug || slug === 'home') return baseUrl
+          return `${baseUrl}/${slug}`
+        }
+        if (collectionConfig?.slug === 'resources') {
+          return `${baseUrl}/resources/${data?.slug || ''}`
+        }
+        return baseUrl
+      },
+      collections: ['pages', 'resources'],
+    },
   },
   collections: [Users, Media, Pages, Resources],
   globals: [Navigation, Footer],
