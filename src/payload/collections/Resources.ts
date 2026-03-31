@@ -7,6 +7,11 @@ export const Resources: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'status', 'publish_date', 'author'],
     description: 'Articles, guides, and other resources',
+    preview: (doc) => {
+      const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+      const slug = (doc?.slug as string) || ''
+      return `${baseUrl}/api/preview?slug=${slug}&collection=resources&secret=${process.env.PAYLOAD_SECRET}`
+    },
   },
   versions: {
     drafts: {

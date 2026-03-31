@@ -14,6 +14,11 @@ export const Pages: CollectionConfig = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'status', 'updatedAt'],
     description: 'Marketing pages built from reusable content blocks',
+    preview: (doc) => {
+      const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+      const slug = (doc?.slug as string) || ''
+      return `${baseUrl}/api/preview?slug=${slug}&collection=pages&secret=${process.env.PAYLOAD_SECRET}`
+    },
   },
   versions: {
     drafts: {
