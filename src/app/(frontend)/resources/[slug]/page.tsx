@@ -51,17 +51,23 @@ export default async function ArticlePage({ params }: Props) {
   // Extract headings from Lexical content for ToC
   const headings = extractHeadings(article.content)
 
-  // Get related posts
-  const relatedIds = article.related_posts as number[] | undefined
+  // Get related posts — may be populated objects or raw IDs
+  const rawRelated = article.related_posts as any[] | undefined
   let relatedPosts: any[] = []
 
-  if (relatedIds && relatedIds.length > 0) {
-    const related = await payload.find({
-      collection: 'resources',
-      where: { id: { in: relatedIds.map(String).join(',') } },
-      limit: 3,
-    })
-    relatedPosts = related.docs
+  if (rawRelated && rawRelated.length > 0) {
+    // If already populated (objects with id), use them directly
+    if (typeof rawRelated[0] === 'object' && rawRelated[0] !== null) {
+      relatedPosts = rawRelated.slice(0, 3)
+    } else {
+      // Raw IDs — fetch them
+      const related = await payload.find({
+        collection: 'resources',
+        where: { id: { in: rawRelated.map((id) => Number(id)).filter((id) => !isNaN(id)).join(',') } },
+        limit: 3,
+      })
+      relatedPosts = related.docs
+    }
   } else {
     // Fallback: 3 most recent articles sharing first tag
     const firstTag = (article.tags as { tag: string }[] | undefined)?.[0]?.tag
