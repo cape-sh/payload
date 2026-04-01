@@ -1,0 +1,113 @@
+# Copy this file to: biqmind/cape-cli/.github/workflows/sync-cli-docs.yml
+#
+# Regenerates CLI docs from Cobra and opens a PR on cape-sh/payload.
+# On push to main, runs cobra docgen and syncs the output.
+
+name: Sync CLI Docs to Docs Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.go'
+      - 'go.mod'
+      - 'go.sum'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout CLI repo
+        uses: actions/checkout@v4
+        with:
+          path: cape-cli
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: cape-cli/go.mod
+
+      - name: Generate CLI docs
+        working-directory: cape-cli
+        run: |
+          # Build the CLI first
+          go build -o caepe-cli .
+
+          # Generate Cobra markdown docs
+          # Adjust this command to match your actual docgen setup:
+          # Option A: If you have a dedicated docgen command
+          #   ./caepe-cli doc --output ./docs/
+          # Option B: If you have a separate docgen script
+          #   go run ./cmd/docgen/ --output ./docs/
+          # Option C: If docs are generated as part of the build
+          #   The files should already be in a known directory
+
+          # --- EDIT THIS SECTION ---
+          # Replace with the actual command that generates CLI markdown docs.
+          # The output directory should contain files like caepe_cluster_create.md
+          mkdir -p generated-docs
+          if [ -f "./cmd/docgen/main.go" ]; then
+            go run ./cmd/docgen/ -d ./generated-docs/
+          elif ./caepe-cli doc --help 2>/dev/null; then
+            ./caepe-cli doc -d ./generated-docs/
+          else
+            echo "WARNING: Could not find docgen command. Checking for existing doc files..."
+            # Fallback: look for pre-existing doc files in common locations
+            for dir in docs doc generated-docs cli/docs; do
+              if [ -d "$dir" ] && ls "$dir"/caepe_*.md 1>/dev/null 2>&1; then
+                cp "$dir"/caepe_*.md ./generated-docs/
+                break
+              fi
+            done
+          fi
+
+          if [ -z "$(ls -A generated-docs/ 2>/dev/null)" ]; then
+            echo "ERROR: No CLI docs were generated. Check the docgen command."
+            exit 1
+          fi
+
+      - name: Checkout Payload docs repo
+        uses: actions/checkout@v4
+        with:
+          repository: cape-sh/payload
+          token: ${{ secrets.PAYLOAD_REPO_TOKEN }}
+          path: payload
+
+      - name: Copy CLI docs
+        run: |
+          # Clear existing CLI command docs and replace with fresh generation
+          rm -f payload/content/docs/cli/cli_commands/caepe_*.md
+          cp cape-cli/generated-docs/caepe_*.md payload/content/docs/cli/cli_commands/
+
+      - name: Check for changes
+        id: changes
+        working-directory: payload
+        run: |
+          git diff --quiet content/docs/cli/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Create PR
+        if: steps.changes.outputs.changed == 'true'
+        working-directory: payload
+        env:
+          GH_TOKEN: ${{ secrets.PAYLOAD_REPO_TOKEN }}
+        run: |
+          BRANCH="sync/cli-docs-$(date +%Y%m%d-%H%M%S)"
+          git checkout -b "$BRANCH"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/docs/cli/
+          git commit -m "Update CLI docs from cape-cli
+
+          Auto-synced from biqmind/cape-cli@${{ github.sha }}"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "Update CLI docs from cape-cli" \
+            --body "## Auto-sync from cape-cli
+
+          Triggered by commit: biqmind/cape-cli@\`${{ github.sha }}\`
+
+          **Changes:** Regenerated CLI command reference docs in \`content/docs/cli/cli_commands/\`
+
+          Review the Vercel preview to verify the CLI docs render correctly." \
+            --base main \
+            --head "$BRANCH"

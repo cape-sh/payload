@@ -1,0 +1,72 @@
+# Copy this file to: biqmind/cape-api-definitions/.github/workflows/sync-api-specs.yml
+#
+# Syncs API spec JSON files to the Payload CMS docs site.
+# On push to main, opens a PR on cape-sh/payload with updated specs.
+
+name: Sync API Specs to Docs Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.json'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout API definitions
+        uses: actions/checkout@v4
+        with:
+          path: api-definitions
+
+      - name: Checkout Payload docs repo
+        uses: actions/checkout@v4
+        with:
+          repository: cape-sh/payload
+          token: ${{ secrets.PAYLOAD_REPO_TOKEN }}
+          path: payload
+
+      - name: Copy API specs
+        run: |
+          # Copy all .json spec files (excluding schema dir)
+          find api-definitions -maxdepth 1 -name '*.json' -exec cp {} payload/content/docs/api/ \;
+
+          # Copy schema files if they exist
+          if [ -d "api-definitions/schema" ]; then
+            mkdir -p payload/content/docs/api/schema
+            cp api-definitions/schema/*.json payload/content/docs/api/schema/ 2>/dev/null || true
+          fi
+
+      - name: Check for changes
+        id: changes
+        working-directory: payload
+        run: |
+          git diff --quiet content/docs/api/ && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Create PR
+        if: steps.changes.outputs.changed == 'true'
+        working-directory: payload
+        env:
+          GH_TOKEN: ${{ secrets.PAYLOAD_REPO_TOKEN }}
+        run: |
+          BRANCH="sync/api-specs-$(date +%Y%m%d-%H%M%S)"
+          git checkout -b "$BRANCH"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/docs/api/
+          git commit -m "Update API specs from cape-api-definitions
+
+          Auto-synced from biqmind/cape-api-definitions@${{ github.sha }}"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "Update API specs from cape-api-definitions" \
+            --body "## Auto-sync from cape-api-definitions
+
+          Triggered by commit: biqmind/cape-api-definitions@\`${{ github.sha }}\`
+
+          **Changes:** Updated API spec JSON files in \`content/docs/api/\`
+
+          Review the Vercel preview to verify the API docs render correctly." \
+            --base main \
+            --head "$BRANCH"

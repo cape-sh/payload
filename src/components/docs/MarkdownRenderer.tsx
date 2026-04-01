@@ -19,14 +19,21 @@ export async function renderMarkdown(rawContent: string): Promise<{ html: string
   let processed = stripMkDocsExtensions(rawContent)
   processed = preprocessAdmonitions(processed)
 
-  // Convert swagger-ui tags to links to JSON files
+  // Convert swagger-ui tags to links to interactive Scalar API viewer
   processed = processed.replace(
     /<swagger-ui[^>]*name="([^"]*)"[^>]*src="\.\/api\/([^"]*)"[^>]*\/>/g,
-    (_match, name: string, file: string) =>
-      `<div class="swagger-link my-4 rounded-lg border border-dark-light bg-dark-light/50 p-4">
-        <h3 class="mb-1 text-base font-semibold text-white">${name}</h3>
-        <a href="/docs/api/${file}" target="_blank" rel="noopener noreferrer" class="text-sm text-accent hover:underline">View API Schema (JSON) &rarr;</a>
-      </div>`,
+    (_match, name: string, file: string) => {
+      const slug = file.replace('.json', '').toLowerCase().replace(/_/g, '-')
+      return `<div class="swagger-link group my-4 rounded-lg border border-dark-light bg-dark-light/50 p-4 transition-colors hover:border-accent/40">
+        <a href="/docs/api/${slug}" class="flex items-center justify-between no-underline">
+          <div>
+            <h3 class="mb-1 text-base font-semibold text-white group-hover:text-accent">${name}</h3>
+            <p class="text-sm text-accent-light">Interactive API reference</p>
+          </div>
+          <span class="text-accent text-lg">&rarr;</span>
+        </a>
+      </div>`
+    },
   )
 
   // Run unified pipeline
